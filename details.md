@@ -51,10 +51,19 @@ Trip.com search URL that works through the Bright Data `scrape_as_markdown` / `s
 | Beijing PEK → UB | 30 Jan | MIAT 11:30–13:50 **$219** | Air China 08:10 is $416 |
 | UB ↔ Hong Kong | 8–11 Jan | MIAT nonstop **$583 return** | SlickTrip had $590.50 |
 | Nanjing → Shenyang | 13 Nov | **China Eastern 07:40–09:50 $121, bag incl.** | Replaced Spring 9C7758 19:55–23:50 ($110.67 + ~100 CNY bag). Shenzhen Air 19:25 $129 is the backup. Cheapest days are 7/10/12/14 Nov at $88 |
-| Beijing ↔ Hangzhou | late Jan | $270–338 on Trip.com intl | Inflated foreign-market fare. Plans keep the ¥700 assumption |
+| Beijing → Hangzhou | 25 Jan | ¥2,265 (CA 21:30, lands 00:05); ¥2,265–2,540 otherwise | Spring Festival rush, southbound. **The old ¥700 assumption is not on sale.** 26 Jan ¥1,286 is Shandong 18:35 (too late for day 1) |
+| Hangzhou → Beijing | 29 Jan | ¥1,809 (Air China, 07:00–10:00 hourly) | |
+| **UB → Hangzhou through** | 25 Jan | **Air China ¥3,265**, UB 11:50 → PEK (2 h 35 min) → HGH 18:45 | Same price as separate MIAT + domestic. One ticket, bags through. Backup: MIAT + Hong Kong Airlines via HKG ¥2,721, lands 23:40 |
+| **Hangzhou → UB through** | 29 Jan | **Air China ¥2,250**, HGH 08:00 → PEK (2 h 35 min) → UB 15:05 | Cheaper than domestic + Beijing night + MIAT 30 Jan (~¥3,280 + hotel). Home a day earlier |
+| Shenyang → UB through | 16 Nov | Air China $286, SHE 09:00 → UB 15:05 | ~$50 pp dearer than train + Beijing night + Air China. Use only if the closing runs late |
+| UB → Nanjing / Nanjing → UB through | 6 / 10 Nov | $353 / $360–394 via Beijing | Dearer than MIAT + fast train. Not used |
 
 - Air China UB↔Beijing is often cheaper than MIAT on the return leg. SlickTrip shows Air China as $0 (unpriced), so check it on Trip.com.
 - Trip.com offers "Student tickets" on some routes. Check them at booking.
+- Domestic Chinese fares 4 months out show near-full fares on Trip.com (CNY). Use `curr=CNY`. Domestic routes redirect to `/chinaflights/ShowFareFirst`, and the date strip shows the cheapest fare for each day.
+- **Through tickets** (one Air China ticket UB ⇄ Chinese city via Beijing Capital) are worth checking whenever a plan has a Beijing night + domestic leg. They won for Hangzhou (EC Final), but not for Nanjing or Shenyang, where high-speed rail is cheap.
+- Skyscanner China route pages have no data this far out (Jan showed "查找价格"). Ctrip's own API (`flights.ctrip.com/itinerary/api/12808/lowestPrice`) is blocked by Bright Data without KYC.
+- If a workbook is open in Excel, saving fails with PermissionError (look for `~$*.xlsx` lock files). Ask the user to close it.
 
 ## Current results (after Trip.com update, incl. 10% contingency on the university part)
 
@@ -64,8 +73,8 @@ Trip.com search URL that works through the Bright Data `scrape_as_markdown` / `s
 | Shenyang – Comfort (recommended) | ₮7.01M | ₮9.57M | ₮401k / ₮317k |
 | Hong Kong – Budget (recommended) | ₮9.11M | ₮12.17M | ₮409k / ₮323k |
 | Hong Kong – Comfort | ₮9.53M | ₮13.10M | ₮409k / ₮323k |
-| EC Final – Train | ₮8.83M | ₮12.17M | ₮401k / ₮317k |
-| EC Final – Fly | ₮9.54M | ₮13.17M | ₮401k / ₮317k |
+| EC Final – Train (rail out, Air China through ticket home 29 Jan) – recommended | ₮8.87M | ₮11.99M | ₮401k / ₮317k |
+| EC Final – Fly (Air China through tickets both ways) | ₮12.07M | ₮16.34M (₮1.34M over) | ₮401k / ₮653k |
 
 Combined Nanjing + Shenyang (3 ppl, total incl. fees and contingency): A Balanced ₮14.00M, B Budget ₮11.67M,
 C Home between ₮16.97M (over budget).
@@ -75,4 +84,5 @@ C Home between ₮16.97M (over budget).
 - Home-between plan: Air China 08:10 on 10 Nov ($172 vs $219) saves ~₮507k for 3 people but needs a Beijing night on 9 Nov (~300 CNY). Not applied yet.
 - Re-check hotels (Bestay Shenyang at 86 CNY/night looks too cheap). Also price 4-person plans as a triple + single room.
 - Confirm the 2026 Shenyang fee and the HK and EC Final hosts and venues. All contest dates are provisional.
-- EC Final domestic legs: get real CNY fares from Chinese Ctrip / Qunar about 40 days ahead.
+- EC Final: buy the 25 Jan Beijing → Hangzhou train the day sales open (~10 Jan). Re-check separate MIAT + domestic tickets ~40 days ahead (mid-Dec) in case discount fares appear.
+- PEK international ⇄ domestic transfer: bags may have to be collected for customs and re-dropped. Keep connections ≥ 2 h 30 min.
