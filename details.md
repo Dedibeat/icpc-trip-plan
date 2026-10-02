@@ -11,7 +11,7 @@ insurance, eSIM, visa).
 |---|---|
 | `ICPC_Single_Contest_Plans.xlsx` | **Main plan.** Compare sheet + 2 variants each for Shenyang, Hong Kong and EC Final Hangzhou, costed for 3 and 4 people. Separate trips with home in between. |
 | `ICPC_2026_Nanjing_Shenyang_Budget (2).xlsx` | Older combined Nanjing + Shenyang plan for 3 people: A Balanced / B Budget / C Home between, plus an Itineraries sheet. |
-| `ICPC_flight_fares_30Sep2026.xlsx` | Trip.com fares found via the Bright Data scraper, compared against the fares the plans used before. Rows 11–22 checked 30 Sep, rows 38–63 checked 1 Oct 2026, rows 65–73 Hohhot gateway + other flight sources. Sheets: "Connector notes", "Trains & hotels" (Ctrip trains and Trip.com hotels checked 1 Oct). |
+| `ICPC_flight_fares_30Sep2026.xlsx` | Trip.com fares found via the Bright Data scraper, compared against the fares the plans used before. Rows 11–22 checked 30 Sep, rows 38–63 checked 1 Oct 2026, rows 65–73 Hohhot gateway + other flight sources. Sheets: "Connector notes", "Trains & hotels" (Ctrip trains and Trip.com hotels checked 1 Oct), "12306 & ChinaTicketOnline" (official fares, sale times and reseller mark-ups, checked 3 Oct). |
 | `scripts/recalc_check.py` | Recalculates every workbook in Python, with no Excel or LibreOffice needed. Prints the key totals and exits 1 on any formula error. |
 | `requirements.txt` | Python deps: `openpyxl` (edit workbooks), `formulas` (recalculate). |
 
@@ -80,6 +80,53 @@ built-in browser's page text; Bright Data/Trip.com route pages only give "from $
 - Beijing → Nanjing sleepers (D5 21:21, D11 21:22, ¥377–401) leave too soon after MIAT lands at 19:30, so the 6 Nov Beijing night stays.
 - Shenyang → Beijing G-train fares vary ¥268–383 by train; the plans keep ¥339 where used.
 
+## Official train source: 12306 (built-in browser, no login)
+
+Open `https://kyfw.12306.cn/otn/leftTicket/init?linktypeid=dc&fs=北京,BJP&ts=沈阳北,SBT&date=YYYY-MM-DD&flag=N,N,Y` once,
+then run `fetch()` from inside that page (same origin, no login needed):
+- Train list: ``/otn/${CLeftTicketUrl}?leftTicketDTO.train_date=D&leftTicketDTO.from_station=BJP&leftTicketDTO.to_station=SBT&purpose_codes=ADULT``
+  (`CLeftTicketUrl` is a page global, currently `leftTicket/queryG`). Split each `data.result` row on `|`: [2] train_no,
+  [3] code, [6]/[7] station codes (names in `data.map`), [8] dep, [9] arr, [16]/[17] from/to station no, [35] seat types.
+- Fares: `/otn/leftTicket/queryTicketPrice?train_no=…&from_station_no=…&to_station_no=…&seat_types=…&train_date=YYYY-MM-DD`.
+  Keys: A1 hard seat, A3 hard sleeper, A4 soft sleeper, A6 deluxe soft, O 2nd class, M 1st, A9 business, WZ standing.
+  D-train sleepers come back as I (1st-class sleeper) / J (2nd-class sleeper) **in tenths of a yuan** (`4910` = ¥491).
+- Station sale times: POST `https://www.12306.cn/index/otn/index12306/queryAllCacheSaleTime` (from a www.12306.cn page).
+- Only the next 15 days are queryable, counting today (on 3 Oct: up to 17 Oct). So a train on date D goes on sale on
+  **D − 14 days**. For later plan dates, query the same train on a date inside the window. Normal-train fares are
+  fixed. Ctrip's 25 Jan connecting-train fares matched 12306's 15 Oct fares, so high-speed fares barely float.
+- Station codes: Beijing BJP, Beijing South VNP, Beijing West BXP, Fengtai FTP, Chaoyang IFP, Shenyang North SBT,
+  Shenyang SYT, Nanjing NJH, Hangzhou HZH, Hong Kong West Kowloon XJA.
+- Sale times (Beijing time): Beijing 10:00, Beijing South 12:45, Beijing West / Fengtai 08:00, Chaoyang 10:00,
+  Shenyang North 09:00, Shenyang 09:30, Nanjing / Nanjing South 08:15, Hangzhou / Hangzhou East 10:45, Hohhot East 14:00,
+  HK West Kowloon 08:00.
+- Plan sale dates: K53 (13 Nov) **30 Oct 10:00**, K54 (15 Nov) **1 Nov 09:00**, Z366 (12 Nov) **29 Oct 08:15**,
+  D17 (25 Jan) **11 Jan 10:00**. The older "29 / 31 Oct" dates were one day off.
+
+| Train | Route | Times | Official fare (CNY) | Use |
+|---|---|---|---|---|
+| K53 / K54 | Beijing ⇄ Shenyang North | 22:35–07:00 / 22:00–06:58 | hard 171, soft 263 | All Shenyang plans |
+| K341 | Beijing → Shenyang | 23:00–08:47 | hard 194, soft 301 | Backup if K53 sells out |
+| **Z366** | Nanjing → Shenyang North | 16:58–09:14 | hard 337, soft 530 | **Combined A (soft) / B (hard), 12 Nov**. Backups Z516 18:38, Z176 18:32 (same fares) |
+| **D17** | Beijing → Hangzhou | 19:10–09:15 | 2nd-class sleeper 491, 1st 670 | **EC Final – Train, 25 Jan** |
+| D11 | Beijing South → Hangzhou | 21:22–11:20 | 2nd-class sleeper 564, 1st 714 | Backup |
+| Z281 | Beijing Fengtai → Hangzhou | 19:10–10:36 | hard 328, soft 515 | Cheapest backup |
+| G-trains | Beijing South → Hangzhou East | 4.5–6 h | 2nd class 564–748 (afternoon 601–644) | Old plan |
+| G381 | Beijing West → HK West Kowloon | 10:00–18:12 | 2nd class 1,248 | Not used (MIAT nonstop is cheaper) |
+
+- Sleeper fares are the cheapest berth. Lower berths cost a bit more (ChinaTicketOnline quotes K53 hard at ¥182).
+- 12306 needs an account with passport details to buy. Trip.com / Ctrip resell at about the official fare.
+
+## ChinaTicketOnline (chinaticketonline.com)
+
+- A pre-booking agent: it accepts orders any time and buys when 12306 sales open. It does not guarantee the ticket.
+- API: from a chinaticketonline.com page, POST `/wp-admin/admin-ajax.php` with `action=getTrainListAjax&from=北京&to=沈阳&date=YYYY-MM-DD&trainCat=`
+  (Chinese city names). It returns every train with per-seat `price` (USD), `serviceFee` (USD), `priceCNY` and
+  `preSaleTime`. It works for any date (Jan 2027 too), so it is a handy timetable + sale-date lookup.
+- **Prices are 30–70% above 12306** once the $8.50–20 per-ticket service fee is added (K53 hard $29 + $8.50 ≈ ¥252
+  vs ¥171; D17 sleeper $110 + $12 ≈ ¥819 vs ¥491). Card transaction fee extra. Not used in any plan.
+- Its Beijing ⇄ Ulaanbaatar / Moscow international trains page still says "Suspended" (stale COVID page). No Mongolia
+  train booking there.
+
 ## Hotel source: Trip.com list pages (built-in browser)
 
 - Search the venue in the Trip.com hotel search box once to get its landmark id, then reuse the list URL:
@@ -93,7 +140,7 @@ built-in browser's page text; Bright Data/Trip.com route pages only give "from $
 
 - If a workbook is open in Excel, saving fails with PermissionError (look for `~$*.xlsx` lock files). Ask the user to close it.
 
-## Current results (after 1 Oct train/hotel/Hohhot update, incl. 10% contingency on the university part)
+## Current results (after the 3 Oct 12306 update, incl. 10% contingency on the university part)
 
 | Plan | Univ.-paid 3 ppl | Univ.-paid 4 ppl | Out-of-pocket pp (3 / 4) |
 |---|---|---|---|
@@ -101,18 +148,24 @@ built-in browser's page text; Bright Data/Trip.com route pages only give "from $
 | Shenyang – Comfort (RiCH family room, K54 soft sleeper back) – recommended | ₮6.34M | ₮8.26M | ₮401k / ₮317k |
 | Hong Kong – Budget (recommended) | ₮9.11M | ₮12.17M | ₮409k / ₮323k |
 | Hong Kong – Comfort | ₮9.53M | ₮13.10M | ₮409k / ₮323k |
-| EC Final – Train (rail out, Air China through ticket home 29 Jan, HanTing) – recommended | ₮8.65M | ₮11.76M | ₮401k / ₮317k |
+| EC Final – Train (D17 sleeper out, Air China through ticket home 29 Jan, HanTing 3 nights) – recommended | ₮8.21M | ₮11.12M | ₮401k / ₮317k |
 | EC Final – Fly (Aero Mongolia + Xiamen via Hohhot out, through ticket home, Mehood Theater) | ₮10.96M | ₮14.82M | ₮401k / ₮317k |
 
-Combined Nanjing + Shenyang (3 ppl, total incl. fees and contingency): A Balanced ₮12.22M, B Budget ₮11.11M,
+Combined Nanjing + Shenyang (3 ppl, total incl. fees and contingency): A Balanced ₮11.57M, B Budget ₮10.21M,
 C Home between ₮15.61M (subtotal fits; ~₮0.6M over with contingency).
+
+3 Oct changes:
+- EC Train: D17 sleeper replaces the G-train and the 25 Jan hotel night (−₮440k / −₮641k). Also fixed the
+  Hangzhou East taxi, which had been counted twice (the 29 Jan trip is the airport taxi row).
+- Combined A / B: Z366 replaces China Eastern $121 and one Nanjing night (−₮647k / −₮905k). The workbook rows moved:
+  16 Air China, 17 "Trains", 18 G-train, 19 Z366, 20 K54, 21 blank. Bag row removed.
 
 ## Open items / next optimization ideas
 
 - Home-between plan: Air China 08:10 on 10 Nov ($172 vs $219) saves ~₮507k for 3 people but needs a Beijing night on 9 Nov (~300 CNY). Not applied yet.
 - Hotels re-checked on Trip.com 1 Oct (see "Trains & hotels" sheet). Bestay's low price is real (8.2, 1,062 reviews). Hong Kong unchanged.
-- K53 on 13 Nov leaves ~1 h 20 min after MIAT immigration; if MIAT is late, use the one free change to a 14 Nov G-train. Buy sleepers when sales open (29 / 31 Oct).
+- K53 on 13 Nov leaves ~1 h 20 min after MIAT immigration; if MIAT is late, use the one free change to a 14 Nov G-train (or K341 23:00). Buy sleepers when sales open: Z366 29 Oct 08:15, K53 30 Oct 10:00, K54 1 Nov 09:00.
 - EC Fly outbound is two separate tickets via Hohhot: a late Aero Mongolia flight is not protected (fallback Air China 19:40 HET → HGH, or the ¥3,265 through ticket).
 - Confirm the 2026 Shenyang fee and the HK and EC Final hosts and venues. All contest dates are provisional.
-- EC Final: buy the 25 Jan Beijing → Hangzhou train the day sales open (~10 Jan). Re-check separate MIAT + domestic tickets ~40 days ahead (mid-Dec) in case discount fares appear.
+- EC Final: buy D17 on 12306 at 10:00 on 11 Jan (Spring Festival rush; use the 候补 waitlist if it sells out). The China timetable often changes in January, so re-check D17 in early Jan. It leaves ~8 h after MIAT lands, which gives plenty of buffer. Re-check separate MIAT + domestic tickets ~40 days ahead (mid-Dec) in case discount fares appear.
 - PEK international ⇄ domestic transfer: bags may have to be collected for customs and re-dropped. Keep connections ≥ 2 h 30 min.
