@@ -145,16 +145,16 @@ then run `fetch()` from inside that page (same origin, no login needed):
 
 | Plan | Univ.-paid 3 ppl | Univ.-paid 4 ppl | Out-of-pocket pp (3 / 4) |
 |---|---|---|---|
-| Shenyang – Budget (K53/K54 hard sleepers, Bestay) | ₮5.05M | ₮6.75M | ₮401k / ₮317k |
-| Shenyang – Comfort (RiCH family room, K54 soft sleeper back) – recommended | ₮6.34M | ₮8.26M | ₮401k / ₮317k |
+| Shenyang – Budget (K53 soft sleeper before day 1, K54 hard after, Bestay) | ₮5.21M | ₮6.96M | ₮401k / ₮317k |
+| Shenyang – Comfort (RiCH family room, K54 hard sleeper back) – recommended | ₮6.18M | ₮8.04M | ₮401k / ₮317k |
 | Hong Kong – Budget (recommended) | ₮9.11M | ₮12.17M | ₮409k / ₮323k |
 | Hong Kong – Comfort | ₮9.53M | ₮13.10M | ₮409k / ₮323k |
 | EC Final – Train (D17 sleeper out, Air China through ticket home 29 Jan, HanTing 3 nights) – recommended | ₮8.21M | ₮11.12M | ₮401k / ₮317k |
 | EC Final – Fly (Aero Mongolia + Xiamen via Hohhot out, through ticket home, Mehood Theater) | ₮10.96M | ₮14.82M | ₮401k / ₮317k |
 | Shenyang – Comfort (G-train) / Budget (G-train) | ₮6.72M / ₮6.05M | ₮8.84M / ₮8.27M | ₮401k / ₮317k |
-| Shanghai – Sleeper (recommended) / Spring nonstop / Train (no sleeper) | ₮7.62M / ₮8.21M / ₮8.11M | ₮10.02M / ₮10.73M / ₮10.78M | ₮401k / ₮317k |
-| Nanchang – Sleeper (recommended) / Comfort / Fly in | ₮6.50M / ₮8.15M / ₮8.61M | ₮8.45M / ₮10.58M / ₮11.21M | ₮401k / ₮317k |
-| Hong Kong – Budget (₮9.08M / ₮12.12M), Value (₮9.08M / ₮12.38M), Comfort (₮9.56M / ₮13.15M) – updated 10 Oct | | | ₮409k / ₮323k |
+| Shanghai – Sleeper (D8 seat back; recommended) / Spring nonstop / Train (no sleeper) | ₮7.48M / ₮8.21M / ₮8.11M | ₮9.83M / ₮10.73M / ₮10.78M | ₮401k / ₮317k |
+| Nanchang – Sleeper (D136 seat back; recommended) / Comfort / Fly in | ₮6.31M / ₮7.96M / ₮8.41M | ₮8.19M / ₮10.32M / ₮10.95M | ₮401k / ₮317k |
+| Hong Kong – Budget (₮9.08M / ₮12.12M), Value (₮9.08M / ₮12.38M), Comfort (₮9.56M / ₮13.15M), **Sleep first** (2 rooms in Sheung Wan, ₮11.63M / ₮14.45M) – updated 10 Oct | | | ₮409k / ₮323k |
 
 Combined Nanjing + Shenyang (3 ppl, total incl. fees and contingency): A Balanced ₮11.57M, B Budget ₮10.21M,
 C Home between ₮15.61M (subtotal fits; ~₮0.6M over with contingency).
@@ -173,6 +173,17 @@ C Home between ₮15.61M (subtotal fits; ~₮0.6M over with contingency).
 - 12306 answers plain HTTP from the container: `python scripts/q12306.py BJP SHH 2026-10-20 300`.
 - The cloud container has LibreOffice (`soffice`) but not the `formulas` package.
 - Booking.com does not resolve railway stations as a destination; use coordinates (Beijing Chaoyang station ≈ 39.9455, 116.5126).
+
+## Sleep principle (user rule, 10 Oct 2026)
+
+Losing sleep **before** a contest hurts performance; **after** the contest anything goes. Rules used in the plans and the `Sleep check` sheet:
+the two nights before the contest day are in a quiet bed near the venue (≥7.5 h in bed, wake ≥06:00 on contest morning); no overnight train or
+flight on the contest eve; a sleeper before day 1 only as a soft sleeper that arrives by midday with a bed night in between; flights before 08:00
+only ≥2 nights before; after the contest use the cheapest option (hard sleeper, seat, red-eye, early flight). Applied: Shenyang Budget K53 hard →
+soft (pre), Shenyang K54 soft → hard, Shanghai D8 sleeper → seat, Nanchang D136 sleeper → seat, older workbook K54 soft → hard (post),
+new `Hong Kong – Sleep first` (2 rooms, Sheung Wan). The funding is ₮15M per regional and plans use ₮6–9M, so spend the headroom on sleep.
+Audit table: `Sleep check` sheet of `ICPC_Single_Contest_Plans.xlsx`. Weak spots still flagged: Hong Kong – Budget (noisy shared room, 35 min
+commute), EC Final – Train (D17 sleeper is the night before the check-in day), Shenyang – Budget (K53 before day 1).
 
 ## 10 Oct 2026 session: Shenyang G-train, Shanghai, Nanchang, Hong Kong (now all in the workbook)
 
@@ -206,8 +217,8 @@ G122 / G126 ¥344. The old ¥339 for a 12 Nov train is not on the 12306 list (¥
 
 | Option | Univ.-paid 3 / 4 ppl | vs sleeper plan |
 |---|---|---|
-| Shenyang – Comfort (G-train): MIAT 12 Nov, G149, RiCH 3 nights, G142 back, Dequan night, Air China 16 Nov | ₮6.72M / ₮8.84M | +₮0.38M vs ₮6.34M |
-| Shenyang – Budget (G-train): MIAT 13 Nov 17:15, Dequan ×2, G101, Bestay 1 night, G142 | ₮6.05M / ₮8.27M | +₮1.0M vs ₮5.05M |
+| Shenyang – Comfort (G-train): MIAT 12 Nov, G149, RiCH 3 nights, G142 back, Dequan night, Air China 16 Nov | ₮6.72M / ₮8.84M | +₮0.54M vs ₮6.18M |
+| Shenyang – Budget (G-train): MIAT 13 Nov 17:15, Dequan ×2, G101, Bestay 1 night, G142 | ₮6.05M / ₮8.27M | +₮0.84M vs ₮5.21M |
 
 ### Shanghai regional (5–6 Dec 2026, provisional)
 
@@ -224,7 +235,7 @@ G122 / G126 ¥344. The old ¥339 for a 12 Nov train is not on the 12306 list (¥
   Trip.com 10 Oct (3 nights, 3 / 4 adults): Zsmart Zhishang 740 m 8.3 ¥1,317 (family room) / ¥1,414; Netfish e-sports 870 m 9.8 (755 reviews)
   ¥1,544 (triple) / ¥1,805 (5-person); Longyang Business 920 m 8.4 ¥1,044; Atour Shangda Rd 830 m 9.7 ¥2,604; 7 nights: Zsmart ¥3,073,
   Netfish ¥3,488 / ¥4,097. No hotel is clearly cheaper than Jenny's near the campus.
-- Results (3 / 4 ppl, incl. contingency): **Sleeper** ₮7.62M / ₮10.02M (MIAT + G17, D8 back) – recommended; **Spring nonstop** ₮8.21M / ₮10.73M
+- Results (3 / 4 ppl, incl. contingency): **Sleeper** ₮7.48M / ₮9.83M (MIAT + G17, D8 seat back) – recommended; **Spring nonstop** ₮8.21M / ₮10.73M
   (7 nights; ₮7.1M with hand baggage only); **Train (no sleeper)** ₮8.11M / ₮10.78M (G32 + Beijing night).
 
 ### Nanchang regional (19–20 Dec 2026, provisional)
@@ -245,8 +256,8 @@ G122 / G126 ¥344. The old ¥339 for a 12 Nov train is not on the 12306 list (¥
   2 nights ¥792 / ¥828, 3 nights ¥1,160 / ¥1,214 (Deluxe Family Room for 4); Lavande Aixi Lake 9.4 (2,069) 1.3 km ¥1,216 / 2 nights;
   Xana Hotel Taizidian Station 9.0 (754) 1.3 km ¥1,358 / 3 nights; Meimei Apartment 6.8 ¥105/night; Jiangxi Bailu Hotel 8.8 ¥1,280 / 2 nights.
   Booking.com has almost nothing near the campus (nearest Atour Aixihu 3.6 km ¥2,154 / 3 nights).
-- Results (3 / 4 ppl): **Sleeper** (Air China $157 + Z111, 2 nights, D136, Air China $172) ₮6.50M / ₮8.45M – recommended; **Comfort** (MIAT + G335,
-  3 nights) ₮8.15M / ₮10.58M; **Fly in** (Air China through ticket $356) ₮8.61M / ₮11.21M.
+- Results (3 / 4 ppl): **Sleeper** (Air China $157 + Z111, 2 nights, D136 seat, Air China $172) ₮6.31M / ₮8.19M – recommended; **Comfort** (MIAT + G335,
+  3 nights) ₮7.96M / ₮10.32M; **Fly in** (Air China through ticket $356) ₮8.41M / ₮10.95M.
 
 ### Hong Kong (9–10 Jan 2027)
 
