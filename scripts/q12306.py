@@ -3,14 +3,18 @@
 Usage:  python scripts/q12306.py FROM TO YYYY-MM-DD [MAX_MINUTES|all]
   FROM/TO are 12306 telegraph codes (BJP Beijing, SHH Shanghai, SBT Shenyang North, NCG Nanchang ...).
   The date must be inside the 15-day sale window; fares are fixed, so query a near date for later trips.
+  On Windows set Q12306_INSECURE=1 (12306's CA is not in the Windows certificate store).
   MAX_MINUTES keeps G/D trains up to that duration plus every D/Z/T/K train leaving after 17:00.
   Sleeper fares for D trains (1stsl/2ndsl) are in tenths of a yuan (4400 = ¥440).
 """
-import http.cookiejar, json, sys, time, urllib.parse, urllib.request
+import http.cookiejar, json, os, ssl, sys, time, urllib.parse, urllib.request
 
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 cj = http.cookiejar.CookieJar()
-op = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))
+handlers = [urllib.request.HTTPCookieProcessor(cj)]
+if os.environ.get("Q12306_INSECURE"):  # 12306 uses a CA missing from the Windows store; data is public, read-only
+    handlers.append(urllib.request.HTTPSHandler(context=ssl._create_unverified_context()))
+op = urllib.request.build_opener(*handlers)
 op.addheaders = [("User-Agent", UA), ("Referer", "https://kyfw.12306.cn/otn/leftTicket/init")]
 
 def get(url):

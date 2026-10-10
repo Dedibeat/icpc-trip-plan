@@ -9,11 +9,11 @@ insurance, eSIM, visa).
 
 | File | What it is |
 |---|---|
-| `ICPC_Single_Contest_Plans.xlsx` | **Main plan.** Compare sheet + 2 variants each for Shenyang, Hong Kong and EC Final Hangzhou, costed for 3 and 4 people. Separate trips with home in between. |
+| `ICPC_Single_Contest_Plans.xlsx` | **Main plan.** Compare sheet + 2–3 variants each for Shenyang (4), Shanghai (3), Nanchang (3), Hong Kong (3) and EC Final Hangzhou (2), costed for 3 and 4 people. Separate trips with home in between. |
 | `ICPC_2026_Nanjing_Shenyang_Budget (2).xlsx` | Older combined Nanjing + Shenyang plan for 3 people: A Balanced / B Budget / C Home between, plus an Itineraries sheet. |
-| `ICPC_flight_fares_30Sep2026.xlsx` | Trip.com fares found via the Bright Data scraper, compared against the fares the plans used before. Rows 11–22 checked 30 Sep, rows 38–63 checked 1 Oct 2026, rows 65–73 Hohhot gateway + other flight sources. Sheets: "Connector notes", "Trains & hotels" (Ctrip trains and Trip.com hotels checked 1 Oct), "12306 & ChinaTicketOnline" (official fares, sale times and reseller mark-ups, checked 3 Oct). |
+| `ICPC_flight_fares_30Sep2026.xlsx` | Trip.com fares found via the Bright Data scraper, compared against the fares the plans used before. Rows 11–22 checked 30 Sep, rows 38–63 checked 1 Oct 2026, rows 65–73 Hohhot gateway + other flight sources. Sheets: "Connector notes", "Trains & hotels" (Ctrip trains and Trip.com hotels checked 1 Oct), "12306 & ChinaTicketOnline" (official fares, sale times and reseller mark-ups, checked 3 Oct), "10 Oct – Dec & Jan checks" (Trip.com / SlickTrip / 12306 / CTO figures behind the Shanghai, Nanchang, Shenyang G-train and Hong Kong sheets). |
 | `scripts/recalc_check.py` | Recalculates every workbook in Python, with no Excel or LibreOffice needed. Prints the key totals and exits 1 on any formula error. |
-| `scripts/q12306.py` | Lists every 12306 train on a route/date with official fares, over plain HTTP (no browser, no login). Works from the cloud container. |
+| `scripts/q12306.py` | Lists every 12306 train on a route/date with official fares, over plain HTTP (no browser, no login). Works from the cloud container. On Windows set `Q12306_INSECURE=1` (12306's CA is not in the Windows store); it is slow (~1 s per train), so the built-in browser snippet below is faster. |
 | `requirements.txt` | Python deps: `openpyxl` (edit workbooks), `formulas` (recalculate). |
 
 ## Setup
@@ -151,6 +151,10 @@ then run `fetch()` from inside that page (same origin, no login needed):
 | Hong Kong – Comfort | ₮9.53M | ₮13.10M | ₮409k / ₮323k |
 | EC Final – Train (D17 sleeper out, Air China through ticket home 29 Jan, HanTing 3 nights) – recommended | ₮8.21M | ₮11.12M | ₮401k / ₮317k |
 | EC Final – Fly (Aero Mongolia + Xiamen via Hohhot out, through ticket home, Mehood Theater) | ₮10.96M | ₮14.82M | ₮401k / ₮317k |
+| Shenyang – Comfort (G-train) / Budget (G-train) | ₮6.72M / ₮6.05M | ₮8.84M / ₮8.27M | ₮401k / ₮317k |
+| Shanghai – Sleeper (recommended) / Spring nonstop / Train (no sleeper) | ₮7.62M / ₮8.21M / ₮8.11M | ₮10.02M / ₮10.73M / ₮10.78M | ₮401k / ₮317k |
+| Nanchang – Sleeper (recommended) / Comfort / Fly in | ₮6.50M / ₮8.15M / ₮8.61M | ₮8.45M / ₮10.58M / ₮11.21M | ₮401k / ₮317k |
+| Hong Kong – Budget (₮9.08M / ₮12.12M), Value (₮9.08M / ₮12.38M), Comfort (₮9.56M / ₮13.15M) – updated 10 Oct | | | ₮409k / ₮323k |
 
 Combined Nanjing + Shenyang (3 ppl, total incl. fees and contingency): A Balanced ₮11.57M, B Budget ₮10.21M,
 C Home between ₮15.61M (subtotal fits; ~₮0.6M over with contingency).
@@ -163,58 +167,105 @@ C Home between ₮15.61M (subtotal fits; ~₮0.6M over with contingency).
 
 ## Cloud session notes (9 Oct 2026)
 
-- **Trip.com is closed to automated access now.** The Bright Data scraper refuses trip.com ("not available for immediate
+- **Trip.com is closed to automated access from the cloud** (on Windows the built-in browser still reads it, see the 10 Oct section). The Bright Data scraper refuses trip.com ("not available for immediate
   residential (no KYC) access … robots.txt"), and headless Chromium gets a slider captcha. So no Air China fares from a cloud
   session. SlickTrip still prices MIAT, Spring, China Southern.
 - 12306 answers plain HTTP from the container: `python scripts/q12306.py BJP SHH 2026-10-20 300`.
 - The cloud container has LibreOffice (`soffice`) but not the `formulas` package.
 - Booking.com does not resolve railway stations as a destination; use coordinates (Beijing Chaoyang station ≈ 39.9455, 116.5126).
 
-## Shenyang without sleeper trains (9 Oct 2026, 3 ppl, incl. 10% contingency)
+## 10 Oct 2026 session: Shenyang G-train, Shanghai, Nanchang, Hong Kong (now all in the workbook)
 
-12306 fares (queried for 20 Oct; fixed fares): Beijing Chaoyang → Shenyang North G101 08:00–10:29 / G103 08:05–10:34 ¥355.
-Shenyang North → Beijing Chaoyang evening: G122 18:19–20:49 / G126 19:00–21:39 ¥344, **G142 19:51–22:30 ¥268**,
-G156 (Shenyang stn) 19:05–21:44 ¥268. Earliest morning train back is G3602 Shenyang 07:02 → Beijing Chaoyang 10:28 (¥369),
-too tight for the 12:55 Air China flight. Beijing night: **Dequan Railway Station Hotel** (~1 km from Beijing Chaoyang stn,
-8.7, 65 reviews) ¥304 for 3 ppl / 1 room, 13 and 15 Nov (Booking.com 9 Oct).
+Sources used (as the user asked): the built-in browser with **Trip.com** (flights, hotels), **12306** (fares) and **ChinaTicketOnline** (timetables / sale dates), plus SlickTrip.
 
-| Option | Univ.-paid 3 ppl | vs current |
+### Method notes
+
+- **Trip.com flights work in the built-in browser** (Bright Data is still refused). Use the mobile URL
+  `https://www.trip.com/m/flights/ubn-to-bjs/tickets-ubn-bjs/?dcitycode=ubn&acitycode=bjs&ddate=YYYY-MM-DD&triptype=0&classtype=0&adult=1&curr=USD&locale=en-XX`
+  (round trip: `&rdate=…&triptype=1`; Shanghai city code `sha` covers PVG + SHA; Beijing `bjs`). The page needs **~40 s and must be the fronted
+  tab** (`tabs_select`) to finish loading; background tabs stay on "Finalizing search results". Read it with
+  `document.body.innerText` after `Average one-way`. It lists Air China fares that SlickTrip leaves unpriced.
+- Trip.com hotel landmark ids (use the list-page recipe above): **JXNU Yaohu campus** `cityId=21959 optionId=6687249 28.6789462|116.0316786`
+  (listed as "Nanchang County"); **Shanghai University Baoshan** `cityId=2 optionId=9534399 31.3159716|121.3935523`.
+  Booking.com does not geocode these campuses; give it `latitude=…&longitude=…` instead (Nanchang gym 28.6829, 116.0323; HKU 22.2828, 114.1371).
+- Nominatim (`nominatim.openstreetmap.org/search?q=紫阳大道99号+南昌&format=json`) finds Chinese addresses when English names fail.
+- **12306 from the browser** (fast): on a kyfw.12306.cn page define `q(fromCode,toCode,date)` = fetch `/otn/leftTicket/queryG?...` and
+  `p(train)` = fetch `/otn/leftTicket/queryTicketPrice?...` (see "Official train source"). Calling many price requests in one script times
+  out at 45 s: fire them without `await` and store results on `window`, then read them in a second call.
+- **ChinaTicketOnline works for the real plan dates** (Dec / Jan): it confirms the train runs and gives the exact sale date. Its fares are
+  30–70% above 12306 (e.g. D8 ¥625 vs ¥440).
+- Sale-date rule again: D − 14 days at the station's sale time. 17 Dec trains from Fengtai / Beijing West: **3 Dec 08:00**; D136 20 Dec from
+  Nanchang: **6 Dec 09:45**; G17 3 Dec: **19 Nov 12:45**; D8 / G32 6 Dec: **22 Nov 14:45 / 13:45**.
+
+### Shenyang without sleeper trains (workbook sheets "… (G-train)")
+
+12306 fares (20 Oct query; fixed): Beijing Chaoyang → Shenyang North G101 / G103 / G105 08:00–08:55 ¥355, G149 12:19 ¥369, G3539 11:43 ¥355,
+slow G3503 / G3509 ¥296, G3537 ¥317. Shenyang North → Chaoyang G142 19:51 ¥268, G156 (Shenyang stn) 19:05 ¥268, G3522 19:21 ¥268,
+G122 / G126 ¥344. The old ¥339 for a 12 Nov train is not on the 12306 list (¥355–369). Beijing night: **Dequan Railway Station Hotel**
+(~1 km from Chaoyang station, 8.7, 65 reviews) ¥304 for 3 ppl / 1 room (Booking.com 9 Oct).
+
+| Option | Univ.-paid 3 / 4 ppl | vs sleeper plan |
 |---|---|---|
-| Comfort, but G142 back + Dequan night (rest day, RiCH 3 nights) | ₮6.53M | +₮188k vs ₮6.34M |
-| Same with G126 19:00 (¥344) | ₮6.66M | +₮322k |
-| Budget: MIAT 13 Nov 17:15, Dequan, G101, Bestay 14 Nov, G142, Dequan, Air China 16 Nov | ₮5.91M | +₮856k vs ₮5.05M |
-| Same with RiCH (near NEU) instead of Bestay | ₮6.05M | |
-| Comfort + 4th RiCH night + Air China SHE 09:00 → UB $286 | ₮7.43M | +₮1.09M |
+| Shenyang – Comfort (G-train): MIAT 12 Nov, G149, RiCH 3 nights, G142 back, Dequan night, Air China 16 Nov | ₮6.72M / ₮8.84M | +₮0.38M vs ₮6.34M |
+| Shenyang – Budget (G-train): MIAT 13 Nov 17:15, Dequan ×2, G101, Bestay 1 night, G142 | ₮6.05M / ₮8.27M | +₮1.0M vs ₮5.05M |
 
-Planes & trains: ~9 h 50 min for the no-sleeper plans (current Comfort 16 h 07 min with K54). Not put in the workbook yet.
+### Shanghai regional (5–6 Dec 2026, provisional)
 
-## Shanghai regional (5–6 Dec 2026, provisional) – researched 9 Oct, not in the workbook yet
+- Host Shanghai University, Baoshan campus gym (31.3165, 121.3925; metro line 7 Shangda Rd). 2025 invitation: fee **¥1,500/team**; day 1
+  registration 09:00–14:00, opening 14:00–15:00, warm-up 15:00–17:00; day 2 contest 09:00–14:00, analysis 14:30–15:30, awards 15:30–17:00.
+  **Wildcard (外卡) by email to shu_icpc@163.com** (first round closed 17 Oct in 2025) – a Mongolian team needs one.
+- Flights (Trip.com 10 Oct / SlickTrip): MIAT UB → PEK 3 Dec 07:30 **$151** / $154; Air China PEK → UB 7 Dec 12:55 **$172** (08:25 also $172;
+  MIAT 11:30 $193); **Spring nonstop** UB → PVG Tue 1 Dec 13:00 $173 / $164, PVG → UB Tue 8 Dec 08:00 $159 / $153 (sale fares: usual round trip
+  $465–700; hand baggage only; flies Tue / Sat). Air China 11:50 UB → PEK $200.
+- 12306: Beijing South → Shanghai G17 13:00 → 17:35 **¥667** (G15 12:00 → Hongqiao ¥661 is too tight after MIAT, G1 06:30 ¥598 too early);
+  Shanghai → Beijing D8 19:08 → 07:17 (Fengtai 06:58) 2nd-class sleeper **¥440**, D6 21:15 → 09:25 ¥474; day trains from Hongqiao G32 19:25 →
+  23:49 **¥598**, G30 18:52 ¥626, G808 / G810 17:25 / 17:46 ¥498.
+- Hotels: Booking.com 9 Oct Jenny's Apartment ~1 km (10/10, 19 reviews) 3–6 Dec ¥1,375 / ¥1,726 (3 / 4 ppl), 1–8 Dec ¥2,984 / ¥3,766.
+  Trip.com 10 Oct (3 nights, 3 / 4 adults): Zsmart Zhishang 740 m 8.3 ¥1,317 (family room) / ¥1,414; Netfish e-sports 870 m 9.8 (755 reviews)
+  ¥1,544 (triple) / ¥1,805 (5-person); Longyang Business 920 m 8.4 ¥1,044; Atour Shangda Rd 830 m 9.7 ¥2,604; 7 nights: Zsmart ¥3,073,
+  Netfish ¥3,488 / ¥4,097. No hotel is clearly cheaper than Jenny's near the campus.
+- Results (3 / 4 ppl, incl. contingency): **Sleeper** ₮7.62M / ₮10.02M (MIAT + G17, D8 back) – recommended; **Spring nonstop** ₮8.21M / ₮10.73M
+  (7 nights; ₮7.1M with hand baggage only); **Train (no sleeper)** ₮8.11M / ₮10.78M (G32 + Beijing night).
 
-- Host Shanghai University; 2024 and 2025 editions at the **Baoshan campus gym** (≈31.3165, 121.3925; metro line 7 Shangda Rd).
-  2025 invitation: fee **¥1,500/team**; day 1 registration 09:00–14:00, opening 14:00–15:00, warm-up 15:00–17:00; day 2
-  contest 09:00–14:00, analysis 14:30–15:30, awards 15:30–17:00 (Weichang Building). Wildcard (外卡) requests by email to
-  shu_icpc@163.com, first round closed 17 Oct in 2025 – a Mongolian team needs one.
-- **Spring Airlines nonstop UB ⇄ Pudong**: 9C6520 UB 13:00 → PVG 17:00 ($164, Tue/Sat), 9C6519 PVG 08:00 → UB 12:00
-  ($153, Tue 8 Dec) on SlickTrip. Hand baggage only. Sat 5 Dec lands after registration closes, so out Tue 1 Dec.
-  MIAT OM265/266 UB ⇄ PVG is seasonal (last winter 17 Dec – 17 Jan, 20:40 → 00:10); none found for early Dec.
-  UB → SHA via Beijing on China Southern: $480. MIAT UB → PEK 3 Dec 07:30 / 4 Dec 17:15 $154; PEK → UB 7 Dec 11:30 $197.
-- 12306 Beijing ⇄ Shanghai: G-trains 4 h 18 – 4 h 54, 2nd class ¥598–672 (G17 Beijing South 13:00 → Shanghai 17:35 ¥667).
-  Overnight 2nd-class sleepers: D7 Beijing 19:18 → Shanghai 07:25 ¥440, D5 21:21 → 09:27 ¥474; back D8 Shanghai 19:08 →
-  Beijing 07:17 ¥440, D6 21:15 → 09:25 ¥474 (too late for MIAT 11:30). Z281/Z282 soft sleeper ¥476.5.
-- Hotels (Booking.com 9 Oct, totals): Jenny's Apartment ~1 km, 10/10 (19 reviews): 3–6 Dec ¥1,375 (3 ppl) / ¥1,726 (4 ppl,
-  2 rooms); 1–8 Dec ¥2,984 / ¥3,766. Atour Shangda Rd ~400 m, 9.3: ¥1,493 / ¥2,833 (3 nights). Mrs Li's Home ~1 km, 9.4:
-  ¥1,288 / ¥2,444. Budget: Holiday Inn Express Gongkang ~4.7 km, 8.5: ¥919 / ¥1,838 (3 nights), ¥2,103 (7 nights, 3 ppl).
-- Costs (3 ppl, univ.-paid incl. contingency): **A** MIAT 3 Dec + G17, Jenny's 3 nights, D8 sleeper + MIAT 7 Dec:
-  ₮7.82M (5 days away). **B** Spring Tue 1 – Tue 8 Dec, Jenny's 7 nights, assumed ¥300 bag each way, ¥220 PVG taxis: ₮7.50M
-  (8 days away). Personal ₮400.6k pp. A no-sleeper version of A still needs working out.
+### Nanchang regional (19–20 Dec 2026, provisional)
 
-## Nanchang regional (19–20 Dec 2026, provisional) – started 9 Oct
+- Host Jiangxi Normal University, **Yaohu campus** (紫阳大道 99 号, gym 28.6829 N 116.0323 E). The 2019 handbook (acm.zju.edu.cn
+  `南昌2019ICPC参赛手册.pdf`) shows: registration 13:00–18:00 the day before and 08:00–12:00 on day 1, opening 14:30 in the gym, warm-up
+  15:00–17:00, contest day 2 09:00–14:00, closing 15:00–16:30; metro line 1 to **Aoti Zhongxin exit 2** (~100 m); from Nanchang station 53 min
+  (line 2 + 1, taxi ¥40), from Nanchang West 1 h 8 min (taxi ¥105), from the airport 1 h 50 min. Fee not known (assumed ¥1,500).
+- Flights (Trip.com 10 Oct): UB → PEK 17 Dec **Air China CA956 16:10–18:20 $157** (cheapest), MIAT 07:30 $193, Air China 11:50 $363;
+  PEK → UB 21 Dec Air China 12:55 / 08:25 **$172**, MIAT 11:30 $193. SlickTrip: Air China through ticket UB → KHN $356 (CA902 11:50 + CA1581
+  19:20, lands 21:40); KHN → UB 21 Dec has no same-day connection (Beijing night, $294). MIAT 18 Dec 17:15 only $196.
+- 12306 (20 Oct query): Beijing → Nanchang **Z111 Fengtai 23:06 → 11:52 hard sleeper ¥296.5** (soft ¥464.5), K105 Beijing West 23:31 → 16:00
+  ¥304.5, **D135 Fengtai 19:48 → Nanchang 07:49 2nd-class sleeper ¥382**, D137 20:00 → 08:01 ¥382, D133 18:12 → Nanchang West 06:30 ¥383;
+  daytime G333 08:05 / G335 12:00 / G337 16:55 → Nanchang West ¥742 / ¥745 / ¥732 (≈6 h). Back: **D136 19:22 → Fengtai 07:31 ¥382**,
+  D138 19:38 ¥382, D140 Nanchang West 19:18 ¥383, D134 20:58 → 09:01 ¥383, G338 14:42 → Beijing West 20:54 ¥742. D trains arrive at
+  Beijing Fengtai (~1 h 15 min from PEK).
+- Hotels (Trip.com 10 Oct, 3 adults / 4 adults): **Orange Hotel (Yaohu West Subway Station, Normal University branch)** 730 m, 9.6 (662 reviews):
+  2 nights ¥792 / ¥828, 3 nights ¥1,160 / ¥1,214 (Deluxe Family Room for 4); Lavande Aixi Lake 9.4 (2,069) 1.3 km ¥1,216 / 2 nights;
+  Xana Hotel Taizidian Station 9.0 (754) 1.3 km ¥1,358 / 3 nights; Meimei Apartment 6.8 ¥105/night; Jiangxi Bailu Hotel 8.8 ¥1,280 / 2 nights.
+  Booking.com has almost nothing near the campus (nearest Atour Aixihu 3.6 km ¥2,154 / 3 nights).
+- Results (3 / 4 ppl): **Sleeper** (Air China $157 + Z111, 2 nights, D136, Air China $172) ₮6.50M / ₮8.45M – recommended; **Comfort** (MIAT + G335,
+  3 nights) ₮8.15M / ₮10.58M; **Fly in** (Air China through ticket $356) ₮8.61M / ₮11.21M.
 
-- Host Jiangxi Normal University (on the 2026–27 host list). The 2019 Nanchang regional was at its **Yaohu campus**
-  (紫阳大道 99 号) gym; metro line 1 to the campus. 2019 schedule: day 1 opening 14:30, warm-up 15:00–17:00; day 2 contest
-  09:00–14:00, closing 15:00–16:30. Trains, flights and hotels not researched yet.
+### Hong Kong (9–10 Jan 2027)
+
+- Flights stay MIAT nonstop: Trip.com 10 Oct round trip 8–11 Jan **$586** (was $583 on 30 Sep; Cathay codeshare $626; via Seoul / Hong Kong
+  Airlines $783+), SlickTrip $593, which it flags as low against the usual $708–900. The 2-month SlickTrip calendar has nothing cheaper
+  around 8 Jan ($593; 21 Jan $593, 29 Jan $568). Alternatives checked and rejected: UB → Beijing + Cathay PEK → HKG $206 (≈$350–400 each way),
+  Aero Mongolia UB → Hohhot ¥892 + Shenzhen Airlines HET → SZX $214 (≈$340), Korean Air via Seoul $515 with an overnight stop.
+- Hotels (Booking.com 10 Oct, 3 nights, near HKU map point): Premium Lounge (8.1, 1,242 reviews) triple room **HK$1,177** (3 ppl) / HK$1,611
+  (4 ppl: triple + 1 dorm bed) – cheaper than the HK$1,308 / 1,790 of 30 Sep; Kusa Inn (9.6, 15 reviews) HK$1,194 / HK$2,122; Mochi Inn
+  (9.1, 17 reviews) 4 ppl HK$2,212; Good Fortune Inn (8.6, 715) HK$1,759 / HK$2,889; Hi Backpackers dorms ~HK$1,950 for 3 beds.
+- Results (3 / 4 ppl): Budget ₮9.08M / ₮12.12M, Value (Kusa Inn) ₮9.08M / ₮12.38M, Comfort ₮9.56M / ₮13.15M.
 
 ## Open items / next optimization ideas
+
+- **Book soon (10 Oct):** Spring UB ⇄ PVG fares and MIAT UB–HKG are far below their usual levels (SlickTrip "low"); Air China UB → PEK 17 Dec $157.
+- Trains to buy on the sale date: Z366 29 Oct 08:15, K53 30 Oct 10:00, K54 1 Nov 09:00, G17 19 Nov 12:45, D8 22 Nov 14:45,
+  Z111 3 Dec 08:00, D136 6 Dec 09:45, D17 11 Jan 10:00. 12306 needs a registered account with passport details.
+- Wildcard for Shanghai (shu_icpc@163.com) – ask before booking anything non-refundable. Nanchang fee, schedule and hotel still unconfirmed.
+- Not yet researched: Beijing–Shenyang low-cost flights; Trip.com Hong Kong hotels near HKU (earlier check: not cheaper than Booking.com).
 
 - Home-between plan: Air China 08:10 on 10 Nov ($172 vs $219) saves ~₮507k for 3 people but needs a Beijing night on 9 Nov (~300 CNY). Not applied yet.
 - Hotels re-checked on Trip.com 1 Oct (see "Trains & hotels" sheet). Bestay's low price is real (8.2, 1,062 reviews). Hong Kong unchanged.
