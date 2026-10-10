@@ -1,9 +1,14 @@
 # ICPC 2026–27 trip plan – project details
 
 Budget workbooks for a Mongolian university team (3 contestants, sometimes + 1 coach) travelling from
-Ulaanbaatar to ICPC Asia EC contests. The university funds **₮15,000,000 per regional**. It pays for flights,
-trains, hotels, meals and local transport. The team pays the contest fee and "Other" costs (UB airport taxi,
-insurance, eSIM, visa).
+Ulaanbaatar to ICPC Asia EC contests.
+
+**Funding model (user, 10 Oct 2026):** one regional is **funded with ₮12,000,000 and the coach travels** (4 people);
+the other regional is **unfunded: the 3 contestants pay everything** themselves. Which regional is which is not decided yet.
+In `ICPC_Single_Contest_Plans.xlsx` every "3 ppl" column / H column = the UNFUNDED regional (`Compare!B12` = ₮0, so the
+"out-of-pocket per person" is the whole cost per contestant) and every "4 ppl" column / K column = the FUNDED regional
+(`Compare!B5` = ₮12M). Funding covers flights, trains, hotels, meals and local transport; the contest fee and "Other" costs
+(UB airport taxi, insurance, eSIM, visa) are paid by the team. The older combined workbook still assumes ₮15M for 3 people.
 
 ## Files
 
@@ -143,7 +148,7 @@ then run `fetch()` from inside that page (same origin, no login needed):
 
 ## Current results (after the 3 Oct 12306 update, incl. 10% contingency on the university part)
 
-| Plan | Univ.-paid 3 ppl | Univ.-paid 4 ppl | Out-of-pocket pp (3 / 4) |
+| Plan | Travel + stay 3 ppl (unfunded) | Travel + stay 4 ppl (₮12M funded) | Fee + other pp (3 / 4) |
 |---|---|---|---|
 | Shenyang – Budget (K53 soft sleeper before day 1, K54 hard after, Bestay) | ₮5.21M | ₮6.96M | ₮401k / ₮317k |
 | Shenyang – Comfort (RiCH family room, K54 hard sleeper back) – recommended | ₮6.18M | ₮8.04M | ₮401k / ₮317k |
@@ -269,6 +274,25 @@ G122 / G126 ¥344. The old ¥339 for a 12 Nov train is not on the 12306 list (¥
   (4 ppl: triple + 1 dorm bed) – cheaper than the HK$1,308 / 1,790 of 30 Sep; Kusa Inn (9.6, 15 reviews) HK$1,194 / HK$2,122; Mochi Inn
   (9.1, 17 reviews) 4 ppl HK$2,212; Good Fortune Inn (8.6, 715) HK$1,759 / HK$2,889; Hi Backpackers dorms ~HK$1,950 for 3 beds.
 - Results (3 / 4 ppl): Budget ₮9.08M / ₮12.12M, Value (Kusa Inn) ₮9.08M / ₮12.38M, Comfort ₮9.56M / ₮13.15M.
+
+## Funded vs unfunded (10 Oct 2026, incl. 10% contingency)
+
+Unfunded 3 ppl = whole cost per person (travel + stay + fee + other); funded 4 ppl = travel + stay against the ₮12M:
+
+| Plan | Unfunded per person | Funded 4 ppl total | vs ₮12M |
+|---|---|---|---|
+| Shenyang – Budget | ₮2.14M | ₮6.96M | fits |
+| Shenyang – Comfort | ₮2.46M | ₮8.04M | fits |
+| Nanchang – Sleeper | ₮2.50M | ₮8.19M | fits |
+| Shanghai – Sleeper | ₮2.89M | ₮9.83M | fits |
+| Shanghai – Spring nonstop / Train | ₮3.14M / ₮3.10M | ₮10.73M / ₮10.78M | fits |
+| Nanchang – Comfort / Fly in | ₮3.05M / ₮3.20M | ₮10.32M / ₮10.95M | fits |
+| EC Final – Train | ₮3.14M | ₮11.12M | fits (₮0.9M left) |
+| Hong Kong – Budget | ₮3.43M | ₮12.12M | over by ₮0.12M (fits without the contingency) |
+| Hong Kong – Value / Comfort / Sleep first | ₮3.44M / ₮3.60M / ₮4.28M | ₮12.38M / ₮13.15M / ₮14.45M | over |
+| EC Final – Fly | ₮4.05M | ₮14.82M | over |
+
+Reading: pay the cheap regional yourselves (Shenyang, Nanchang) and use the ₮12M for the dearest one you must attend (Shanghai, Hong Kong, EC Final).
 
 ## Open items / next optimization ideas
 
