@@ -14,7 +14,7 @@ In `ICPC_Single_Contest_Plans.xlsx` every "3 ppl" column / H column = the UNFUND
 
 | File | What it is |
 |---|---|
-| `ICPC_Single_Contest_Plans.xlsx` | **Main plan.** Compare sheet + 2–3 variants each for Shenyang (4), Shanghai (3), Nanchang (3), Hong Kong (3) and EC Final Hangzhou (2), costed for 3 and 4 people. Separate trips with home in between. |
+| `ICPC_Single_Contest_Plans.xlsx` | **Main plan.** Compare sheet + 2–3 variants each for Shenyang (4), Shanghai (5), Nanchang (3), Hong Kong (3) and EC Final Hangzhou (2), costed for 3 and 4 people. Separate trips with home in between. |
 | `ICPC_2026_Nanjing_Shenyang_Budget (2).xlsx` | Older combined Nanjing + Shenyang plan for 3 people: A Balanced / B Budget / C Home between, plus an Itineraries sheet. |
 | `ICPC_flight_fares_30Sep2026.xlsx` | Trip.com fares found via the Bright Data scraper, compared against the fares the plans used before. Rows 11–22 checked 30 Sep, rows 38–63 checked 1 Oct 2026, rows 65–73 Hohhot gateway + other flight sources. Sheets: "Connector notes", "Trains & hotels" (Ctrip trains and Trip.com hotels checked 1 Oct), "12306 & ChinaTicketOnline" (official fares, sale times and reseller mark-ups, checked 3 Oct), "10 Oct – Dec & Jan checks" (Trip.com / SlickTrip / 12306 / CTO figures behind the Shanghai, Nanchang, Shenyang G-train and Hong Kong sheets). |
 | `scripts/recalc_check.py` | Recalculates every workbook in Python, with no Excel or LibreOffice needed. Prints the key totals and exits 1 on any formula error. |
@@ -157,7 +157,7 @@ then run `fetch()` from inside that page (same origin, no login needed):
 | EC Final – Train (D17 sleeper out, Air China through ticket home 29 Jan, HanTing 3 nights) – recommended | ₮8.21M | ₮11.12M | ₮401k / ₮317k |
 | EC Final – Fly (Aero Mongolia + Xiamen via Hohhot out, through ticket home, Mehood Theater) | ₮10.96M | ₮14.82M | ₮401k / ₮317k |
 | Shenyang – Comfort (G-train) / Budget (G-train) | ₮6.72M / ₮6.05M | ₮8.84M / ₮8.27M | ₮401k / ₮317k |
-| Shanghai – Sleeper (D8 seat back; recommended) / Spring nonstop / Train (no sleeper) | ₮7.48M / ₮8.21M / ₮8.11M | ₮9.83M / ₮10.73M / ₮10.78M | ₮401k / ₮317k |
+| Shanghai – Sleeper (D8 seat back; recommended) / Nonstop cheap rooms / Fly out, train home / Spring nonstop (old apartment) / Train (no sleeper) | ₮7.15M / ₮7.50M / ₮7.27M / ₮8.21M / ₮7.78M | ₮9.23M / ₮9.48M / ₮9.28M / ₮10.73M / ₮10.18M | ₮401k / ₮317k |
 | Nanchang – Sleeper (D136 seat back; recommended) / Comfort / Fly in | ₮6.31M / ₮7.96M / ₮8.41M | ₮8.19M / ₮10.32M / ₮10.95M | ₮401k / ₮317k |
 | Hong Kong – Budget (₮9.08M / ₮12.12M), Value (₮9.08M / ₮12.38M), Comfort (₮9.56M / ₮13.15M), **Sleep first** (2 rooms in Sheung Wan, ₮11.63M / ₮14.45M) – updated 10 Oct | | | ₮409k / ₮323k |
 
@@ -239,7 +239,8 @@ G122 / G126 ¥344. The old ¥339 for a 12 Nov train is not on the 12306 list (¥
 - Hotels: Booking.com 9 Oct Jenny's Apartment ~1 km (10/10, 19 reviews) 3–6 Dec ¥1,375 / ¥1,726 (3 / 4 ppl), 1–8 Dec ¥2,984 / ¥3,766.
   Trip.com 10 Oct (3 nights, 3 / 4 adults): Zsmart Zhishang 740 m 8.3 ¥1,317 (family room) / ¥1,414; Netfish e-sports 870 m 9.8 (755 reviews)
   ¥1,544 (triple) / ¥1,805 (5-person); Longyang Business 920 m 8.4 ¥1,044; Atour Shangda Rd 830 m 9.7 ¥2,604; 7 nights: Zsmart ¥3,073,
-  Netfish ¥3,488 / ¥4,097. No hotel is clearly cheaper than Jenny's near the campus.
+  Netfish ¥3,488 / ¥4,097. (Superseded: the Trip.com filter run of 10 Oct, see "Shanghai nonstop optimised", finds 2 private rooms at Hi Inn
+  for ¥820 / 3 nights – far cheaper than Jenny's.)
 - Results (3 / 4 ppl, incl. contingency): **Sleeper** ₮7.48M / ₮9.83M (MIAT + G17, D8 seat back) – recommended; **Spring nonstop** ₮8.21M / ₮10.73M
   (7 nights; ₮7.1M with hand baggage only); **Train (no sleeper)** ₮8.11M / ₮10.78M (G32 + Beijing night).
 
@@ -286,8 +287,9 @@ whole cost per person (travel + stay + fee + other); funded 4 ppl = travel + sta
 | Shenyang – Budget | ₮2.14M | ₮6.96M | ₮5.7M |
 | Shenyang – Comfort | ₮2.46M | ₮8.04M | ₮4.7M |
 | Nanchang – Sleeper | ₮2.50M | ₮8.19M | ₮4.6M |
-| Shanghai – Sleeper | ₮2.89M | ₮9.83M | ₮3.1M |
-| Shanghai – Spring nonstop / Train | ₮3.14M / ₮3.10M | ₮10.73M / ₮10.78M | ₮2.2M |
+| Shanghai – Sleeper | ₮2.78M | ₮9.23M | ₮3.6M |
+| Shanghai – Fly out, train home / Nonstop cheap rooms | ₮2.82M / ₮2.90M | ₮9.28M / ₮9.48M | ₮3.6M / ₮3.4M |
+| Shanghai – Train (no sleeper) / Spring nonstop (apartment) | ₮2.99M / ₮3.14M | ₮10.18M / ₮10.73M | ₮2.7M / ₮2.2M |
 | Nanchang – Comfort / Fly in | ₮3.05M / ₮3.20M | ₮10.32M / ₮10.95M | ₮2.6M / ₮2.0M |
 | EC Final – Train | ₮3.14M | ₮11.12M | ₮1.9M |
 | Hong Kong – Budget | ₮3.43M | ₮12.12M | ₮1.0M (over with contingency) |
@@ -317,6 +319,37 @@ shared in a triple). Trip.com HKU-area results were no better. The 2026 host is 
 Kowloon guesthouses sit on the MTR for any campus. Chosen: **Hong Kong – Sleep priority** = Good Fortune Inn + A21 airport bus ≈ ₮11.33M before
 contingency (₮0.67M spare); commute ~35–40 min each way (wake ~06:15, lights out 22:30 = 7.75 h). Booking.com's price filter is
 `nflt=price%3DHKD-min-1450-1%3Breview_score%3D80` (per-night, both rooms).
+
+## Shanghai nonstop optimised (10 Oct 2026, evening)
+
+Request: cheap hotels for the nights before the contest (distance matters little), and an early flight + train or other cheap combo after it.
+New workbook sheets: `Shanghai – Nonstop cheap rooms` and `Shanghai – Fly out, train home` (copies of Spring nonstop / Sleeper), plus Compare and
+Sleep check rows. The `Shanghai – Sleeper` and `Train (no sleeper)` hotel rows were switched to the same cheap rooms.
+
+- **Hotel recipe that found them:** Trip.com list URL with the Shanghai University landmark (`optionId=9534399`) and
+  `listFilters=29~1*29*1~<adults>*2,17~3*17*3,75~TAG_495*75*495,77~92*77*92,80~0~1*80*0` (lowest price, **Hotel** type `75~TAG_495`,
+  **private bathroom** `77~92`). With 3 or 4 adults Trip.com books **2 rooms of 2**, so the 3rd person has a room too. Without the Hotel filter
+  the cheap list is only dorm beds quoted per person. Booking.com's cheapest sorted list is Pudong-airport hotels (30+ km), useless here.
+- **Results (7 nights 1–8 Dec / 5 nights / 3 nights, 2 rooms):** Hi Inn Shanghai University Hutai Road (1.8 km walk, **8.9 from 423 reviews**)
+  ¥1,784 / ¥1,284 / ¥820 for 3 adults; Jtour Inn Hotel Shanghai University (1.8 km, 8.6 from 142) ¥1,652 / ¥1,180 / ¥708 for 4 adults (not offered for
+  3). Cheaper but worse: Yibai Gucun Park 5.2 km 7.9 ¥1,456 (7 nights), Boshi Changzhong Rd 2.5 km 8.2 ¥1,568. Far-away rooms save only
+  ¥200–330 in total, so distance buys nothing. Jenny's Apartment was ¥2,984 / ¥3,766 for 7 nights (1 room for 3, 2 rooms for 4).
+- **Post-contest 12306 fares (20 Oct query, fixed):** Shanghai → Beijing **D10 Shanghai South 21:05 → Beijing South 09:24 2nd-class seat ¥294** (sleeper ¥442),
+  D12 Songjiang 21:14 → Fengtai 09:24 ¥294, D6 Shanghai 21:15 → Beijing 09:25 ¥338, D8 19:08 ¥361, D18 Songjiang 18:42 ¥367; slow trains
+  **Z282 Songjiang 19:17 → Fengtai 09:52 hard seat ¥177.5** (sleeper ¥304.5), **T110 Shanghai 16:30 → Beijing 08:33 hard seat ¥177.5** (sleeper ¥304.5),
+  1462 Shanghai 12:15 → Beijing 10:00+1 hard seat ¥156.5. Day G-trains ¥576–667. All sell on **22 Nov 14:45** (ChinaTicketOnline).
+  Beijing → UB 7 Dec: Air China CA955 12:55 $172 (Trip.com), MIAT 11:30 $197 (SlickTrip), 8 Dec Air China 08:10 $179.
+  Shanghai → Hohhot: Z268 14:49 → 17:08 +1 hard seat ¥254.5; Hohhot → Erenhot 4652 22:50 → 06:50 hard seat ¥61 / sleeper ¥115, 6856 08:11 → 17:30 ¥53
+  (overland home via Erenhot / Zamyn-Uud not costed: the UBTZ train is weekly and fares are unverified).
+- **Plans (3 ppl / 4 ppl, incl. 10% contingency):** Sleeper ₮7.15M / ₮9.23M (was ₮7.48M / ₮9.83M); **Nonstop cheap rooms** ₮7.50M / ₮9.48M (was
+  ₮8.21M / ₮10.73M); **Fly out, train home** (Spring out 1 Dec, 5 nights, D10 seat after the awards, Air China 7 Dec, no hotel nights or meals after
+  the contest, bag fee outbound only) ₮7.27M / ₮9.28M, home a day earlier, 26 h door to door. Fly out + train is ~₮0.12M dearer than Sleeper but has no
+  04:30 start and no Beijing day. Per person unfunded: Sleeper ₮2.78M, Fly out + train ₮2.82M, Nonstop cheap rooms ₮2.90M.
+- **Biggest remaining lever:** Spring checked bags are assumed ¥300 per bag per direction (₮0.97M of the nonstop plan for 3). Web search found
+  weight-tier prices of ~¥80–150 per 5 kg / ¥140–270 per 10 kg on Japan routes (conflicting sources); read the real Ulaanbaatar price on 9c.com
+  when booking. Carry-on only saves ~₮1.0M.
+- Excel keeps `ICPC_Single_Contest_Plans.xlsx` locked while it is open (`~$ICPC_Single_Contest_Plans.xlsx`); close it before the scripts save.
+- `pip install formulas` was needed again on this Windows machine (recalc_check.py).
 
 ## Open items / next optimization ideas
 
