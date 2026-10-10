@@ -293,6 +293,7 @@ whole cost per person (travel + stay + fee + other); funded 4 ppl = travel + sta
 | Hong Kong – Budget | ₮3.43M | ₮12.12M | ₮1.0M (over with contingency) |
 | Hong Kong – Value | ₮3.44M | ₮12.38M | ₮0.7M |
 | **Hong Kong – Funded 12M** (BW Plus 2 rooms, airport bus) | ₮3.53M | ₮12.87M | **₮0.3M** (₮11.7M) |
+| **Hong Kong – Sleep priority** (Good Fortune Inn, 4 twin beds, airport bus) | ₮3.46M | ₮12.47M | **₮0.67M** (₮11.33M) |
 | Hong Kong – Comfort | ₮3.60M | ₮13.15M | ₮0.04M |
 | Hong Kong – Sleep first | ₮4.28M | ₮14.45M | over |
 | EC Final – Fly | ₮4.05M | ₮14.82M | over |
@@ -304,6 +305,18 @@ whole cost per person (travel + stay + fee + other); funded 4 ppl = travel + sta
   Hunnu Air UB → Daxing 20:45 $158), Air China PEK → UB 16 Nov 12:55 $172 (MIAT $193, **Hunnu Air Daxing PKX → UB 00:05 $151**).
   Hunnu Air (Mongolian low-cost, Embraer 190, Daxing airport) is new: the 00:05 flight would need G122 18:19 (¥344) from Shenyang to be at Daxing
   by ~22:15, so it saves nothing net versus K54 + Air China.
+
+## Hong Kong: sleep over distance (10 Oct 2026)
+
+Asked what changes if sleep is prioritised over distance to HKU. Findings (Booking.com, 8–11 Jan, 4 adults / 2 rooms, HKD, 3 nights):
+Good Fortune Inn **8.6 (715 reviews), 2 rooms with 4 twin beds + private bathrooms, HK$2,889** (cheapest real option with a bed each);
+South Nest 8.0 (609) 2 twin rooms HK$3,941; ALVA Hotel by Royal, Tsuen Wan 8.5 (1,038) two queen beds HK$3,890 (~50 min to HKU);
+Sleep Inn 8.4 HK$3,401 but one full bed per room (two people share); Kusa Inn 9.6 (15 reviews) double + triple HK$2,122; Mochi Inn 9.1 (17)
+HK$2,025; BW Plus (near HKU) HK$3,640 (7.4 on Booking, 8.2 on Trip.com HK$4,243); Premium Lounge triple + dorm bed HK$1,611 (a full bed is
+shared in a triple). Trip.com HKU-area results were no better. The 2026 host is not certain (2025 = HKUST), so a campus-adjacent hotel is a bet;
+Kowloon guesthouses sit on the MTR for any campus. Chosen: **Hong Kong – Sleep priority** = Good Fortune Inn + A21 airport bus ≈ ₮11.33M before
+contingency (₮0.67M spare); commute ~35–40 min each way (wake ~06:15, lights out 22:30 = 7.75 h). Booking.com's price filter is
+`nflt=price%3DHKD-min-1450-1%3Breview_score%3D80` (per-night, both rooms).
 
 ## Open items / next optimization ideas
 
