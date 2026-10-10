@@ -277,22 +277,33 @@ G122 / G126 ¥344. The old ¥339 for a 12 Nov train is not on the 12306 list (¥
 
 ## Funded vs unfunded (10 Oct 2026, incl. 10% contingency)
 
-Unfunded 3 ppl = whole cost per person (travel + stay + fee + other); funded 4 ppl = travel + stay against the ₮12M:
+User answer (10 Oct): funded regional is probably **Hong Kong**, unfunded is likely **Shenyang**; the team will choose. Unfunded 3 ppl =
+whole cost per person (travel + stay + fee + other); funded 4 ppl = travel + stay against the ₮12M (`Compare` columns L / M show
+"fits incl. contingency?" and "left before contingency"):
 
-| Plan | Unfunded per person | Funded 4 ppl total | vs ₮12M |
+| Plan | Unfunded per person | Funded 4 ppl total | Left of ₮12M before contingency |
 |---|---|---|---|
-| Shenyang – Budget | ₮2.14M | ₮6.96M | fits |
-| Shenyang – Comfort | ₮2.46M | ₮8.04M | fits |
-| Nanchang – Sleeper | ₮2.50M | ₮8.19M | fits |
-| Shanghai – Sleeper | ₮2.89M | ₮9.83M | fits |
-| Shanghai – Spring nonstop / Train | ₮3.14M / ₮3.10M | ₮10.73M / ₮10.78M | fits |
-| Nanchang – Comfort / Fly in | ₮3.05M / ₮3.20M | ₮10.32M / ₮10.95M | fits |
-| EC Final – Train | ₮3.14M | ₮11.12M | fits (₮0.9M left) |
-| Hong Kong – Budget | ₮3.43M | ₮12.12M | over by ₮0.12M (fits without the contingency) |
-| Hong Kong – Value / Comfort / Sleep first | ₮3.44M / ₮3.60M / ₮4.28M | ₮12.38M / ₮13.15M / ₮14.45M | over |
+| Shenyang – Budget | ₮2.14M | ₮6.96M | ₮5.7M |
+| Shenyang – Comfort | ₮2.46M | ₮8.04M | ₮4.7M |
+| Nanchang – Sleeper | ₮2.50M | ₮8.19M | ₮4.6M |
+| Shanghai – Sleeper | ₮2.89M | ₮9.83M | ₮3.1M |
+| Shanghai – Spring nonstop / Train | ₮3.14M / ₮3.10M | ₮10.73M / ₮10.78M | ₮2.2M |
+| Nanchang – Comfort / Fly in | ₮3.05M / ₮3.20M | ₮10.32M / ₮10.95M | ₮2.6M / ₮2.0M |
+| EC Final – Train | ₮3.14M | ₮11.12M | ₮1.9M |
+| Hong Kong – Budget | ₮3.43M | ₮12.12M | ₮1.0M (over with contingency) |
+| Hong Kong – Value | ₮3.44M | ₮12.38M | ₮0.7M |
+| **Hong Kong – Funded 12M** (BW Plus 2 rooms, airport bus) | ₮3.53M | ₮12.87M | **₮0.3M** (₮11.7M) |
+| Hong Kong – Comfort | ₮3.60M | ₮13.15M | ₮0.04M |
+| Hong Kong – Sleep first | ₮4.28M | ₮14.45M | over |
 | EC Final – Fly | ₮4.05M | ₮14.82M | over |
 
-Reading: pay the cheap regional yourselves (Shenyang, Nanchang) and use the ₮12M for the dearest one you must attend (Shanghai, Hong Kong, EC Final).
+- Hong Kong flights are 70% of the 4-person cost (₮8.4M; MIAT nonstop $586 return ≈ $293 each way; one-ways are dearer: $343 + $335).
+  Savings found: airport bus (~HK$45) instead of the HK$115 Airport Express ≈ ₮0.26M for 4; contingency is only a buffer – book the flights early.
+- Shenyang unfunded per person (Budget): flights ₮1.16M (58%), trains ₮0.23M, hotel ₮0.02M, meals + local ₮0.18M, fee ₮0.27M, UB taxi ₮0.07M,
+  insurance ₮0.03M, eSIM ₮0.04M, contingency ₮0.16M. Flights are already the cheapest found: MIAT 13 Nov 17:15 $151 (Air China 16:10 $157,
+  Hunnu Air UB → Daxing 20:45 $158), Air China PEK → UB 16 Nov 12:55 $172 (MIAT $193, **Hunnu Air Daxing PKX → UB 00:05 $151**).
+  Hunnu Air (Mongolian low-cost, Embraer 190, Daxing airport) is new: the 00:05 flight would need G122 18:19 (¥344) from Shenyang to be at Daxing
+  by ~22:15, so it saves nothing net versus K54 + Air China.
 
 ## Open items / next optimization ideas
 
