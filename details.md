@@ -445,6 +445,14 @@ Tianjin, Changchun, Qingdao only via Seoul ($262–436). Per person, workbook FX
   sleeper ₮629k / soft ₮691k; Hohhot + Spring cabin bag only ₮713k / with a ~¥120 bag ₮778k; Hohhot + T304 hard ₮713k / soft ₮803k;
   Budget (MIAT 13 Nov 17:15 $154 + Airport Express ¥30 + K53 soft) ₮711k but arrives 14 Nov 07:00; MIAT 07:30 + G-train ₮810k
   (04:00 wake-up); Air China 11:50 + G153 ₮915k. Routes leaving 11 Nov add ~½ day of meals (~₮21k).
+- **Cheapest way out ignoring sleep** (per person, workbook FX): **overland** UBTZ 276 UB 16:40 → Zamyn-Uud 07:20 (seat ₮26,000 /
+  platskart ₮51,400) + shared jeep to Erenhot (~¥100, assumed) + 4654 Erenhot 12:45 → Jining South 18:11 (seat ¥44.5) + **T301 Jining South
+  19:30 → Shenyang 10:16** (seat ¥163.5, hard sleeper ¥280.5) = **₮0.19M seats / ₮0.28M sleepers**; 4654 and T301 confirmed on
+  ChinaTicketOnline for 11 Nov, on sale 28 Oct 15:00 (Jining South → Shenyang: also K1567 17:31, K1519 12:50). Leaving UB Thu 12 Nov it
+  reaches Shenyang Sat 14 Nov 10:16 (day 1), so only one hotel night is needed. Next: Manzhouli all seats (Hunnu ¥677 + K7092 hard seat ¥119
+  + K928 Harbin 07:48 → Shenyang North 14:32 hard seat ¥75; T184 Harbin West 07:10 also ¥75) ₮0.48M; Hunnu MR801 13 Nov 17:55 → Daxing
+  ¥921 (Ctrip; MIAT 17:15 ¥975, CA956 16:10 ¥1,031) + K341 Beijing 23:00 → Shenyang 08:47 hard seat ¥112 (on sale 30 Oct 10:00) ₮0.58M;
+  Hunnu to Erenhot ($136) + 4654 + T301 ₮0.61M; MIAT red-eye to Hohhot ¥946 + T304 seat ₮0.61M.
 - Whole-trip effect (workbook recalculated on a scratch copy, 22 Oct; outbound swapped to CA758 ¥1,011 + 9C6782 ¥290 + bag ¥120 +
   Taoxian taxi ¥90 per car): **Sleep value via Hohhot ₮2.55M per person** (₮7.64M for 3 incl. fees, ₮8.29M travel + stay for 4) vs
   ₮2.69M via Beijing; **Overland home via Hohhot ₮2.22M per person** (₮2.37M via Beijing). Cheapest plan for comparison: Shenyang –
