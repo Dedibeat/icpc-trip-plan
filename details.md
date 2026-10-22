@@ -14,7 +14,7 @@ In `ICPC_Single_Contest_Plans.xlsx` every "3 ppl" column / H column = the UNFUND
 
 | File | What it is |
 |---|---|
-| `ICPC_Single_Contest_Plans.xlsx` | **Main plan.** Compare sheet + 2–3 variants each for Shenyang (4), Shanghai (5), Nanchang (3), Hong Kong (3) and EC Final Hangzhou (2), costed for 3 and 4 people. Separate trips with home in between. |
+| `ICPC_Single_Contest_Plans.xlsx` | **Main plan.** Compare sheet + 2–3 variants each for Shenyang (7), Shanghai (5), Nanchang (3), Hong Kong (6) and EC Final Hangzhou (2), costed for 3 and 4 people. Separate trips with home in between. |
 | `ICPC_2026_Nanjing_Shenyang_Budget (2).xlsx` | Older combined Nanjing + Shenyang plan for 3 people: A Balanced / B Budget / C Home between, plus an Itineraries sheet. |
 | `ICPC_flight_fares_30Sep2026.xlsx` | Trip.com fares found via the Bright Data scraper, compared against the fares the plans used before. Rows 11–22 checked 30 Sep, rows 38–63 checked 1 Oct 2026, rows 65–73 Hohhot gateway + other flight sources. Sheets: "Connector notes", "Trains & hotels" (Ctrip trains and Trip.com hotels checked 1 Oct), "12306 & ChinaTicketOnline" (official fares, sale times and reseller mark-ups, checked 3 Oct), "10 Oct – Dec & Jan checks" (Trip.com / SlickTrip / 12306 / CTO figures behind the Shanghai, Nanchang, Shenyang G-train and Hong Kong sheets). |
 | `scripts/recalc_check.py` | Recalculates every workbook in Python, with no Excel or LibreOffice needed. Prints the key totals and exits 1 on any formula error. |
@@ -286,6 +286,8 @@ whole cost per person (travel + stay + fee + other); funded 4 ppl = travel + sta
 |---|---|---|---|
 | Shenyang – Budget | ₮2.14M | ₮6.96M | ₮5.7M |
 | Shenyang – Comfort | ₮2.46M | ₮8.04M | ₮4.7M |
+| Shenyang – Overland home (22 Oct) | ₮2.41M | ₮7.84M | ₮4.9M |
+| Shenyang – Sleep value / Sleep first (22 Oct) | ₮2.73M / ₮2.93M | ₮9.04M / ₮9.64M | ₮3.8M / ₮3.2M |
 | Nanchang – Sleeper | ₮2.50M | ₮8.19M | ₮4.6M |
 | Shanghai – Sleeper | ₮2.78M | ₮9.23M | ₮3.6M |
 | Shanghai – Fly out, train home / Nonstop cheap rooms | ₮2.82M / ₮2.90M | ₮9.28M / ₮9.48M | ₮3.6M / ₮3.4M |
@@ -351,9 +353,57 @@ Sleep check rows. The `Shanghai – Sleeper` and `Train (no sleeper)` hotel rows
 - Excel keeps `ICPC_Single_Contest_Plans.xlsx` locked while it is open (`~$ICPC_Single_Contest_Plans.xlsx`); close it before the scripts save.
 - `pip install formulas` was needed again on this Windows machine (recalc_check.py).
 
+## Shenyang sleep-first plans (22 Oct 2026)
+
+Request: sleep quality and quantity on UB → Shenyang, cheapest option back. New sheets (built by copying `Shenyang – Comfort (G-train)`
+and rewriting rows 8+), plus rows 19–21 in Compare and 9–11 in Sleep check (everything below moved down 3 rows; Compare L/M formulas
+of the moved rows were rewritten for their new rows). Excel sheet names must be ≤ 31 characters ("Shenyang – Sleep value, overland"
+was 32, so it is `Shenyang – Overland home`); openpyxl's copy_worksheet warns about the temporary "… Copy" name – harmless.
+
+| Plan | Out | Hotel 12–15 Nov | Back | 3 ppl total / per person | 4 ppl (₮12M) |
+|---|---|---|---|---|---|
+| **Sleep first** | Air China CA902 11:50 $203 + G153 17:27 → Shenyang 20:04 ¥369 | NEU International, 2 Superior Twin 38 m², 580 m, 9.7 (1,998), ¥2,388 | K28 22:24 hard seat ¥112 + Air China 12:55 $171 | ₮7.60M / ₮2.93M | ₮9.64M |
+| **Sleep value** | same | Ji Hotel Sanhao St, 2 Budget Twin (King Koil), 940 m, 9.0 (1,433), ¥1,371 | same | ₮7.00M / ₮2.73M | ₮9.04M |
+| **Overland home** | same | Ji Hotel | K1568 22:50 → Hohhot 17:02 hard sleeper ¥304.5, 4652 22:50 → Erenhot 06:50 ¥115, jeep ~¥100 (assumed), UBTZ 275 18:05 → UB 09:20 platskart ₮51,400; home 18 Nov | ₮6.10M / ₮2.41M | ₮7.84M |
+
+- Why Air China 11:50: MIAT 07:30 ($154 SlickTrip / $170 Trip.com) needs a ~04:00 wake-up; Air China costs ~$33–49 pp more. Lands 13:55, so
+  G153 17:27 is booked with G141 16:00 → Shenyang North 18:29 (¥369) as a free same-day change if the flight is on time.
+- K28 is the cheapest train that still makes the 12:55 flight; K54 hard sleeper ¥171 is the lie-flat upgrade (+¥59 pp). K54 has no seats.
+- Hotels: both prices are for 2 rooms × 3 nights, the same for 3 or 4 adults. NEU International's price is a 30% "Surprise Savings" rate
+  (list ¥547 per room-night). Other twin-free options near NEU (Trip.com 22 Oct, 2 rooms, 3 nights): Jinke 9.6 ¥1,044 and Birches 9.2
+  ¥1,116 (double beds, Birches windowless), RiCH Forest Room 9.5 ¥1,220, Lavande 9.3 ¥1,410, Park Inn ¥1,776, Orange ¥1,816, GUNAI 9.4
+  ¥1,992; Booking.com: Atour Youth Street ¥2,334, Atour Youth Avenue ¥2,408, Hilton ¥3,061 (2 rooms, 3 adults).
+- Hotel check-out is the contest morning; store luggage and collect it after the awards.
+
+### Fares and timetables found (22 Oct)
+
+- Trip.com (desktop `showfarefirst` page loads even with the browser pane hidden; the mobile page and UB-origin searches stall on
+  "Finalizing search results" while the pane is hidden): UB → PEK 12 Nov MIAT 07:30 $170, Air China 11:50 $203 (student fare $202);
+  PEK → UB 16 Nov Air China 12:55 **$171**, MIAT 11:30 $193, Air China 08:25 $215, Capital + Hunnu via Erenhot $196, Air China via Hohhot $240.
+- SlickTrip (22 Oct): UB → BJS MIAT 12 Nov 07:30 $154, 11 Nov 08:15 $172, 13 Nov 17:15 $154; Hunnu MR801 17:55 → Daxing $186 (11 / 13 Nov);
+  it now prices Air China but far above Trip.com (13 Nov 11:50 $316, 16:10 $292; 16 Nov 12:55 $350). PEK → UB MIAT 16 Nov 11:30 $176,
+  17 Nov 20:45 $176. Hunnu MR862 Erenhot → UB 11:00 $146. UB ⇄ Shenyang has no nonstop; via Seoul $467–515 – useless.
+- 12306 (queried 22 Oct for 5 Nov; window ends 5 Nov). Beijing Chaoyang → Shenyang: G141 16:00 / G125 16:05 / G153 17:27 (→ Shenyang 20:04)
+  ¥369, G151 15:55 → Shenyang ¥355, G143 18:48 ¥383. Shenyang → Beijing night trains: K342 19:34 → 05:49 and **K28 22:24 → 08:40 hard seat ¥112**
+  (sleeper ¥194), K96 23:39 → 11:19 ¥102, K2550 18:20 → Fengtai 06:11 hard sleeper ¥207. Shenyang → Hohhot: **K1568 22:50 → 17:02** (+1) hard
+  sleeper ¥304.5 / seat ¥177.5, T302 17:20 → Hohhot East 10:16, K1520 15:27. Hohhot → Erenhot **4652 22:50 → 06:50** hard sleeper ¥115 / seat ¥61,
+  6856 08:11 → 17:30 seat ¥53; Jining South → Erenhot 4653 00:59 → 06:50 ¥90.5. No direct Beijing or Shenyang → Erenhot train.
+- Station codes: Erenhot RLC, Hohhot HHC, Hohhot East NDC, Ulanqab WPC, Jining South JAC, Shenyang South SOT, Beijing North VAP.
+- ChinaTicketOnline (real dates): G153 etc. 12 Nov on sale **29 Oct 10:00**; K28 / K342 / K1568 15 Nov **1 Nov 09:30** (Shenyang station);
+  K54 1 Nov 09:00; 4652 16 Nov **2 Nov 14:00** (Hohhot).
+- **UBTZ e-ticket** (eticket.ubtz.mn, no login to search): POST `/searchtrain` with the page's `_token`, `from_st=19` (Zamyn-Uud),
+  `to_st=37` (Ulaanbaatar), `vdate=YYYY-MM-DD`, and parse the HTML. Train **275 Zamyn-Uud 18:05 → Ulaanbaatar 09:20** daily (15 h 15 min):
+  platskart ₮44,000 + bedding ₮7,400, seat (общий) ₮26,000, kupe ₮73,400 + ₮7,400, 4-berth soft ₮133,100. Its station list has Erenhot
+  (279) and Hohhot (272) only as destinations from UB.
+- Erenhot → Zamyn-Uud: shared jeeps ¥50–110 pp (Wikivoyage, blogs); a bus ~¥40–60 also reported. Not verified for 2026.
+- The 2026 Shenyang invitation (fee, schedule, venue) was still not found on 22 Oct; the 2024 and 2025 editions were at NEU Nanhu.
+
 ## Open items / next optimization ideas
 
 - **Book soon (10 Oct):** Spring UB ⇄ PVG fares and MIAT UB–HKG are far below their usual levels (SlickTrip "low"); Air China UB → PEK 17 Dec $157.
+- Shenyang sleep-first plans: book Air China CA902 12 Nov on Trip.com and the twin rooms now (free cancellation); trains G153 29 Oct 10:00,
+  K28 or K1568 1 Nov 09:30, 4652 2 Nov 14:00; UBTZ 275 is on sale already. Confirm the Shenyang registration day before relying on a 20:30
+  arrival on 12 Nov (it is two days early, so only a schedule change would matter).
 - Trains to buy on the sale date: Z366 29 Oct 08:15, K53 30 Oct 10:00, K54 1 Nov 09:00, G17 19 Nov 12:45, D8 22 Nov 14:45,
   Z111 3 Dec 08:00, D136 6 Dec 09:45, D17 11 Jan 10:00. 12306 needs a registered account with passport details.
 - Wildcard for Shanghai (shu_icpc@163.com) – ask before booking anything non-refundable. Nanchang fee, schedule and hotel still unconfirmed.
