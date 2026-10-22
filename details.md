@@ -428,7 +428,7 @@ Tianjin, Changchun, Qingdao only via Seoul ($262–436). Per person, workbook FX
 | Beijing (current plans): Air China CA902 12 Nov 11:50 + G153 | ¥1,291 Ctrip + ¥369 | 12 Nov 20:04 | ₮0.91M | – |
 | **Manzhouli**: Hunnu MR881 **Wed 11 Nov 13:20 → 15:00** (Wed/Sat only) + K7092 Manzhouli 19:17 → Harbin 07:11 + G1280 Harbin 09:11 → Shenyang North 11:42 | **¥677** Ctrip ($108 SlickTrip) + soft sleeper ¥324 (hard ¥207) + ¥267 | 12 Nov 11:42 | **₮0.71M soft / ₮0.65M hard** (incl. ½ day extra meals) | **−₮0.20M / −₮0.26M** |
 | Hohhot: Air China CA758 11 Nov 13:00 → 14:40 + T304 Hohhot East 17:36 → Shenyang 10:16 | ¥1,011 Ctrip ($268 SlickTrip) + soft ¥464.5 (hard ¥296.5) | 12 Nov 10:16 | ₮0.82M soft / ₮0.73M hard | −₮0.09M / −₮0.18M |
-| Hohhot by air: CA758 + Spring HET 19:05 → SHE 21:15 (self-transfer, no bag) | ¥1,561 Ctrip / $237 Kiwi | 12 Nov ~22:15 at hotel | ~₮0.86M | −₮0.05M |
+| **Hohhot by air**: CA758 12 Nov 13:00 → 14:40 + Spring **9C6782** HET 19:05 → SHE 21:15 (A320), two separate tickets, 4 h 25 min self-transfer | ¥1,011 + **¥290** Ctrip (SlickTrip $65 for 9C6782); Ctrip combined ¥1,561, Kiwi $237 | 12 Nov ~22:15 at hotel | **₮0.77–0.79M** with a Spring bag bought online (~¥100–150, estimate) + airport taxi; ₮0.71M carry-on only | **−₮0.12–0.15M**, no night train |
 | Erenhot: Hunnu 08:45 or UBTZ 276 + jeep, then 4654 Erenhot 12:45 → Hohhot 20:00 / Jining South 18:11 | $136 or ₮51–81k + ¥100, ¥44.5–115 | needs a Hohhot / Beijing night | ~₮0.55–0.85M | not worth it before a contest |
 | Shanghai: Spring 9C6520 13:00 → PVG 16:45–17:00 ($165, Tue/Thu) + G100 Hongqiao 10:04 → Shenyang North 17:59 (8–10 h) | | 13 Nov | more than Beijing | no |
 
@@ -438,6 +438,9 @@ Tianjin, Changchun, Qingdao only via Seoul ($262–436). Per person, workbook FX
   12 Nov, then the same 3 hotel nights – allowed by the sleep rule if it is a soft sleeper. With 4 people the soft-sleeper compartment is
   private. The flights leave at 13:00–13:20, so no early wake-up either.
 - Hunnu Air checked bag: ~20 kg international per Expedia / Kupi guides (not confirmed on hunnuair.com).
+- Hohhot → Shenyang domestic flights on 12 Nov (Ctrip): Spring 9C6782 19:05 ¥290 (10 Nov ¥240, 11 / 13 Nov ¥400), Ruili DR5065
+  12:50 ¥450 (too early for CA758), Air China CA8179 08:55 ¥620 (next-morning fallback). Book the two legs separately: the Spring
+  ticket is the only money at risk if CA758 is late. Spring includes only a 7 kg cabin bag; buy checked bags online.
 - Sale dates (ChinaTicketOnline): K7092 / K7090 11 Nov **28 Oct 16:00** (Manzhouli); G1280 / G106 12 Nov **29 Oct 10:00**; T304 / K1566
   11 Nov 28 Oct 14:00. Station codes: Manzhouli MLX, Hailar HRX, Harbin HBB, Harbin West VAB, Qiqihar QHX, Changchun CCT, Dalian DLT,
   Tianjin TJP, Shanghai SHH, Shanghai Hongqiao AOH.
