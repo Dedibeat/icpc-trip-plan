@@ -417,6 +417,33 @@ was 32, so it is `Shenyang – Overland home`); openpyxl's copy_worksheet warns 
   (1st class ~$90).
 - Workbook now budgets CA902 at Ctrip's ¥1,291 (−₮38k pp vs Trip.com). Ctrip needs a Ctrip account and Alipay or a foreign card.
 
+### Other gateway cities + train to Shenyang (22 Oct; not yet in the workbook)
+
+SlickTrip `explore_destinations` (UBN → China) lists only four nonstop gateways: **Manzhouli** (Hunnu), **Shanghai** (Spring),
+Beijing, **Hohhot** (MIAT / Air China). Plus Erenhot (Hunnu MR861 08:45 → 10:00, $136) and Daxing (Hunnu 17:55, $186). Harbin, Dalian,
+Tianjin, Changchun, Qingdao only via Seoul ($262–436). Per person, workbook FX, incl. taxis, excl. contingency:
+
+| Route (out 11 or 12 Nov) | Fares | Arrive Shenyang | Per person | vs Beijing |
+|---|---|---|---|---|
+| Beijing (current plans): Air China CA902 12 Nov 11:50 + G153 | ¥1,291 Ctrip + ¥369 | 12 Nov 20:04 | ₮0.91M | – |
+| **Manzhouli**: Hunnu MR881 **Wed 11 Nov 13:20 → 15:00** (Wed/Sat only) + K7092 Manzhouli 19:17 → Harbin 07:11 + G1280 Harbin 09:11 → Shenyang North 11:42 | **¥677** Ctrip ($108 SlickTrip) + soft sleeper ¥324 (hard ¥207) + ¥267 | 12 Nov 11:42 | **₮0.71M soft / ₮0.65M hard** (incl. ½ day extra meals) | **−₮0.20M / −₮0.26M** |
+| Hohhot: Air China CA758 11 Nov 13:00 → 14:40 + T304 Hohhot East 17:36 → Shenyang 10:16 | ¥1,011 Ctrip ($268 SlickTrip) + soft ¥464.5 (hard ¥296.5) | 12 Nov 10:16 | ₮0.82M soft / ₮0.73M hard | −₮0.09M / −₮0.18M |
+| Hohhot by air: CA758 + Spring HET 19:05 → SHE 21:15 (self-transfer, no bag) | ¥1,561 Ctrip / $237 Kiwi | 12 Nov ~22:15 at hotel | ~₮0.86M | −₮0.05M |
+| Erenhot: Hunnu 08:45 or UBTZ 276 + jeep, then 4654 Erenhot 12:45 → Hohhot 20:00 / Jining South 18:11 | $136 or ₮51–81k + ¥100, ¥44.5–115 | needs a Hohhot / Beijing night | ~₮0.55–0.85M | not worth it before a contest |
+| Shanghai: Spring 9C6520 13:00 → PVG 16:45–17:00 ($165, Tue/Thu) + G100 Hongqiao 10:04 → Shenyang North 17:59 (8–10 h) | | 13 Nov | more than Beijing | no |
+
+- Manzhouli → Shenyang direct trains (K1302 09:05, K2624 11:15, K1260 13:40, ~18–21 h, hard sleeper ¥296.5) all leave before the flight
+  lands, so go via Harbin. Harbin → Shenyang North G-trains every ~20 min from 06:10 (¥265–282, ~2–2.5 h).
+- Sleep: the Manzhouli and Hohhot routes put a sleeper on the night of 11 Nov (4 nights before the contest) and arrive by midday on
+  12 Nov, then the same 3 hotel nights – allowed by the sleep rule if it is a soft sleeper. With 4 people the soft-sleeper compartment is
+  private. The flights leave at 13:00–13:20, so no early wake-up either.
+- Hunnu Air checked bag: ~20 kg international per Expedia / Kupi guides (not confirmed on hunnuair.com).
+- Sale dates (ChinaTicketOnline): K7092 / K7090 11 Nov **28 Oct 16:00** (Manzhouli); G1280 / G106 12 Nov **29 Oct 10:00**; T304 / K1566
+  11 Nov 28 Oct 14:00. Station codes: Manzhouli MLX, Hailar HRX, Harbin HBB, Harbin West VAB, Qiqihar QHX, Changchun CCT, Dalian DLT,
+  Tianjin TJP, Shanghai SHH, Shanghai Hongqiao AOH.
+- UBTZ: train **276 Ulaanbaatar 16:40 → Zamyn-Uud 07:20** daily (platskart ₮44,000 + ₮7,400, kupe ₮73,400 + ₮7,400, seat ₮26,000).
+  No UBTZ train to Erenhot, Hohhot or Beijing on 9–11 Nov (`to_st` 279 / 272 / 266 return nothing).
+
 ## Open items / next optimization ideas
 
 - **Book soon (10 Oct):** Spring UB ⇄ PVG fares and MIAT UB–HKG are far below their usual levels (SlickTrip "low"); Air China UB → PEK 17 Dec $157.
