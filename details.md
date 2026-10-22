@@ -441,6 +441,10 @@ Tianjin, Changchun, Qingdao only via Seoul ($262–436). Per person, workbook FX
 - Hohhot → Shenyang domestic flights on 12 Nov (Ctrip): Spring 9C6782 19:05 ¥290 (10 Nov ¥240, 11 / 13 Nov ¥400), Ruili DR5065
   12:50 ¥450 (too early for CA758), Air China CA8179 08:55 ¥620 (next-morning fallback). Book the two legs separately: the Spring
   ticket is the only money at risk if CA758 is late. Spring includes only a 7 kg cabin bag; buy checked bags online.
+- Way-out cost only (UB airport → Shenyang hotel, per person, workbook FX, no contingency, UB home taxi excluded): Manzhouli hard
+  sleeper ₮629k / soft ₮691k; Hohhot + Spring cabin bag only ₮713k / with a ~¥120 bag ₮778k; Hohhot + T304 hard ₮713k / soft ₮803k;
+  Budget (MIAT 13 Nov 17:15 $154 + Airport Express ¥30 + K53 soft) ₮711k but arrives 14 Nov 07:00; MIAT 07:30 + G-train ₮810k
+  (04:00 wake-up); Air China 11:50 + G153 ₮915k. Routes leaving 11 Nov add ~½ day of meals (~₮21k).
 - Whole-trip effect (workbook recalculated on a scratch copy, 22 Oct; outbound swapped to CA758 ¥1,011 + 9C6782 ¥290 + bag ¥120 +
   Taoxian taxi ¥90 per car): **Sleep value via Hohhot ₮2.55M per person** (₮7.64M for 3 incl. fees, ₮8.29M travel + stay for 4) vs
   ₮2.69M via Beijing; **Overland home via Hohhot ₮2.22M per person** (₮2.37M via Beijing). Cheapest plan for comparison: Shenyang –
