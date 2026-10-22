@@ -530,6 +530,17 @@ Stay 12–15 Nov, price = **2 rooms × 3 nights** (team price for 3 or 4 people)
   Park, Shenyang" resolves to the whole city (geoId 297454), so search the city with `sortBy: PRICE_LOW_TO_HIGH`, `limit: 100` (works, ~250 kB
   saved to a file) and compute distances from each hotel's `geocode`. `priceShown` = room-night `rate` × nights × rooms (all rooms, all nights);
   the provider is the `p=` parameter of `commerceUrl` (`CtripTA` = Trip.com). The `minPrice`/`maxPrice` filter returned just 1 hotel – don't use it.
+- **Trip.com static pages load with WebFetch from the cloud** (the hotel *list* and booking flow stay blocked): the landmark page
+  `https://www.trip.com/hotels/landmark/cn/northeastern-university-site.html` lists hotels with detail links, and hotel detail pages
+  (`https://www.trip.com/hotels/shenyang-hotel-detail-<id>/<slug>/`) give address, nearest metro, rating, room types and the
+  foreign-guest policy (no live prices). WebSearch with `allowed_domains: ["trip.com"]` finds the hotel ids.
+- Trip.com hotel ids near NEU: 7 Days Inn Sanhao St Medical Univ. Second Hospital **1987395** (8.9 / 452, 6 Jia 6 Wencui Road, Sanhaojie
+  metro 780 m, Traditional Twin Room, accepts all nationalities – same hotel as Tripadvisor d2650124), Jinke **634710** (9.5 / 1,190, 19 Wenhua
+  Road), Ji Hotel Sanhao St **1315035** (9.3 / 1,663), RiCH **100659881** (9.5 / 1,799, 0.85 km), Birches **76479215**, GUNAI **68560251**
+  (9.4 / 5,291), JinJiang Metropolo Sanhao St **6796570** (8.8 / 1,100), Orange Wenhua Rd **136045612**, Park Inn Sanhao St **136061604**,
+  NEU International **876479**, Aiyi Future Serviced Apartment **29517896** (9.8 / 950, Tower C Youyi Shidai Plaza, 197-2 Qingnian St, 1.6 km;
+  "from USD 78" on 22 Oct, so the ¥528 of 1 Oct may be gone), Bestay Huaiyuanmen **2306256** (8.7 / 935; reviews: no lift, small rooms).
+  The sheet's last two columns hold Trip.com and Tripadvisor / Booking.com links (Tripadvisor links carry the dates and 2 rooms / 4 guests).
 
 ## Open items / next optimization ideas
 
@@ -541,9 +552,9 @@ Stay 12–15 Nov, price = **2 rooms × 3 nights** (team price for 3 or 4 people)
   Z111 3 Dec 08:00, D136 6 Dec 09:45, D17 11 Jan 10:00. 12306 needs a registered account with passport details.
 - Wildcard for Shanghai (shu_icpc@163.com) – ask before booking anything non-refundable. Nanchang fee, schedule and hotel still unconfirmed.
 - Not yet researched: Beijing–Shenyang low-cost flights; Trip.com Hong Kong hotels near HKU (earlier check: not cheaper than Booking.com).
-- Shenyang hotels (22 Oct): on Trip.com (built-in browser) check 7 Days Inn Sanhao St (0.7 km, $109 for 2 rooms × 3 nights) and Home Inn
-  Sanhao St (1.1 km, $105) for twin rooms, reviews and "accepts foreign guests"; re-check Aiyi Future Serviced Apartment (1.8 km, family 2-bed
-  room for 4, ¥528 on 1 Oct). If one holds, swap it into `Shenyang – Sleep value` (saves ~₮0.3M). Not yet in any plan sheet.
+- Shenyang hotels (22 Oct): 7 Days Inn Sanhao St (0.7 km, $109 for 2 rooms × 3 nights) is confirmed on Trip.com (8.9 / 452, twin rooms,
+  takes foreigners) – read the live twin-room price in the built-in browser and, if it holds, swap it into `Shenyang – Sleep value` (saves
+  ~₮0.3M). Also re-check Aiyi Future Serviced Apartment (family room for 4, ¥528 on 1 Oct). Not yet in any plan sheet.
 
 - Home-between plan: Air China 08:10 on 10 Nov ($172 vs $219) saves ~₮507k for 3 people but needs a Beijing night on 9 Nov (~300 CNY). Not applied yet.
 - Hotels re-checked on Trip.com 1 Oct (see "Trains & hotels" sheet). Bestay's low price is real (8.2, 1,062 reviews). Hong Kong unchanged.
