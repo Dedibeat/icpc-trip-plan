@@ -16,7 +16,7 @@ In `ICPC_Single_Contest_Plans.xlsx` every "3 ppl" column / H column = the UNFUND
 |---|---|
 | `ICPC_Single_Contest_Plans.xlsx` | **Main plan.** Compare sheet + variants for Shenyang (15, plus the `Shenyang – Way out` comparison sheet), Shanghai (5), Nanchang (3), Hong Kong (6) and EC Final Hangzhou (2), costed for 3 and 4 people. Separate trips with home in between. |
 | `ICPC_2026_Nanjing_Shenyang_Budget (2).xlsx` | Older combined Nanjing + Shenyang plan for 3 people: A Balanced / B Budget / C Home between, plus an Itineraries sheet. |
-| `ICPC_flight_fares_30Sep2026.xlsx` | Trip.com fares found via the Bright Data scraper, compared against the fares the plans used before. Rows 11–22 checked 30 Sep, rows 38–63 checked 1 Oct 2026, rows 65–73 Hohhot gateway + other flight sources. Sheets: "Connector notes", "Trains & hotels" (Ctrip trains and Trip.com hotels checked 1 Oct), "12306 & ChinaTicketOnline" (official fares, sale times and reseller mark-ups, checked 3 Oct), "10 Oct – Dec & Jan checks" (Trip.com / SlickTrip / 12306 / CTO figures behind the Shanghai, Nanchang, Shenyang G-train and Hong Kong sheets). |
+| `ICPC_flight_fares_30Sep2026.xlsx` | Trip.com fares found via the Bright Data scraper, compared against the fares the plans used before. Rows 11–22 checked 30 Sep, rows 38–63 checked 1 Oct 2026, rows 65–73 Hohhot gateway + other flight sources. Sheets: "Connector notes", "Trains & hotels" (Ctrip trains and Trip.com hotels checked 1 Oct), "12306 & ChinaTicketOnline" (official fares, sale times and reseller mark-ups, checked 3 Oct), "10 Oct – Dec & Jan checks" (Trip.com / SlickTrip / 12306 / CTO figures behind the Shanghai, Nanchang, Shenyang G-train and Hong Kong sheets), "Shenyang hotels by distance" (22 Oct: budget hotels around NEU grouped walk / metro / taxi, with metro and taxi time + fare estimates and the metro stations near NEU). |
 | `scripts/recalc_check.py` | Recalculates every workbook in Python, with no Excel or LibreOffice needed. Prints the key totals and exits 1 on any formula error. |
 | `scripts/q12306.py` | Lists every 12306 train on a route/date with official fares, over plain HTTP (no browser, no login). Works from the cloud container. On Windows set `Q12306_INSECURE=1` (12306's CA is not in the Windows store); it is slow (~1 s per train), so the built-in browser snippet below is faster. |
 | `requirements.txt` | Python deps: `openpyxl` (edit workbooks), `formulas` (recalculate). |
@@ -142,7 +142,9 @@ then run `fetch()` from inside that page (same origin, no login needed):
 - Fast extraction: `fetch()` the list URL from inside a trip.com page and parse the server-rendered HTML (`[data-offline-hotelId]` cards: `.hotelName`, `.score`, `.comment-num`, `.position-desc`, `.room-name`; the last `CNY n` in the card is the total incl. taxes). Only the first 5 cards are server-rendered.
 - Searching with 3 or 4 adults in **1 room** finds family rooms that fit the whole team (e.g. RiCH Family Room ¥976/3 nights for 3 or 4). These beat Booking.com's 2-room prices for 4 people.
 - Hong Kong: Trip.com is not cheaper than Booking.com near HKU; cheap Tsim Sha Tsui guesthouses there are rated < 7.
-- Tripadvisor's MCP tool timed out; SlickTrip hotel search is Google Hotels data and misses most Chinese budget hotels.
+- Tripadvisor's MCP tool works from the cloud (22 Oct) when calls are sent **one at a time** (parallel calls time out) and carries Trip.com /
+  Agoda / Booking prices for Chinese budget chains – see "Shenyang budget hotels by distance" below. SlickTrip hotel search is Google Hotels
+  data and misses most Chinese budget hotels.
 
 - If a workbook is open in Excel, saving fails with PermissionError (look for `~$*.xlsx` lock files). Ask the user to close it.
 
@@ -492,6 +494,43 @@ Compare rows 22–28 and Sleep check rows 12–18 were inserted (everything belo
   costs a Manzhouli hotel night + K2624 11:15 → Harbin 23:12 + a Harbin night, arriving 13 Nov.
 - Builder: `build_shenyang_cheap_out.py` (scratchpad, imports `build_shenyang_sleep.py`) – not committed; the sheets are the record.
 
+## Shenyang budget hotels by distance from NEU (22 Oct 2026, cloud session)
+
+Request: budget hotels at walking, metro and taxi distance from NEU. Record: sheet `Shenyang hotels by distance` in
+`ICPC_flight_fares_30Sep2026.xlsx` (builder `build_neu_sheet.py` + `neu_hotels.py` in the scratchpad, not committed; the sheet is the record).
+Stay 12–15 Nov, price = **2 rooms × 3 nights** (team price for 3 or 4 people).
+
+### Getting to NEU (new knowledge)
+
+- **Metro Line 3 east section opened 30 Jun 2026** and runs along Wenhua Road past the campus. Nearest station: **Sanhaojie 三好街 (L3)**
+  41.7691, 123.4222, ~0.5 km from the NEU landmark; also Fangxing Guangchang 方型广场 (L3) ~1.0 km, Gongye Zhanlanguan 工业展览馆 (L2/L3
+  interchange) ~1.1 km, Shi Tushuguan 市图书馆 (L2) ~1.3 km. Line 3 order: … Shayang (L4) – Nanbamalu – Jiaxing Jie – Fangxing Guangchang –
+  Sanhaojie – Gongye Zhanlanguan (L2) – Zhongkeyuan Jinshusuo – Nanta – Wenfu Lu – … Fangjialan.
+- **Line 2 now reaches Taoxian airport** (Taoxianjichang station; Gongye Zhanlanguan → airport ≈ 14 stops) – a cheap airport ⇄ NEU option
+  for the Hohhot + Spring plan (taxi assumed ¥90 so far).
+- Station coordinates come from Nominatim (`nominatim.openstreetmap.org/search?q=<Chinese name>&viewbox=123.30,41.85,123.52,41.70&bounded=1`,
+  keep `class=railway`). Overpass API mirrors time out or reset from the cloud.
+- Taxi tariff assumed **¥9 for 3 km + ¥2/km** (taxi-rechner.de, "1 Jan 2025"; older China Daily guide: ¥8 + ¥1.82/km) – not confirmed
+  officially. Metro from ¥2 per person, by distance. With 3–4 people one taxi costs about the same as the metro (¥9–23 per car).
+
+### Results (Tripadvisor 4 adults / 2 rooms, 22 Oct, USD incl. partner price, + $1–3 tax)
+
+| Group | Cheapest found | Notes |
+|---|---|---|
+| **Walk (≤ 1.5 km)** | 7 Days Inn Sanhao St Liaozhan 1.3 km **$95**; Home Inn Sanhao St / Shengjing 2nd Hospital 1.1 km $105; **7 Days Inn Sanhao St 0.7 km $109**; Jin Ke 0.95 km $146 (= Trip.com ¥1,044, 9.6) | No-review listings on Tripadvisor; check reviews, twin beds and foreign-guest registration on Trip.com before booking. Booking.com: Atour Youth Avenue Square 1.0 km ¥1,591 |
+| **Metro (≤ 850 m to a station, ≤ 1 change)** | Langrun 2.2 km $62 (independent, no reviews); Home Inn Youth Park Metro $86; 7 Days Maluwan $87; Hanting Bus Station North (Nanta L3) $95 (1-room price); LazyBee hostel $112 (4.3); Home Inn Nanta (Wenfu Lu L3) $139 (3.9, 134) | ~25–35 min door to door |
+| **Taxi (13–30 min, ¥10–23 per car)** | YDOO & YGOO / Xinting / Dongdong $58–60 (no reviews); **Jinjiang Inn North Station 6.9 km $71 (4.3, 84)**; Home Inn North Stn South Exit $69; **Bestay Huaiyuanmen 4.2 km $77** (Booking.com direct ¥516); 7 Days Premium Zhongshan Sq 3.7 km $86 (4.1, 83) | Bestay by metro needs L1 → L2 → L3 (~39 min) |
+
+- Cost of distance: 4 commute trips (14 Nov ×2, 15 Nov ×2) by taxi ≈ ¥36–92 for the team. Cheapest walkable chain ($95 ≈ ₮342k) vs cheapest
+  taxi-distance chains ($71 ≈ ₮255k, Bestay ¥516 ≈ ₮277k) + 4 taxi rides saves only **~₮35–40k for the whole team** (₮10–13k per person;
+  ~₮95k with the no-review $58 hotels) for a 20–30 min commute on contest morning – the sleep rule favours the walk group. Versus the current `Sleep value` hotel (Ji Hotel twin ¥1,371), 7 Days Inn Sanhao St saves
+  ~₮0.34M for the team if it has twin rooms and takes foreigners.
+- Tool behaviour (22 Oct): Booking.com coordinate searches with a price cap return only 1–3 Shenyang budget properties (thin inventory).
+  Expedia `search_hotels` → `Unknown error`. Tripadvisor: `location` strings such as "Northeastern University, Shenyang" time out and "Nanhu
+  Park, Shenyang" resolves to the whole city (geoId 297454), so search the city with `sortBy: PRICE_LOW_TO_HIGH`, `limit: 100` (works, ~250 kB
+  saved to a file) and compute distances from each hotel's `geocode`. `priceShown` = room-night `rate` × nights × rooms (all rooms, all nights);
+  the provider is the `p=` parameter of `commerceUrl` (`CtripTA` = Trip.com). The `minPrice`/`maxPrice` filter returned just 1 hotel – don't use it.
+
 ## Open items / next optimization ideas
 
 - **Book soon (10 Oct):** Spring UB ⇄ PVG fares and MIAT UB–HKG are far below their usual levels (SlickTrip "low"); Air China UB → PEK 17 Dec $157.
@@ -502,6 +541,9 @@ Compare rows 22–28 and Sleep check rows 12–18 were inserted (everything belo
   Z111 3 Dec 08:00, D136 6 Dec 09:45, D17 11 Jan 10:00. 12306 needs a registered account with passport details.
 - Wildcard for Shanghai (shu_icpc@163.com) – ask before booking anything non-refundable. Nanchang fee, schedule and hotel still unconfirmed.
 - Not yet researched: Beijing–Shenyang low-cost flights; Trip.com Hong Kong hotels near HKU (earlier check: not cheaper than Booking.com).
+- Shenyang hotels (22 Oct): on Trip.com (built-in browser) check 7 Days Inn Sanhao St (0.7 km, $109 for 2 rooms × 3 nights) and Home Inn
+  Sanhao St (1.1 km, $105) for twin rooms, reviews and "accepts foreign guests"; re-check Aiyi Future Serviced Apartment (1.8 km, family 2-bed
+  room for 4, ¥528 on 1 Oct). If one holds, swap it into `Shenyang – Sleep value` (saves ~₮0.3M). Not yet in any plan sheet.
 
 - Home-between plan: Air China 08:10 on 10 Nov ($172 vs $219) saves ~₮507k for 3 people but needs a Beijing night on 9 Nov (~300 CNY). Not applied yet.
 - Hotels re-checked on Trip.com 1 Oct (see "Trains & hotels" sheet). Bestay's low price is real (8.2, 1,062 reviews). Hong Kong unchanged.
