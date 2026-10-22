@@ -14,7 +14,7 @@ In `ICPC_Single_Contest_Plans.xlsx` every "3 ppl" column / H column = the UNFUND
 
 | File | What it is |
 |---|---|
-| `ICPC_Single_Contest_Plans.xlsx` | **Main plan.** Compare sheet + 2–3 variants each for Shenyang (7), Shanghai (5), Nanchang (3), Hong Kong (6) and EC Final Hangzhou (2), costed for 3 and 4 people. Separate trips with home in between. |
+| `ICPC_Single_Contest_Plans.xlsx` | **Main plan.** Compare sheet + variants for Shenyang (14, plus the `Shenyang – Way out` comparison sheet), Shanghai (5), Nanchang (3), Hong Kong (6) and EC Final Hangzhou (2), costed for 3 and 4 people. Separate trips with home in between. |
 | `ICPC_2026_Nanjing_Shenyang_Budget (2).xlsx` | Older combined Nanjing + Shenyang plan for 3 people: A Balanced / B Budget / C Home between, plus an Itineraries sheet. |
 | `ICPC_flight_fares_30Sep2026.xlsx` | Trip.com fares found via the Bright Data scraper, compared against the fares the plans used before. Rows 11–22 checked 30 Sep, rows 38–63 checked 1 Oct 2026, rows 65–73 Hohhot gateway + other flight sources. Sheets: "Connector notes", "Trains & hotels" (Ctrip trains and Trip.com hotels checked 1 Oct), "12306 & ChinaTicketOnline" (official fares, sale times and reseller mark-ups, checked 3 Oct), "10 Oct – Dec & Jan checks" (Trip.com / SlickTrip / 12306 / CTO figures behind the Shanghai, Nanchang, Shenyang G-train and Hong Kong sheets). |
 | `scripts/recalc_check.py` | Recalculates every workbook in Python, with no Excel or LibreOffice needed. Prints the key totals and exits 1 on any formula error. |
@@ -462,6 +462,32 @@ Tianjin, Changchun, Qingdao only via Seoul ($262–436). Per person, workbook FX
   Tianjin TJP, Shanghai SHH, Shanghai Hongqiao AOH.
 - UBTZ: train **276 Ulaanbaatar 16:40 → Zamyn-Uud 07:20** daily (platskart ₮44,000 + ₮7,400, kupe ₮73,400 + ₮7,400, seat ₮26,000).
   No UBTZ train to Erenhot, Hohhot or Beijing on 9–11 Nov (`to_st` 279 / 272 / 266 return nothing).
+
+### Cheap way-out Shenyang plans in the workbook (22 Oct)
+
+Seven new sheets after `Shenyang – Overland home`, each = one way out + the rest of `Sleep value` (Ji Hotel twin rooms at ¥457 per
+night for 2 rooms, nights set by the arrival; K28 hard seat + Air China 12:55 home; meals by days away). Then `Shenyang – Way out`
+compares the way-out rows (flights, trains, jeep, transfers up to Shenyang; formulas over each sheet's rows) with the whole trip.
+Compare rows 22–28 and Sleep check rows 12–18 were inserted (everything below moved 7 rows; Compare L/M formulas rewritten).
+
+| Sheet | Way out per person | Whole trip per person (3 ppl) | Travel + stay 3 / 4 ppl | Sleep |
+|---|---|---|---|---|
+| Overland out (seats): UBTZ 276 Thu 12 Nov 16:40 seat ₮26,000 + jeep ~¥100 + 4654 + T301 seat → Sat 14 Nov 10:16, 1 hotel night | ₮191k | **₮1.70M** | ₮3.96M / ₮5.19M | POOR |
+| Overland out, berths (platskart ₮51,400, T301 hard sleeper ¥280.5) | ₮279k | ₮1.79M | ₮4.25M / ₮5.58M | POOR |
+| Manzhouli seats: Hunnu Wed 11 Nov + K7092 seat ¥119 + K928 seat ¥75 → 12 Nov 14:32, 3 nights | ₮472k | ₮2.27M | ₮5.62M / ₮7.22M | OK |
+| Hunnu Daxing + K341: Fri 13 Nov ¥921 + Daxing Express ¥40 + K341 seat → 14 Nov 08:47, 1 night | ₮575k | ₮2.08M | ₮5.03M / ₮6.62M | POOR |
+| MIAT 13 Nov + K341: ¥975 + Airport Express ¥30 + K341 seat, 1 night | ₮599k | ₮2.10M | ₮5.11M / ₮6.72M | POOR |
+| Hunnu Erenhot: Fri 13 Nov $136 + 4654 + T301 seat → 14 Nov 10:16, 1 night | ₮606k | ₮2.14M | ₮5.23M / ₮6.88M | POOR |
+| Hohhot red-eye: MIAT Wed 11 Nov 22:25 ¥946 + Hohhot hotel ~¥200 (assumed) + T304 seat → 13 Nov 10:16, 2 nights | ₮647k | ₮2.34M | ₮5.83M / ₮7.66M | WATCH |
+| (Budget, older: MIAT $150 + K53 soft) / (Sleep value: Air China ¥1,291 + G153) | ₮681k / ₮911k | ₮2.14M / ₮2.69M | | WATCH / BEST |
+
+- Real-date checks: UBTZ 276 runs 9–12 Nov (seat ₮26,000); 4654 / T301 on 11 and 13 Nov (on sale 30 Oct 15:00 for 13 Nov); K341 13 Nov
+  (30 Oct 10:00); T304 12 Nov (29 Oct 14:00); K7092 11 Nov (28 Oct 16:00); K928 / T184 12 Nov seat ¥75 (29 Oct 10:00). Ji Hotel 14–15 Nov
+  ¥457 for 2 rooms (Trip.com); 2 nights assumed at the same rate. Hunnu MR861 to Erenhot also flies 13 Nov ($136).
+- **Manzhouli always needs overnight travel:** Ctrip (22 Oct) has no direct Manzhouli → Harbin / Shenyang flight; every connection stops
+  overnight in Hohhot or Beijing (e.g. G54696 19:40 via Ulanhot to Hohhot, then Spring next evening, ¥590). Without the night train it
+  costs a Manzhouli hotel night + K2624 11:15 → Harbin 23:12 + a Harbin night, arriving 13 Nov.
+- Builder: `build_shenyang_cheap_out.py` (scratchpad, imports `build_shenyang_sleep.py`) – not committed; the sheets are the record.
 
 ## Open items / next optimization ideas
 
