@@ -286,8 +286,8 @@ whole cost per person (travel + stay + fee + other); funded 4 ppl = travel + sta
 |---|---|---|---|
 | Shenyang – Budget | ₮2.14M | ₮6.96M | ₮5.7M |
 | Shenyang – Comfort | ₮2.46M | ₮8.04M | ₮4.7M |
-| Shenyang – Overland home (22 Oct) | ₮2.41M | ₮7.84M | ₮4.9M |
-| Shenyang – Sleep value / Sleep first (22 Oct) | ₮2.73M / ₮2.93M | ₮9.04M / ₮9.64M | ₮3.8M / ₮3.2M |
+| Shenyang – Overland home (22 Oct) | ₮2.37M | ₮7.67M | ₮5.0M |
+| Shenyang – Sleep value / Sleep first (22 Oct) | ₮2.69M / ₮2.89M | ₮8.87M / ₮9.47M | ₮3.9M / ₮3.4M |
 | Nanchang – Sleeper | ₮2.50M | ₮8.19M | ₮4.6M |
 | Shanghai – Sleeper | ₮2.78M | ₮9.23M | ₮3.6M |
 | Shanghai – Fly out, train home / Nonstop cheap rooms | ₮2.82M / ₮2.90M | ₮9.28M / ₮9.48M | ₮3.6M / ₮3.4M |
@@ -362,9 +362,11 @@ was 32, so it is `Shenyang – Overland home`); openpyxl's copy_worksheet warns 
 
 | Plan | Out | Hotel 12–15 Nov | Back | 3 ppl total / per person | 4 ppl (₮12M) |
 |---|---|---|---|---|---|
-| **Sleep first** | Air China CA902 11:50 $203 + G153 17:27 → Shenyang 20:04 ¥369 | NEU International, 2 Superior Twin 38 m², 580 m, 9.7 (1,998), ¥2,388 | K28 22:24 hard seat ¥112 + Air China 12:55 $171 | ₮7.60M / ₮2.93M | ₮9.64M |
-| **Sleep value** | same | Ji Hotel Sanhao St, 2 Budget Twin (King Koil), 940 m, 9.0 (1,433), ¥1,371 | same | ₮7.00M / ₮2.73M | ₮9.04M |
-| **Overland home** | same | Ji Hotel | K1568 22:50 → Hohhot 17:02 hard sleeper ¥304.5, 4652 22:50 → Erenhot 06:50 ¥115, jeep ~¥100 (assumed), UBTZ 275 18:05 → UB 09:20 platskart ₮51,400; home 18 Nov | ₮6.10M / ₮2.41M | ₮7.84M |
+| **Sleep first** | Air China CA902 11:50 ¥1,291 (Ctrip) + G153 17:27 → Shenyang 20:04 ¥369 | NEU International, 2 Superior Twin 38 m², 580 m, 9.7 (1,998), ¥2,388 | K28 22:24 hard seat ¥112 + Air China 12:55 $171 | ₮7.47M / ₮2.89M | ₮9.47M |
+| **Sleep value** | same | Ji Hotel Sanhao St, 2 Budget Twin (King Koil), 940 m, 9.0 (1,433), ¥1,371 | same | ₮6.88M / ₮2.69M | ₮8.87M |
+| **Overland home** | same | Ji Hotel | K1568 22:50 → Hohhot 17:02 hard sleeper ¥304.5, 4652 22:50 → Erenhot 06:50 ¥115, jeep ~¥100 (assumed), UBTZ 275 18:05 → UB 09:20 platskart ₮51,400; home 18 Nov | ₮5.97M / ₮2.37M | ₮7.67M |
+
+(Totals after the multi-source check below; with Trip.com's $203 they were ₮7.60M / ₮7.00M / ₮6.10M for 3 people.)
 
 - Why Air China 11:50: MIAT 07:30 ($154 SlickTrip / $170 Trip.com) needs a ~04:00 wake-up; Air China costs ~$33–49 pp more. Lands 13:55, so
   G153 17:27 is booked with G141 16:00 → Shenyang North 18:29 (¥369) as a free same-day change if the flight is on time.
@@ -398,10 +400,27 @@ was 32, so it is `Shenyang – Overland home`); openpyxl's copy_worksheet warns 
 - Erenhot → Zamyn-Uud: shared jeeps ¥50–110 pp (Wikivoyage, blogs); a bus ~¥40–60 also reported. Not verified for 2026.
 - The 2026 Shenyang invitation (fee, schedule, venue) was still not found on 22 Oct; the 2024 and 2025 editions were at NEU Nanhu.
 
+### Multi-source check of the UB → Shenyang leg (22 Oct, for 12 Nov)
+
+| Source | Air China CA902 11:50 → PEK | MIAT OM223 07:30 → PEK | UB → Shenyang one ticket | How it was read |
+|---|---|---|---|---|
+| **Ctrip** (flights.ctrip.com) | **¥1,291** (cheapest) | ¥1,096 | Air China + Spring via Hohhot 13:00 → 21:15 ¥1,561; Air China via PEK 11:50 → 22:40 ¥2,021; MIAT via PEK ¥1,835–1,905 | Built-in browser, `flights.ctrip.com/online/list/oneway-uln-bjs?depdate=YYYY-MM-DD&cabin=y_s&adult=1&child=0&infant=0` (city code **ULN**), `get_page_text` after ~25 s. Date strip: 11 / 13 Nov ¥921 |
+| Kiwi.com | $200 | $167 | Air China UB 13:00 → Hohhot 14:40 + Spring HET 19:05 → SHE 21:15, self-transfer, $237 (no checked bag); 13 Nov $215 | Built-in browser, `kiwi.com/en/search/results/ulaanbaatar-mongolia/shenyang-china/YYYY-MM-DD/no-return?currency=usd`. Decline the cookie banner first |
+| Trip.com | $203 | $170 | – | see above |
+| Google Flights | unpriced | $172 | Air China 11:50 → PEK → SHE 20:55, unpriced | Bright Data `scrape_as_markdown` of `google.com/travel/flights?q=…` |
+| SlickTrip | $316 (13 Nov) | $154 | MIAT + China Southern via PEK → PKX $491 | MCP |
+
+- Not usable: Expedia MCP (geo-fenced for Mongolia), Kayak / Skyscanner / Kiwi through Bright Data (robots.txt, needs KYC),
+  Aviasales (empty), Qunar (redirects to the home page).
+- Trains for 12 Nov on Ctrip's train list match 12306: G153 17:27 → Shenyang 20:04 ¥369, G141 16:00 / G125 16:05 ¥369,
+  G151 15:55 → Shenyang 18:24 ¥355, G3611 19:48 → Shenyang North 22:59 ¥328. 12go.asia lists the same trains at resale prices
+  (1st class ~$90).
+- Workbook now budgets CA902 at Ctrip's ¥1,291 (−₮38k pp vs Trip.com). Ctrip needs a Ctrip account and Alipay or a foreign card.
+
 ## Open items / next optimization ideas
 
 - **Book soon (10 Oct):** Spring UB ⇄ PVG fares and MIAT UB–HKG are far below their usual levels (SlickTrip "low"); Air China UB → PEK 17 Dec $157.
-- Shenyang sleep-first plans: book Air China CA902 12 Nov on Trip.com and the twin rooms now (free cancellation); trains G153 29 Oct 10:00,
+- Shenyang sleep-first plans: book Air China CA902 12 Nov on Ctrip (¥1,291; Trip.com $203 fallback) and the twin rooms now (free cancellation); trains G153 29 Oct 10:00,
   K28 or K1568 1 Nov 09:30, 4652 2 Nov 14:00; UBTZ 275 is on sale already. Confirm the Shenyang registration day before relying on a 20:30
   arrival on 12 Nov (it is two days early, so only a schedule change would matter).
 - Trains to buy on the sale date: Z366 29 Oct 08:15, K53 30 Oct 10:00, K54 1 Nov 09:00, G17 19 Nov 12:45, D8 22 Nov 14:45,
