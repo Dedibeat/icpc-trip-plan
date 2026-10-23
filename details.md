@@ -553,6 +553,22 @@ Wording: the user's "way out" = UB → Shenyang, "way in" = Shenyang → UB (hom
 
   The overland routes reach UB Wed 18 Nov 09:20 (Thu 19 Nov if you stay the 15th). Overland saves ₮0.27M per person net of 2 extra days at ¥110.
 
+### User decision (23 Oct, later): overland way in is "too extreme", so come home via Beijing + MIAT
+
+There is no cheap middle option. Every flight home uses Beijing → UB (MIAT $173–176, Air China $171–185), which is ~₮0.62M per person.
+Shenyang → UB tickets cost $250 or more (Kiwi 15 Nov: $303+). The way to Beijing then sets the comfort level (per person, way in only):
+
+| Way to Beijing | Per person |
+|---|---|
+| K28 hard seat + MIAT 11:30 | ₮699k |
+| **K54 hard sleeper 22:00 → 06:58 + MIAT 11:30 (picked)** | **₮730k** |
+| K54 soft sleeper | ₮780k |
+| G156 19:05 → Chaoyang + Dequan Railway Station Hotel (¥304 for 3 in 1 room, Booking.com) + taxi to PEK | ₮838k |
+| Stay the 15th + K54 Mon + MIAT Tue 20:45 | ₮741k + room |
+
+Whole trip, Hohhot + Spring out + Sunshine 3 nights + K54 + MIAT: **₮2.22M per person / ₮6.67M for the team** (Manzhouli seats out: ₮1.98M / ₮5.93M).
+`Shenyang_plan.md` now recommends this.
+
 ### Hotels with a 1.8 m bed for 2 (Trip.com 23 Oct, 3 adults, 1 room, team totals)
 
 Ids for `trip_hotel_detail.js`: Sunshine Select Homestay **118781429** `sunshine-select-homestay`; Westin Audio-Visual Homestay
@@ -585,7 +601,7 @@ The calculator lives in the scratchpad (`combos.py`) and is not committed; the n
 ## Open items / next optimization ideas
 
 - **Book soon (10 Oct):** Spring UB ⇄ PVG fares and MIAT UB–HKG are far below their usual levels (SlickTrip "low"); Air China UB → PEK 17 Dec $157.
-- **Shenyang (23 Oct):** book the Sunshine Select room on Trip.com now (free cancellation). Buy K1568 on 1 Nov 09:30 and 4652 on 2 Nov 14:00 (or the 16 / 17 Nov trains if staying the 15th), and UBTZ 275. Re-check MIAT / Air China PEK → UB on a PC (Trip.com / Ctrip) if flying home. The workbook does not have the 23 Oct way-in / hotel figures yet.
+- **Shenyang (23 Oct):** book the Sunshine Select room on Trip.com now (free cancellation) and MIAT OM224 16 Nov 11:30 (~$173–176). Buy K54 on 1 Nov 09:00 (the 16 Nov K54 opens 2 Nov if staying the 15th). The overland way in was dropped as too extreme. Re-check MIAT / Air China PEK → UB on a PC (Trip.com / Ctrip) if flying home. The workbook does not have the 23 Oct way-in / hotel figures yet.
 - Shenyang sleep-first plans: book Air China CA902 12 Nov on Ctrip (¥1,291; Trip.com $203 fallback) and the twin rooms now (free cancellation); trains G153 29 Oct 10:00,
   K28 or K1568 1 Nov 09:30, 4652 2 Nov 14:00; UBTZ 275 is on sale already. Confirm the Shenyang registration day before relying on a 20:30
   arrival on 12 Nov (it is two days early, so only a schedule change would matter).
