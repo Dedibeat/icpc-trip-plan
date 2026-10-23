@@ -5,6 +5,7 @@ Ulaanbaatar to ICPC Asia EC contests.
 
 **Funding model (user, 10 Oct 2026):** one regional is **funded with ₮12,000,000 and the coach travels** (4 people);
 the other regional is **unfunded: the 3 contestants pay everything** themselves. Which regional is which is not decided yet.
+**Shenyang (user, 23 Oct 2026): the team pays everything itself (3 people), and two people sharing a 1.8 m bed is fine.** Focus is the cost of the way out (UB → Shenyang), the hotel and the way in (Shenyang → UB); the team may stay the night of 15 Nov after the contest.
 In `ICPC_Single_Contest_Plans.xlsx` every "3 ppl" column / H column = the UNFUNDED regional (`Compare!B12` = ₮0, so the
 "out-of-pocket per person" is the whole cost per contestant) and every "4 ppl" column / K column = the FUNDED regional
 (`Compare!B5` = ₮12M). Funding covers flights, trains, hotels, meals and local transport; the contest fee and "Other" costs
@@ -17,6 +18,9 @@ In `ICPC_Single_Contest_Plans.xlsx` every "3 ppl" column / H column = the UNFUND
 | `ICPC_Single_Contest_Plans.xlsx` | **Main plan.** Compare sheet + variants for Shenyang (15, plus the `Shenyang – Way out` comparison sheet), Shanghai (5), Nanchang (3), Hong Kong (6) and EC Final Hangzhou (2), costed for 3 and 4 people. Separate trips with home in between. |
 | `ICPC_2026_Nanjing_Shenyang_Budget (2).xlsx` | Older combined Nanjing + Shenyang plan for 3 people: A Balanced / B Budget / C Home between, plus an Itineraries sheet. |
 | `ICPC_flight_fares_30Sep2026.xlsx` | Trip.com fares found via the Bright Data scraper, compared against the fares the plans used before. Rows 11–22 checked 30 Sep, rows 38–63 checked 1 Oct 2026, rows 65–73 Hohhot gateway + other flight sources. Sheets: "Connector notes", "Trains & hotels" (Ctrip trains and Trip.com hotels checked 1 Oct), "12306 & ChinaTicketOnline" (official fares, sale times and reseller mark-ups, checked 3 Oct), "10 Oct – Dec & Jan checks" (Trip.com / SlickTrip / 12306 / CTO figures behind the Shanghai, Nanchang, Shenyang G-train and Hong Kong sheets). |
+| `Shenyang_plan.md` | **Printed Shenyang plan (23 Oct)** for the self-paid team of 3: way-in options, 1.8 m-bed hotels, whole-trip totals, day by day, booking calendar. The user reads plans in the Claude app and cannot open the xlsx easily, so plans go in markdown (and in the chat). Not yet copied into the workbook. |
+| `scripts/cto.py` | ChinaTicketOnline train list for any date (official fare, CTO price + fee, sale time). Plain HTTP, works from the cloud. |
+| `scripts/trip_hotel_list.js`, `scripts/trip_hotel_detail.js`, `scripts/parse_trip_detail.py` | Trip.com hotels from the cloud with headless Chromium (Playwright): cheapest 10 near NEU, then each hotel's rooms with bed widths. See "23 Oct" below. |
 | `scripts/recalc_check.py` | Recalculates every workbook in Python, with no Excel or LibreOffice needed. Prints the key totals and exits 1 on any formula error. |
 | `scripts/q12306.py` | Lists every 12306 train on a route/date with official fares, over plain HTTP (no browser, no login). Works from the cloud container. On Windows set `Q12306_INSECURE=1` (12306's CA is not in the Windows store); it is slow (~1 s per train), so the built-in browser snippet below is faster. |
 | `requirements.txt` | Python deps: `openpyxl` (edit workbooks), `formulas` (recalculate). |
@@ -172,7 +176,7 @@ C Home between ₮15.61M (subtotal fits; ~₮0.6M over with contingency).
 
 ## Cloud session notes (9 Oct 2026)
 
-- **Trip.com is closed to automated access from the cloud** (on Windows the built-in browser still reads it, see the 10 Oct section). The Bright Data scraper refuses trip.com ("not available for immediate
+- **Trip.com flights are closed to automated access from the cloud** (on Windows the built-in browser still reads them, see the 10 Oct section). **Update 23 Oct: Trip.com hotels and trains do load from the cloud in Playwright Chromium with `--disable-blink-features=AutomationControlled`** (see the 23 Oct section). The Bright Data scraper refuses trip.com ("not available for immediate
   residential (no KYC) access … robots.txt"), and headless Chromium gets a slider captcha. So no Air China fares from a cloud
   session. SlickTrip still prices MIAT, Spring, China Southern.
 - 12306 answers plain HTTP from the container: `python scripts/q12306.py BJP SHH 2026-10-20 300`.
@@ -492,9 +496,96 @@ Compare rows 22–28 and Sleep check rows 12–18 were inserted (everything belo
   costs a Manzhouli hotel night + K2624 11:15 → Harbin 23:12 + a Harbin night, arriving 13 Nov.
 - Builder: `build_shenyang_cheap_out.py` (scratchpad, imports `build_shenyang_sleep.py`) – not committed; the sheets are the record.
 
+## 23 Oct 2026 session: Shenyang way in (Shenyang → UB) + 1.8 m-bed hotels (in `Shenyang_plan.md`)
+
+Wording: the user's "way out" = UB → Shenyang, "way in" = Shenyang → UB (home).
+
+### What works from the cloud container (23 Oct)
+
+- **Trip.com hotels: yes**, with Playwright Chromium (global `playwright`, `NODE_PATH=$(npm root -g)`), launch flag
+  `--disable-blink-features=AutomationControlled` and context locale `zh-CN`. Without the flag the hotel pages show a sign-in wall.
+  - The list page shows only the 10 cheapest cards; it does not page further without a login. Filters appended to `listFilters` in the URL seem to be ignored.
+  - Hotel pages work only on the SEO URL with the right slug: `https://www.trip.com/hotels/shenyang-hotel-detail-<id>/<slug>/?checkIn=…&checkOut=…&adult=3&crn=1&curr=CNY&locale=en-XX`.
+  - Clicking "Room Details" opens a popup with bed widths ("2 queen beds (1.8m wide)"). On Trip.com, "queen" = 1.8 m and "double" = 1.5 m here.
+  - Totals read "Total price: CNY n" for several nights and "Total (incl. taxes & fees): CNY n" for one night.
+- **Trip.com trains: yes**, `https://www.trip.com/trains/china/list?departureStation=Shenyang&arrivalStation=Hohhot&departDate=YYYY-MM-DD&locale=en-XX&curr=CNY`.
+  - Official fares; you can reserve before sales open.
+  - It sells 4652 Hohhot → Erenhot. "Jining" resolves to Jining in Shandong, so use the 12306 / CTO station names for Jining South.
+- **Trip.com and Ctrip flights: no.** Headless Chromium gets "whaleguard block", and Bright Data refuses Ctrip (needs KYC).
+- **Kiwi.com: yes**, with Playwright (`kiwi.com/en/search/results/beijing-china/ulaanbaatar-mongolia/YYYY-MM-DD/no-return?currency=usd`). Click "Reject all" on the cookie banner. It prices Air China (unlike Google and SlickTrip, which show $350).
+- **ChinaTicketOnline: yes**, plain HTTP POST (`scripts/cto.py`). Erenhot is `二连`; `二连浩特` returns nothing. Jining South is `集宁南`.
+- **UBTZ e-ticket: no**, connection reset through the proxy. The 22 Oct figures (Windows session) still stand.
+- Agoda: cookie wall only; not tried further.
+- Running 3 Chromium instances at once crashed pages ("Target page closed"). Run them one or two at a time.
+
+### Way-in facts (Sun 15 – Thu 19 Nov 2026)
+
+- **12306** (queried for 6 Nov; fares fixed):
+  - Shenyang → Hohhot / Hohhot East / Jining South: only K1520 15:27, T302 17:20 and **K1568 22:50**.
+    - K1568: seat ¥177.5 / hard sleeper ¥304.5 to Hohhot 17:02; seat ¥163.5 / hard sleeper ¥280.5 to Jining South 14:38.
+  - Jining South → Erenhot: **4653 00:59 → 06:50**, seat ¥44.5 / hard sleeper ¥90.5 / soft ¥140.5; 6857 10:29 → 17:30, seat ¥38.5.
+  - Hohhot → Erenhot: 6856 08:11 (¥53), K7924 10:16 → 15:53 (¥69 / ¥123; not on CTO for 16–17 Nov), **4652 22:50 → 06:50** (¥61 / ¥115).
+  - Hohhot East → Ulanqab has D/G trains every few minutes (~40 min, ¥40–53).
+  - Shenyang → Beijing night trains: K342 19:34, K54 22:00, K28 22:24, K96 23:39, and K340 00:43 (seat ¥98). Day trains: T184 13:27 (seat ¥102), Z158 15:13 / Z114 15:52 (¥98).
+- **ChinaTicketOnline sale times:**
+  - K1568 / K28 15 Nov: 1 Nov 09:30. K54: 1 Nov 09:00.
+  - 4652 16 Nov: 2 Nov 14:00. 4653 17 Nov: 3 Nov 15:00.
+  - The 16 Nov trains open a day later.
+  - CTO adds $7.5–10.5 per ticket.
+- **Flights** (SlickTrip / Kiwi / Google, 23 Oct):
+  - Beijing → UB, Mon 16 Nov: MIAT OM224 PEK 11:30 → 13:50 **$173 Kiwi / $176**; Air China CA955 12:55 $185 Kiwi ($350 SlickTrip / Google); Air China CA901 08:25 $646; Hunnu MR802 PKX 00:05 (Sunday night) $243.
+  - Beijing → UB, Tue 17 Nov: only Air China CA901 08:10 and MIAT 20:45 ($176) nonstop.
+  - Hohhot → UB, Mon 16 Nov: MIAT OM258 01:15 → 03:15 $171 (Sunday night), Aero Mongolia M0802 09:30 → 11:00 (not listed on 17 Nov), Air China CA757 10:10 → 12:00 (daily, $350 SlickTrip).
+  - Shenyang → Hohhot: Ruili DR5066 15:55 → 18:00, Air China CA8102 20:00 → 22:10. SlickTrip prices neither; its Air China through fare SHE → HET → UB is $250 with a Hohhot night.
+  - Shenyang → UB via PEK (CA1602 09:00 + CA955): $289 SlickTrip / $317 Kiwi.
+  - Erenhot → UB: Hunnu MR862 11:00 → 12:20, $146 (17 and 18 Nov).
+- **Zamyn-Uud → UB:** UBTZ 275 18:05 → 09:20. Wikivoyage (undated) also lists buses at 10:00 and 13:00 (~10 h to Tenger Plaza). Jeep Erenhot → Zamyn-Uud: ¥50–110 in traveller reports, not verified.
+- **Per person, workbook FX:**
+
+  | Way in | Per person |
+  |---|---|
+  | W1 overland seats via Jining South | ₮191k |
+  | W2 overland berths via Hohhot | ₮330k |
+  | W2-J berths via Jining South | ₮304k |
+  | W3 K28 + MIAT 11:30 | ₮699k |
+  | K54 + MIAT | ₮730k |
+  | Stay the 15th + K28 Mon + MIAT Tue 20:45 | ₮709k |
+
+  The overland routes reach UB Wed 18 Nov 09:20 (Thu 19 Nov if you stay the 15th). Overland saves ₮0.27M per person net of 2 extra days at ¥110.
+
+### Hotels with a 1.8 m bed for 2 (Trip.com 23 Oct, 3 adults, 1 room, team totals)
+
+Ids for `trip_hotel_detail.js`: Sunshine Select Homestay **118781429** `sunshine-select-homestay`; Westin Audio-Visual Homestay
+**123859823** `westin-audio-visual-homestay`; Shenyang Jingwan Apartment **118627589** `shenyang-jingwan-apartment`; Jianing Apartment
+1771202 `jianing-apartment-hotel-shenyang-wenhua-road`; Langrun 1436374 `langrun-hotel`; 7-Day Premium Taiyuan St 5246423 `7-day-premium`;
+7 Days Inn Sanhao St 1987395.
+
+| Room | Beds | 1 n (14–15) | 3 n (12–15) | 15–16 | 4 n (12–16) | Cancellation |
+|---|---|---|---|---|---|---|
+| Sunshine Elegant 2-bed (9.6, 585 reviews; Qingnian St 236, 2.9 km to NEU) – **pick** | 2 × 1.8 m | ¥156 | ¥447 | ¥135 | ¥582 | Free until 12:00 on the check-in day |
+| Sunshine 2-bed AV | 1.8 m + 1.55 m sofa bed | ¥135 | ¥377 | ¥107 | ¥484 | Free |
+| Westin AV Quadruple / Luxe Family (9.5, 397) | 2 × 1.8 m / 1.8 + 1.5 m | ¥135 / 125 | ¥380 / 350 | ¥110 / 100 | ¥490 / 450 | Only within 30 min of booking |
+| Jingwan Family (9.1, 27; 1.4 km walk) | 1.8 m + single bed | ¥141 | ¥423 | ¥141 | ¥564 | Free until 18:00 on the check-in day |
+
+Booking.com's cheapest near NEU was ¥1,267 for 3 nights, at the same address as Sunshine, so use Trip.com for Shenyang hotels.
+These homestays have no front desk: book the night of 15 Nov (¥107–141) to keep bags and shower before a 22:50 train.
+
+### Whole trip per person (team pays; Sunshine hotel; meals + local ¥110 per day; fee, insurance, eSIM ₮334k per person; no contingency)
+
+| Combo | Per person | Team |
+|---|---|---|
+| Hohhot + Spring + W2 | ₮1.92M | ₮5.76M |
+| Hohhot + Spring + W3 | ₮2.19M | ₮6.58M |
+| Hohhot + Spring + stay the 15th + W4 | ₮2.00M | ₮6.00M |
+| Manzhouli seats + W2 | ₮1.67M | ₮5.02M |
+| Overland out (seats) + W1 (floor, poor sleep) | ₮1.09M | ₮3.26M |
+
+The calculator lives in the scratchpad (`combos.py`) and is not committed; the numbers are in `Shenyang_plan.md`.
+
 ## Open items / next optimization ideas
 
 - **Book soon (10 Oct):** Spring UB ⇄ PVG fares and MIAT UB–HKG are far below their usual levels (SlickTrip "low"); Air China UB → PEK 17 Dec $157.
+- **Shenyang (23 Oct):** book the Sunshine Select room on Trip.com now (free cancellation). Buy K1568 on 1 Nov 09:30 and 4652 on 2 Nov 14:00 (or the 16 / 17 Nov trains if staying the 15th), and UBTZ 275. Re-check MIAT / Air China PEK → UB on a PC (Trip.com / Ctrip) if flying home. The workbook does not have the 23 Oct way-in / hotel figures yet.
 - Shenyang sleep-first plans: book Air China CA902 12 Nov on Ctrip (¥1,291; Trip.com $203 fallback) and the twin rooms now (free cancellation); trains G153 29 Oct 10:00,
   K28 or K1568 1 Nov 09:30, 4652 2 Nov 14:00; UBTZ 275 is on sale already. Confirm the Shenyang registration day before relying on a 20:30
   arrival on 12 Nov (it is two days early, so only a schedule change would matter).
