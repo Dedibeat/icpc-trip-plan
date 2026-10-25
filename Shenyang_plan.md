@@ -213,6 +213,26 @@ Sleep before the contest:
 - Trip.com and Ctrip flight prices could not be read from the cloud ("whaleguard" block). Re-check MIAT and Air China Beijing → UB on a PC before buying; Ctrip was the cheapest source for UB → Beijing on 22 Oct.
 - Homestays: confirm late check-in, luggage storage and a non-smoking room with the host.
 
+## 8. Check prices yourself (direct links, 1 adult)
+
+Way out, Thu 12 Nov:
+
+| What | Trip.com | Ctrip | Kiwi | Google Flights |
+|---|---|---|---|---|
+| UB → Shenyang (bundle via Hohhot) | [Trip.com](https://www.trip.com/flights/showfarefirst?dcity=ubn&acity=she&ddate=2026-11-12&triptype=ow&class=y&quantity=1&curr=MNT&locale=en-XX) | [Ctrip](https://flights.ctrip.com/online/list/oneway-uln-she?depdate=2026-11-12&cabin=y_s&adult=1&child=0&infant=0) | [Kiwi](https://www.kiwi.com/en/search/results/ulaanbaatar-mongolia/shenyang-china/2026-11-12/no-return?currency=usd&sortBy=price) | [Google](https://www.google.com/travel/flights?q=Flights%20from%20UBN%20to%20SHE%20on%202026-11-12%20one%20way&curr=MNT&hl=en) |
+| UB → Hohhot (CA758 13:00) | [Trip.com](https://www.trip.com/flights/showfarefirst?dcity=ubn&acity=het&ddate=2026-11-12&triptype=ow&class=y&quantity=1&curr=MNT&locale=en-XX) | [Ctrip](https://flights.ctrip.com/online/list/oneway-uln-het?depdate=2026-11-12&cabin=y_s&adult=1&child=0&infant=0) | [Kiwi](https://www.kiwi.com/en/search/results/ulaanbaatar-mongolia/hohhot-china/2026-11-12/no-return?currency=usd&sortBy=price) | [Google](https://www.google.com/travel/flights?q=Flights%20from%20UBN%20to%20HET%20on%202026-11-12%20one%20way&curr=MNT&hl=en) |
+| Hohhot → Shenyang (Spring 9C6782 19:05) | [Trip.com](https://www.trip.com/flights/showfarefirst?dcity=het&acity=she&ddate=2026-11-12&triptype=ow&class=y&quantity=1&curr=MNT&locale=en-XX) | [Ctrip](https://flights.ctrip.com/online/list/oneway-het-she?depdate=2026-11-12&cabin=y_s&adult=1&child=0&infant=0) | [Kiwi](https://www.kiwi.com/en/search/results/hohhot-china/shenyang-china/2026-11-12/no-return?currency=usd&sortBy=price) | [Google](https://www.google.com/travel/flights?q=Flights%20from%20HET%20to%20SHE%20on%202026-11-12%20one%20way&curr=MNT&hl=en) |
+
+Way in and hotel:
+
+| What | Links |
+|---|---|
+| Beijing → UB, Mon 16 Nov (MIAT 11:30) | [Trip.com](https://www.trip.com/flights/showfarefirst?dcity=bjs&acity=ubn&ddate=2026-11-16&triptype=ow&class=y&quantity=1&curr=MNT&locale=en-XX) · [Ctrip](https://flights.ctrip.com/online/list/oneway-bjs-uln?depdate=2026-11-16&cabin=y_s&adult=1&child=0&infant=0) · [Kiwi](https://www.kiwi.com/en/search/results/beijing-china/ulaanbaatar-mongolia/2026-11-16/no-return?currency=usd&sortBy=price) · [Google](https://www.google.com/travel/flights?q=Flights%20from%20PEK%20to%20UBN%20on%202026-11-16%20one%20way&curr=MNT&hl=en) |
+| K54 Shenyang North → Beijing, Sun 15 Nov | [Trip.com trains](https://www.trip.com/trains/china/list?departureStation=Shenyang&arrivalStation=Beijing&departDate=2026-11-15&locale=en-XX&curr=CNY) · [12306](https://kyfw.12306.cn/otn/leftTicket/init?linktypeid=dc&fs=%E6%B2%88%E9%98%B3%E5%8C%97%2CSBT&ts=%E5%8C%97%E4%BA%AC%2CBJP&date=2026-11-15&flag=N,N,Y) (shows trains from 1 Nov) |
+| Sunshine Select Homestay, 12→15 Nov, 3 adults | [Trip.com hotel page](https://www.trip.com/hotels/shenyang-hotel-detail-118781429/sunshine-select-homestay/?checkIn=2026-11-12&checkOut=2026-11-15&adult=3&crn=1&children=0&curr=CNY&locale=en-XX) (change the dates to 12→16 to add the 15th) |
+
+City codes: UB is `ubn` on Trip.com but `uln` on Ctrip; Hohhot `het`, Shenyang `she`, Beijing `bjs`. To check another day, change `ddate=` (Trip.com), `depdate=` (Ctrip), or the date in the Kiwi and Google links.
+
 ## Sources (checked 23 Oct 2026 unless noted)
 
 - 12306 train list and official fares, `scripts/q12306.py` (queried for 6 Nov; fares are fixed).
