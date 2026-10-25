@@ -20,6 +20,37 @@ The team pays everything: 3 people, 2 of them share a 1.8 m bed. FX: ¥1 = ₮53
 
 The night of 15 Nov in the same room costs only **¥135 (₮24k per person)**. Book it even if you take the 22:00 train: you can shower after the contest and leave your bags in the room until the train. A homestay has no front desk to hold luggage.
 
+### Way-out recheck, 25 Oct (Hohhot + Spring, Thu 12 Nov)
+
+Trip.com shows **₮829k** for UB → Hohhot → Shenyang. That is the **bundled price**, with both flights on one booking. The plan's figure is **two separate tickets**.
+
+| Source (25 Oct) | CA758 UB 13:00 → Hohhot 14:40 | Spring 9C6782 Hohhot 19:05 → Shenyang 21:15 | Both on one booking |
+|---|---|---|---|
+| Plan (Ctrip, 22 Oct) | ¥1,011 (₮542k) | ¥290 (₮155k) | Ctrip ¥1,561 (₮837k) |
+| Kiwi | $157 (₮565k) | $67 (₮241k) | **$238 (₮856k)**; it was $237 on 22 Oct |
+| SlickTrip | $268 (overpriced for Air China, as before) | $56 (≈ ¥400, ₮201k); it was $65 | – |
+| Google Flights | ¥1,790 (full fare; ¥989 on 11 Nov) | **¥370** (₮198k) | – |
+| Trip.com (your screen) | ? | ? | **₮829k** |
+
+- **No big jump:** the bundle was already ~₮837–856k on 22 Oct.
+- **The Spring leg looks ~¥80–110 dearer than the ¥290 used** (Google ¥370). Ctrip can't be read from the cloud to confirm.
+
+Way out per person, including the airport taxi in Shenyang (~₮16k):
+
+| How you book | Way out per person | Whole trip per person (with K54 + MIAT home) |
+|---|---|---|
+| Separate tickets at the 22 Oct Ctrip prices + Spring bag ~¥120 (as in the plan) | ₮778k | ₮2.22M |
+| Separate tickets with Spring at ¥370 + bag ~¥120 | ₮820k | ₮2.26M |
+| Trip.com bundle ₮829k, if it **includes** a checked bag on the Spring leg | ₮845k | ₮2.29M |
+| Trip.com bundle ₮829k + a Spring bag bought separately | ₮909k | ₮2.35M |
+
+What to check on Trip.com:
+- Open the ₮829k result and look at the baggage allowance for the Spring leg. Also check whether it is sold as a protected transfer ("Trip.com transfer guarantee", "self-transfer"); a protected transfer covers a late CA758.
+- Then search the two legs separately (UB → Hohhot on 12 Nov, and Hohhot → Shenyang on 12 Nov) and compare.
+- If the bundle includes the bag and protects the connection, it costs about the same as separate tickets and is safer. Buy the bundle.
+
+The Beijing route (Air China 11:50 + G153, ₮911k) is still dearer than either.
+
 ---
 
 ## 2. Way-in options (Shenyang → Ulaanbaatar), cheapest first

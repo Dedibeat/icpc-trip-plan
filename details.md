@@ -569,6 +569,24 @@ Shenyang → UB tickets cost $250 or more (Kiwi 15 Nov: $303+). The way to Beiji
 Whole trip, Hohhot + Spring out + Sunshine 3 nights + K54 + MIAT: **₮2.22M per person / ₮6.67M for the team** (Manzhouli seats out: ₮1.98M / ₮5.93M).
 `Shenyang_plan.md` now recommends this.
 
+### Way-out recheck, 25 Oct: Hohhot + Spring
+
+The user saw **₮829k on Trip.com** for UB → Hohhot → Shenyang on 12 Nov. That is the bundled itinerary (≈ $230; it matches Ctrip's ¥1,561 bundle of 22 Oct at ~₮531 per ¥).
+
+Today's prices:
+
+| Source | CA758 | Spring 9C6782 | Bundle |
+|---|---|---|---|
+| Kiwi | $157 | $67 | $238 (was $237 on 22 Oct) |
+| SlickTrip | $268 (unchanged) | $56 (was $65) | – |
+| Google Flights (Bright Data) | ¥1,790 (full fare; ¥989 on 11 Nov) | **¥370** | – |
+
+- The Spring leg looks ~¥80–110 above the ¥290 used.
+- Trip.com and Ctrip flights are still "whaleguard"-blocked from the cloud, desktop and mobile URLs alike.
+- Way out per person: ₮778k (plan) → ₮820k separately with Spring ¥370 → ₮845k bundle with a bag included → ₮909k bundle + a bag bought separately.
+- Whole trip with K54 + MIAT home: ₮2.22M → ₮2.26–2.35M per person.
+- Asked the user to open the bundle on Trip.com (baggage, transfer guarantee) and to price both legs separately.
+
 ### Hotels with a 1.8 m bed for 2 (Trip.com 23 Oct, 3 adults, 1 room, team totals)
 
 Ids for `trip_hotel_detail.js`: Sunshine Select Homestay **118781429** `sunshine-select-homestay`; Westin Audio-Visual Homestay
