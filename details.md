@@ -142,7 +142,8 @@ then run `fetch()` from inside that page (same origin, no login needed):
 - Fast extraction: `fetch()` the list URL from inside a trip.com page and parse the server-rendered HTML (`[data-offline-hotelId]` cards: `.hotelName`, `.score`, `.comment-num`, `.position-desc`, `.room-name`; the last `CNY n` in the card is the total incl. taxes). Only the first 5 cards are server-rendered.
 - Searching with 3 or 4 adults in **1 room** finds family rooms that fit the whole team (e.g. RiCH Family Room ¥976/3 nights for 3 or 4). These beat Booking.com's 2-room prices for 4 people.
 - Hong Kong: Trip.com is not cheaper than Booking.com near HKU; cheap Tsim Sha Tsui guesthouses there are rated < 7.
-- Tripadvisor's MCP tool timed out; SlickTrip hotel search is Google Hotels data and misses most Chinese budget hotels.
+- Tripadvisor's MCP tool timed out on 1 Oct but **works from the cloud on 25 Oct** (Ctrip / Agoda / Booking.com prices for Chinese chain
+  hotels; see "Budget double rooms near NEU"). SlickTrip hotel search is Google Hotels data and misses most Chinese budget hotels.
 
 - If a workbook is open in Excel, saving fails with PermissionError (look for `~$*.xlsx` lock files). Ask the user to close it.
 
@@ -491,6 +492,37 @@ Compare rows 22–28 and Sleep check rows 12–18 were inserted (everything belo
   overnight in Hohhot or Beijing (e.g. G54696 19:40 via Ulanhot to Hohhot, then Spring next evening, ¥590). Without the night train it
   costs a Manzhouli hotel night + K2624 11:15 → Harbin 23:12 + a Harbin night, arriving 13 Nov.
 - Builder: `build_shenyang_cheap_out.py` (scratchpad, imports `build_shenyang_sleep.py`) – not committed; the sheets are the record.
+
+## Budget double rooms near NEU (25 Oct 2026; not yet in the workbook)
+
+Request: good-deal budget hotels within 3 km of NEU Nanhu, **two people may share one queen/double bed** (大床房), so 2 double rooms
+cover 3 or 4 people. Searched 12–15 Nov (3 nights), 2 adults / 1 room; distances computed from NEU 41.7655, 123.4182.
+USD → CNY at the workbook rates (3,598 / 536 = 6.713). Prices are full-stay totals for 1 room, incl. fees.
+
+| Hotel (address) | Distance | 1 room × 3 nights | 2 rooms | Seller / rating |
+|---|---|---|---|---|
+| **7 Days Inn Sanhao St / NEU Science Palace** (文体西路 21甲, by NEU south gate) | 0.7 km | $36.90 ≈ ¥248 (¥83/night) | ¥495 | Agoda via Tripadvisor; TA 4/5 (1 review, 2013 – "无窗", windowless room) |
+| **7 Days Inn Sanhao St Liaozhan** (文萃路 6甲6, opposite Hualian north gate) | 1.3 km | $47.62 ≈ ¥320 "Standard Double Room", non-refundable | ¥639 | Booking.com via SlickTrip; Standard Family Room $82 ≈ ¥550 (may fit 3 – verify) |
+| **Home Inn Sanhao St / Shengjing Medical Univ. 2nd Hospital** (文化路 44) | 1.1 km | $52.47 ≈ ¥352; $56 free cancellation (Bluepillow) | ¥704 | Agoda; no reviews |
+| Langrun Hotel | 2.2 km | $31.17 ≈ ¥209 | ¥418 | Ctrip; independent, no reviews, foreign-guest acceptance unknown |
+| Home Inn Youth Park Metro / TV Tower Night Market | 2.9 km | $42.90 ≈ ¥288 | ¥576 | Agoda |
+| 7 Days Inn Maluwan | 2.7 km | $43.71 ≈ ¥293 | ¥587 | Ctrip |
+| Jin Ke Hotel (文化路 19), free breakfast | 0.95 km | $72.99 ≈ ¥490 | ¥980 | Ctrip; TA 3.4 (25, old); Trip.com 9.6 on 22 Oct (¥1,044 / 2 rooms) |
+| Home Inn Sanhao St Liaozhan / HanTing Sanhaojie | 1.4 km | $76.92 / $79.95 | ¥1,033 / ¥1,073 | Ctrip |
+| Metropolo Jinjiang Sanhao St (三好街 76) | 0.8 km | $86.28 (SlickTrip $80) | ¥1,158 | Ctrip; TA 3.6 (62) |
+| Ji Hotel Sanhao St (current plan hotel, double) | 0.95 km | $96.93 ≈ ¥651 | ¥1,301 | Ctrip (plan budgets 2 twins at ¥1,371) |
+| Sunlight Apartment TV Tower (Booking.com 9.3, 19 reviews) | 2.6 km | ¥633 | ¥1,267 | Booking.com |
+
+- Swapping the Ji Hotel twins (¥1,371) for 2 double rooms at a 7 Days / Home Inn on Sanhao Street saves **¥670–880 ≈ ₮0.36–0.47M**
+  per trip. Not applied to the workbook.
+- Check before booking: (1) the cheapest 7 Days / Home Inn room is often **windowless (无窗)**. Pick a room with a window (有窗) for the
+  pre-contest nights; (2) bed width: 1.5 m is tight for two adults, 1.8 m is better (大床 1.8米); (3) the branch must accept foreign
+  passports (涉外). Chains usually do; independents such as Langrun may not; (4) free cancellation while the dates are provisional.
+- Tool notes: Tripadvisor `search_hotels` with `sortBy: DISTANCE` ranks around the named landmark ("Northeastern University, Shenyang")
+  even though `searchGeoData` says the city centre; `PRICE_LOW_TO_HIGH` ranks around the city centre; the `maxPrice` filter broke the
+  search (1 result). The per-night rate is the `rate=` field in each `commerceUrl`; `priceShown=` is the stay total. Large results land in
+  a file – parse them with a small Python script. `hotel_details` has no room-level data; SlickTrip `hotel_details` gives room names.
+  Booking.com MCP does not list these chain branches (`hotel_names_not_resolved`); Expedia `search_hotels` returned "Unknown error" twice.
 
 ## Open items / next optimization ideas
 
