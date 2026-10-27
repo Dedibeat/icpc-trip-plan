@@ -541,7 +541,8 @@ SlickTrip, ChinaTicketOnline (trains). Per person, UB airport → Shenyang hotel
 | Air China CA902 + G153 (current Sleep value / Sleep first) | 12 Nov | **CA902 now ¥1,541** (was ¥1,291; 10 Nov ¥2,311) + ¥369 | 20:04 | ~¥1,945 = ₮1.04M |
 
 - Rejected for sleep: MIAT 07:30 (12 Nov) / 08:15 (11 Nov) to Beijing; MIAT 22:25 red-eye to Hohhot (¥932–936); Spring via Shanghai
-  (9C6520 13:00 → PVG 16:45 $165, then the first usable PVG → SHE is CZ6520 20:55 → 23:20 ¥350 + ¥140); Manzhouli (Hunnu $108; every
+  on 10 / 12 Nov (9C6520 ¥1,108 those days, and 9C6759 leaves PVG at 14:35 on Thursdays, so the first usable flight is CZ6520 20:55 →
+  23:20; **Fri 13 Nov works – see the follow-up below**); Manzhouli (Hunnu $108; every
   NZH → SHE connection stops overnight in Hohhot or Beijing, from ¥670); Erenhot (Hunnu MR861 08:45 $136; ERL → SHE only via a Hohhot
   night, from ¥807); Seoul ($515, 00:25 or 07:45 departures); all overnight trains.
 - CA758 is ¥1,011 on Ctrip every day 10–13 Nov (Trip.com ¥1,009); Air China includes a checked bag. 9C6782 fares on Ctrip: 10 Nov ¥220,
@@ -551,8 +552,32 @@ SlickTrip, ChinaTicketOnline (trains). Per person, UB airport → Shenyang hotel
   06:30, 12306 hard sleeper ~¥297–305; on sale 29 Oct 14:00. Fallback only.
 - ChinaTicketOnline Beijing → Shenyang 11 Nov: G101 / G103 / G105 / G127 08:00–09:00 (2 h 29 min), G149 12:19, on sale **28 Oct 10:00**;
   its CNY figures are ~¥381 + $10.50 fee vs 12306 ¥355.
-- Recommendation: Hohhot + Spring on **Thu 12 Nov** as two Ctrip tickets (same price as 10 Nov, 13 Nov left as a spare day). Applied to the
+- Recommendation (before the follow-up below found Fri 13 Nov via Shanghai at ₮680k): Hohhot + Spring on **Thu 12 Nov** as two Ctrip
+  tickets (same price as 10 Nov, 13 Nov left as a spare day) – still the pick if a spare day matters more than ₮71k pp. Applied to the
   `Shenyang – Hohhot + Spring` sheet (Spring row ¥290 → ¥360, bag row confirmed ¥120, yellow assumption fill removed).
+
+### Follow-up: Spring via Shanghai on Fri 13 Nov (27 Oct, from the user's Trip.com screenshot)
+
+Trip.com (MNT, 13 Nov) lists a Spring "Partner offer" UB 13:00 → Shanghai (2 h 05 min) → SHE 21:10 for **₮751,400** (7 kg cabin bag, 20 kg
+on leg 2 only) or ₮780,300 (20 kg on both legs). It is a **self-transfer package**: two tickets, bags not checked through, immigration +
+re-check at PVG, UB → PVG leg non-refundable, change from ₮66,400. Trip.com's MNT ≈ CNY × 539.3 (₮770,100 = CNY 1,428 on 10 Nov).
+
+| 13 Nov option | Flights | Price | Arrive | Per person (CNY 536, + ¥30 taxi) |
+|---|---|---|---|---|
+| **Spring via Shanghai, 2 Ctrip tickets** | 9C6520 UB 13:00 → PVG T2 16:45 **¥808** incl. tax (¥858 with 20 kg bag) + 9C6759 PVG T2 18:50 → SHE 21:10 ¥290 + ¥140 tax (¥410 with 20 kg bag) | ¥1,238 / ¥1,408 with bags | 21:10, hotel ~22:15 | **₮680k** / ₮771k with bags |
+| Same, Trip.com package | as above | ₮751,400 / ₮780,300 | same | ₮767k / ₮796k |
+| Air China one ticket, bag through | CA758 13:00 → HET 14:40 + **CA8101** HET 17:00 → SHE 18:50 (Fridays; not on 12 Nov) | Ctrip ¥1,831, Trip.com ₮985,900 | 18:50 | ~₮1.0M |
+| Air China one ticket via Beijing | CA956 16:10 → PEK + CA1601 21:00 → 22:40 | Ctrip ¥1,661, Trip.com ₮905,000 | 22:40 | ~₮0.91M |
+| Spring + China Eastern (Trip.com) | 13:00 → 21:55 | ₮853,900 | 21:55 | ~₮0.87M |
+
+- Spring via Shanghai on 13 Nov is the **cheapest no-sleep-loss way out**: ₮71k pp less than Hohhot + Spring on 12 Nov without bags (₮44k with
+  20 kg bags), and one hotel night fewer (~¥152 pp, not counted). 9C6520 date strip on Ctrip: 10 / 12 Nov ¥1,108, 11 Nov no Spring, 13 Nov ¥808.
+  Spring 9C6782 Hohhot → Shenyang does not fly on 13 Nov.
+- Risk: a 2 h 05 min international → domestic self-transfer on the evening before day 1, with no spare day. Spring domestic check-in closes
+  45 min before departure (18:05); carry-on only + online check-in makes it easier. Same-night fallbacks from PVG (SlickTrip schedule, not
+  priced): CZ6502 19:00 → 21:30, MU6195 19:30 → 21:55, CZ6520 20:55 → 23:20, MU5603 21:30 → 23:50.
+- Other 13 Nov PVG → SHE fares (Ctrip, before tax): 9C7635 06:50 ¥350, MF8095 18:35 ¥470, CA8315 17:35 ¥500. Spring bag fares on 9C6759:
+  ¥290 / ¥350 (cabin only) / **¥410 with 20 kg** / ¥450.
 
 Method notes (27 Oct):
 - **Ctrip domestic list prices exclude taxes**: add the ¥50 airport fee + fuel surcharge (from 10 Oct 2026: **¥90 for > 800 km, ¥50 for
@@ -566,7 +591,8 @@ Method notes (27 Oct):
 
 - **Book soon (10 Oct):** Spring UB ⇄ PVG fares and MIAT UB–HKG are far below their usual levels (SlickTrip "low"); Air China UB → PEK 17 Dec $157.
 - **27 Oct:** CA902 12 Nov is now ¥1,541 on Ctrip (10 Nov ¥2,311), so `Sleep first` / `Sleep value` (still ¥1,291) are ~₮134k pp
-  low; the cheapest no-sleep-loss way out is Hohhot + Spring on 10 or 12 Nov (₮751k pp, two Ctrip tickets). Book CA758 + 9C6782 soon.
+  low. Cheapest no-sleep-loss way out: Spring via Shanghai on Fri 13 Nov (9C6520 + 9C6759, ₮680k pp, tight 2 h 05 min transfer), or
+  Hohhot + Spring on 10 / 12 Nov (₮751k pp, 4 h 25 min transfer, spare day). Not yet a workbook sheet.
 - Shenyang sleep-first plans: book Air China CA902 12 Nov on Ctrip (¥1,291; Trip.com $203 fallback) and the twin rooms now (free cancellation); trains G153 29 Oct 10:00,
   K28 or K1568 1 Nov 09:30, 4652 2 Nov 14:00; UBTZ 275 is on sale already. Confirm the Shenyang registration day before relying on a 20:30
   arrival on 12 Nov (it is two days early, so only a schedule change would matter).
