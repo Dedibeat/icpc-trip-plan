@@ -429,7 +429,7 @@ Tianjin, Changchun, Qingdao only via Seoul ($262–436). Per person, workbook FX
 | Beijing (current plans): Air China CA902 12 Nov 11:50 + G153 | ¥1,291 Ctrip + ¥369 | 12 Nov 20:04 | ₮0.91M | – |
 | **Manzhouli**: Hunnu MR881 **Wed 11 Nov 13:20 → 15:00** (Wed/Sat only) + K7092 Manzhouli 19:17 → Harbin 07:11 + G1280 Harbin 09:11 → Shenyang North 11:42 | **¥677** Ctrip ($108 SlickTrip) + soft sleeper ¥324 (hard ¥207) + ¥267 | 12 Nov 11:42 | **₮0.71M soft / ₮0.65M hard** (incl. ½ day extra meals) | **−₮0.20M / −₮0.26M** |
 | Hohhot: Air China CA758 11 Nov 13:00 → 14:40 + T304 Hohhot East 17:36 → Shenyang 10:16 | ¥1,011 Ctrip ($268 SlickTrip) + soft ¥464.5 (hard ¥296.5) | 12 Nov 10:16 | ₮0.82M soft / ₮0.73M hard | −₮0.09M / −₮0.18M |
-| **Hohhot by air**: CA758 12 Nov 13:00 → 14:40 + Spring **9C6782** HET 19:05 → SHE 21:15 (A320), two separate tickets, 4 h 25 min self-transfer | ¥1,011 + **¥290** Ctrip (SlickTrip $65 for 9C6782); Ctrip combined ¥1,561, Kiwi $237 | 12 Nov ~22:15 at hotel | **₮0.77–0.79M** with a Spring bag bought online (~¥100–150, estimate) + airport taxi; ₮0.71M carry-on only | **−₮0.12–0.15M**, no night train |
+| **Hohhot by air**: CA758 12 Nov 13:00 → 14:40 + Spring **9C6782** HET 19:05 → SHE 21:15 (A320), two separate tickets, 4 h 25 min self-transfer | ¥1,011 + **¥290** Ctrip (before taxes – ¥220 + ¥140 = ¥360 on 27 Oct, see "No-sleep-loss way out"; SlickTrip $65 for 9C6782); Ctrip combined ¥1,561, Kiwi $237 | 12 Nov ~22:15 at hotel | **₮0.77–0.79M** with a Spring bag bought online (~¥100–150, estimate) + airport taxi; ₮0.71M carry-on only | **−₮0.12–0.15M**, no night train |
 | Erenhot: Hunnu 08:45 or UBTZ 276 + jeep, then 4654 Erenhot 12:45 → Hohhot 20:00 / Jining South 18:11 | $136 or ₮51–81k + ¥100, ¥44.5–115 | needs a Hohhot / Beijing night | ~₮0.55–0.85M | not worth it before a contest |
 | Shanghai: Spring 9C6520 13:00 → PVG 16:45–17:00 ($165, Tue/Thu) + G100 Hongqiao 10:04 → Shenyang North 17:59 (8–10 h) | | 13 Nov | more than Beijing | no |
 
@@ -482,7 +482,7 @@ Compare rows 22–28 and Sleep check rows 12–18 were inserted (everything belo
 | Hunnu Erenhot: Fri 13 Nov $136 + 4654 + T301 seat → 14 Nov 10:16, 1 night | ₮606k | ₮2.14M | ₮5.23M / ₮6.88M | POOR |
 | Hohhot red-eye: MIAT Wed 11 Nov 22:25 ¥946 + Hohhot hotel ~¥200 (assumed) + T304 seat → 13 Nov 10:16, 2 nights | ₮647k | ₮2.34M | ₮5.83M / ₮7.66M | WATCH |
 | (Budget, older: MIAT $150 + K53 soft) | ₮681k | ₮2.14M | ₮5.21M / ₮6.96M | WATCH |
-| **Hohhot + Spring**: Air China CA758 Thu 12 Nov 13:00 ¥1,011 + Spring 9C6782 19:05 → 21:15 ¥290 + bag ~¥120 (assumed) + Taoxian taxi ~¥90 per car, 3 nights | ₮778k | **₮2.55M** | ₮6.43M / ₮8.29M | BEST |
+| **Hohhot + Spring**: Air China CA758 Thu 12 Nov 13:00 ¥1,011 + Spring 9C6782 19:05 → 21:15 ¥360 incl. taxes + 20 kg bag fare +¥120 + Taoxian taxi ~¥90 per car, 3 nights (27 Oct fix: the ¥290 had no taxes) | ₮815k | **₮2.59M** | ₮6.56M / ₮8.46M | BEST |
 | (Sleep value: Air China ¥1,291 + G153) | ₮911k | ₮2.69M | ₮6.88M / ₮8.87M | BEST |
 
 - Real-date checks: UBTZ 276 runs 9–12 Nov (seat ₮26,000); 4654 / T301 on 11 and 13 Nov (on sale 30 Oct 15:00 for 13 Nov); K341 13 Nov
@@ -524,9 +524,49 @@ USD → CNY at the workbook rates (3,598 / 536 = 6.713). Prices are full-stay to
   a file – parse them with a small Python script. `hotel_details` has no room-level data; SlickTrip `hotel_details` gives room names.
   Booking.com MCP does not list these chain branches (`hotel_names_not_resolved`); Expedia `search_hotels` returned "Unknown error" twice.
 
+## No-sleep-loss way out, 10–13 Nov (27 Oct 2026)
+
+Request: cheap UB → Shenyang with no sleep loss, leaving 10–13 Nov, flights only if possible, travel cost only. "No sleep loss"
+= no overnight train or flight, no flight before ~09:00 (no 04:00–05:00 alarm), in the hotel by ~22:30. Sources: Ctrip, Trip.com,
+SlickTrip, ChinaTicketOnline (trains). Per person, UB airport → Shenyang hotel, CNY 536 / USD 3,598, UB home taxi left out.
+
+| Option | Dates | Fares (per person) | Arrive | Per person |
+|---|---|---|---|---|
+| **Hohhot + Spring, 2 tickets** (Ctrip): Air China CA758 13:00 → HET 14:40 + Spring 9C6782 19:05 → SHE 21:15 + taxi | **Tue 10 / Thu 12 Nov** | ¥1,011 + ¥360 (¥220 + ¥50 airport fee + ¥90 fuel) + ¥30 | 21:15, hotel ~22:15 | **¥1,401 = ₮751k**; ₮815k with a 20 kg Spring bag (+¥120) |
+| Same flights, one ticket | 10 / 12 Nov | Trip.com ¥1,428 / ¥1,528; Ctrip ¥1,451 / ¥1,531 | same | ₮781k / ₮835k (Trip.com) |
+| Same, 2 tickets | Wed 11 / Fri 13 Nov | Spring ¥400 + ¥140 | same | ¥1,581 = ₮847k (13 Nov = arrive the night before day 1, no spare day) |
+| MIAT OM223 17:15 → PEK 19:30 + Beijing night + G-train next morning (not flight-only) | 10 / 13 Nov | ¥978 Ctrip ($154 SlickTrip) + Airport Express ¥30 + hotel ~¥101 (Dequan, 9 Oct) + G101 08:00 ¥355 (12306) + metro | next day ~10:30 | ~¥1,470 = ₮0.79M |
+| MIAT 17:15 + Beijing night + China Southern CZ8732 Daxing 12:05 → SHE 13:45 | 10 / 13 Nov | Trip.com one ticket ¥1,526 + hotel ~¥101 + PEK → PKX ~¥60 + taxi | next day 13:45 | ~¥1,720 = ₮0.92M |
+| Air China via Beijing: CA902 11:50 + CA1635 19:30 → 20:55 | 12 Nov | Trip.com one ticket ¥2,308 (10 Nov ¥2,694); Ctrip 2 tickets ¥1,541 + ¥710 | 20:55 | ₮1.22–1.25M |
+| Air China CA902 + G153 (current Sleep value / Sleep first) | 12 Nov | **CA902 now ¥1,541** (was ¥1,291; 10 Nov ¥2,311) + ¥369 | 20:04 | ~¥1,945 = ₮1.04M |
+
+- Rejected for sleep: MIAT 07:30 (12 Nov) / 08:15 (11 Nov) to Beijing; MIAT 22:25 red-eye to Hohhot (¥932–936); Spring via Shanghai
+  (9C6520 13:00 → PVG 16:45 $165, then the first usable PVG → SHE is CZ6520 20:55 → 23:20 ¥350 + ¥140); Manzhouli (Hunnu $108; every
+  NZH → SHE connection stops overnight in Hohhot or Beijing, from ¥670); Erenhot (Hunnu MR861 08:45 $136; ERL → SHE only via a Hohhot
+  night, from ¥807); Seoul ($515, 00:25 or 07:45 departures); all overnight trains.
+- CA758 is ¥1,011 on Ctrip every day 10–13 Nov (Trip.com ¥1,009); Air China includes a checked bag. 9C6782 fares on Ctrip: 10 Nov ¥220,
+  11 ¥400, 12 ¥220, 13 ¥400. Ctrip's 9C6782 products on 12 Nov: ¥220 (7 kg cabin bag, 20×30×40 cm) / ¥280 / **¥340 with 20 kg checked bag**
+  / ¥380. Hohhot → Shenyang other flights: Ruili DR5065 12:50 ¥450, Air China CA8179 08:55 ¥620 (next-morning fallback if CA758 is late).
+- Hohhot → Shenyang trains are all overnight (ChinaTicketOnline, 12 Nov): T304 Hohhot East 17:36 → 10:16, K1566 15:18 → 09:38, K1518 10:54 →
+  06:30, 12306 hard sleeper ~¥297–305; on sale 29 Oct 14:00. Fallback only.
+- ChinaTicketOnline Beijing → Shenyang 11 Nov: G101 / G103 / G105 / G127 08:00–09:00 (2 h 29 min), G149 12:19, on sale **28 Oct 10:00**;
+  its CNY figures are ~¥381 + $10.50 fee vs 12306 ¥355.
+- Recommendation: Hohhot + Spring on **Thu 12 Nov** as two Ctrip tickets (same price as 10 Nov, 13 Nov left as a spare day). Applied to the
+  `Shenyang – Hohhot + Spring` sheet (Spring row ¥290 → ¥360, bag row confirmed ¥120, yellow assumption fill removed).
+
+Method notes (27 Oct):
+- **Ctrip domestic list prices exclude taxes**: add the ¥50 airport fee + fuel surcharge (from 10 Oct 2026: **¥90 for > 800 km, ¥50 for
+  ≤ 800 km**; it was ¥70 / ¥40 from 5 Aug). Ctrip international pages already show 含税价. Trip.com domestic prices include taxes.
+- With the browser pane hidden, Ctrip and Trip.com pages stop rendering: take a small `screenshot` (scale 0.2) to make the tab paint, then
+  `get_page_text` / `document.body.innerText`. A screenshot fails with "pane is not displayed" now and then; retry it.
+- Ctrip fare products (bag included or not): `document.querySelector('button.btn-book').click()`, then click the "展开查看所有产品" element.
+- ChinaTicketOnline's API still works as in the section above (`getTrainListAjax`, run from a chinaticketonline.com page).
+
 ## Open items / next optimization ideas
 
 - **Book soon (10 Oct):** Spring UB ⇄ PVG fares and MIAT UB–HKG are far below their usual levels (SlickTrip "low"); Air China UB → PEK 17 Dec $157.
+- **27 Oct:** CA902 12 Nov is now ¥1,541 on Ctrip (10 Nov ¥2,311), so `Sleep first` / `Sleep value` (still ¥1,291) are ~₮134k pp
+  low; the cheapest no-sleep-loss way out is Hohhot + Spring on 10 or 12 Nov (₮751k pp, two Ctrip tickets). Book CA758 + 9C6782 soon.
 - Shenyang sleep-first plans: book Air China CA902 12 Nov on Ctrip (¥1,291; Trip.com $203 fallback) and the twin rooms now (free cancellation); trains G153 29 Oct 10:00,
   K28 or K1568 1 Nov 09:30, 4652 2 Nov 14:00; UBTZ 275 is on sale already. Confirm the Shenyang registration day before relying on a 20:30
   arrival on 12 Nov (it is two days early, so only a schedule change would matter).
