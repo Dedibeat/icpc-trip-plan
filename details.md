@@ -14,7 +14,7 @@ In `ICPC_Single_Contest_Plans.xlsx` every "3 ppl" column / H column = the UNFUND
 
 | File | What it is |
 |---|---|
-| `ICPC_Single_Contest_Plans.xlsx` | **Main plan.** Compare sheet + variants for Shenyang (15, plus the `Shenyang – Way out` comparison sheet), Shanghai (5), Nanchang (3), Hong Kong (6) and EC Final Hangzhou (2), costed for 3 and 4 people. Separate trips with home in between. |
+| `ICPC_Single_Contest_Plans.xlsx` | **Main plan.** Compare sheet + variants for Shenyang (16, plus the `Shenyang – Way out` comparison sheet), Shanghai (5), Nanchang (3), Hong Kong (6) and EC Final Hangzhou (2), costed for 3 and 4 people. Separate trips with home in between. |
 | `ICPC_2026_Nanjing_Shenyang_Budget (2).xlsx` | Older combined Nanjing + Shenyang plan for 3 people: A Balanced / B Budget / C Home between, plus an Itineraries sheet. |
 | `ICPC_flight_fares_30Sep2026.xlsx` | Trip.com fares found via the Bright Data scraper, compared against the fares the plans used before. Rows 11–22 checked 30 Sep, rows 38–63 checked 1 Oct 2026, rows 65–73 Hohhot gateway + other flight sources. Sheets: "Connector notes", "Trains & hotels" (Ctrip trains and Trip.com hotels checked 1 Oct), "12306 & ChinaTicketOnline" (official fares, sale times and reseller mark-ups, checked 3 Oct), "10 Oct – Dec & Jan checks" (Trip.com / SlickTrip / 12306 / CTO figures behind the Shanghai, Nanchang, Shenyang G-train and Hong Kong sheets). |
 | `scripts/recalc_check.py` | Recalculates every workbook in Python, with no Excel or LibreOffice needed. Prints the key totals and exits 1 on any formula error. |
@@ -288,6 +288,8 @@ whole cost per person (travel + stay + fee + other); funded 4 ppl = travel + sta
 | Shenyang – Budget | ₮2.14M | ₮6.96M | ₮5.7M |
 | Shenyang – Comfort | ₮2.46M | ₮8.04M | ₮4.7M |
 | Shenyang – Overland home (22 Oct) | ₮2.37M | ₮7.67M | ₮5.0M |
+| Shenyang – Spring via Shanghai (27 Oct, Fri 13 Nov, 2 hotel nights) | ₮2.38M | ₮7.73M | ₮5.0M |
+| Shenyang – Hohhot + Spring (22 / 27 Oct) | ₮2.59M | ₮8.46M | ₮4.3M |
 | Shenyang – Sleep value / Sleep first (22 Oct) | ₮2.69M / ₮2.89M | ₮8.87M / ₮9.47M | ₮3.9M / ₮3.4M |
 | Nanchang – Sleeper | ₮2.50M | ₮8.19M | ₮4.6M |
 | Shanghai – Sleeper | ₮2.78M | ₮9.23M | ₮3.6M |
@@ -482,6 +484,7 @@ Compare rows 22–28 and Sleep check rows 12–18 were inserted (everything belo
 | Hunnu Erenhot: Fri 13 Nov $136 + 4654 + T301 seat → 14 Nov 10:16, 1 night | ₮606k | ₮2.14M | ₮5.23M / ₮6.88M | POOR |
 | Hohhot red-eye: MIAT Wed 11 Nov 22:25 ¥946 + Hohhot hotel ~¥200 (assumed) + T304 seat → 13 Nov 10:16, 2 nights | ₮647k | ₮2.34M | ₮5.83M / ₮7.66M | WATCH |
 | (Budget, older: MIAT $150 + K53 soft) | ₮681k | ₮2.14M | ₮5.21M / ₮6.96M | WATCH |
+| **Spring via Shanghai** (27 Oct): Spring 9C6520 Fri 13 Nov 13:00 → PVG 16:45 ¥808 + 9C6759 PVG 18:50 → SHE 21:10 ¥430 incl. taxes + 20 kg bag fares +¥170 + taxi, 2 nights | ₮771k | **₮2.38M** | ₮5.95M / ₮7.73M | OK |
 | **Hohhot + Spring**: Air China CA758 Thu 12 Nov 13:00 ¥1,011 + Spring 9C6782 19:05 → 21:15 ¥360 incl. taxes + 20 kg bag fare +¥120 + Taoxian taxi ~¥90 per car, 3 nights (27 Oct fix: the ¥290 had no taxes) | ₮815k | **₮2.59M** | ₮6.56M / ₮8.46M | BEST |
 | (Sleep value: Air China ¥1,291 + G153) | ₮911k | ₮2.69M | ₮6.88M / ₮8.87M | BEST |
 
@@ -578,6 +581,12 @@ re-check at PVG, UB → PVG leg non-refundable, change from ₮66,400. Trip.com'
   priced): CZ6502 19:00 → 21:30, MU6195 19:30 → 21:55, CZ6520 20:55 → 23:20, MU5603 21:30 → 23:50.
 - Other 13 Nov PVG → SHE fares (Ctrip, before tax): 9C7635 06:50 ¥350, MF8095 18:35 ¥470, CA8315 17:35 ¥500. Spring bag fares on 9C6759:
   ¥290 / ¥350 (cabin only) / **¥410 with 20 kg** / ¥450.
+- **Workbook sheet `Shenyang – Spring via Shanghai`** (copy of `Hohhot + Spring`, built 27 Oct): rows 10–12 = 9C6520 ¥808, 9C6759 ¥430,
+  20 kg bag fares ¥170 per person; Ji Hotel 2 nights (13–15 Nov); B4 = 3 days; K28 seat + Air China 12:55 home unchanged. Totals
+  **₮5.95M / ₮7.73M** (3 / 4 ppl), **₮2.38M per person** (₮0.20M less than Hohhot + Spring), way out ₮771k pp, planes & trains 18 h 31 min,
+  door to door 23 h 36 min. Rows inserted: Compare 30, Sleep check 20 (verdict OK: no alarm, no train night, but no rest day and a tight
+  transfer the evening before day 1), Way out 13 (cost order). Everything below moved one row; the builder shifted merged cells and row
+  heights and rewrote Compare's L/M formulas. Builder: `build_spring_shanghai.py` (scratchpad, not committed).
 
 Method notes (27 Oct):
 - **Ctrip domestic list prices exclude taxes**: add the ¥50 airport fee + fuel surcharge (from 10 Oct 2026: **¥90 for > 800 km, ¥50 for
@@ -592,7 +601,7 @@ Method notes (27 Oct):
 - **Book soon (10 Oct):** Spring UB ⇄ PVG fares and MIAT UB–HKG are far below their usual levels (SlickTrip "low"); Air China UB → PEK 17 Dec $157.
 - **27 Oct:** CA902 12 Nov is now ¥1,541 on Ctrip (10 Nov ¥2,311), so `Sleep first` / `Sleep value` (still ¥1,291) are ~₮134k pp
   low. Cheapest no-sleep-loss way out: Spring via Shanghai on Fri 13 Nov (9C6520 + 9C6759, ₮680k pp, tight 2 h 05 min transfer), or
-  Hohhot + Spring on 10 / 12 Nov (₮751k pp, 4 h 25 min transfer, spare day). Not yet a workbook sheet.
+  Hohhot + Spring on 10 / 12 Nov (₮751k pp, 4 h 25 min transfer, spare day). Both are workbook sheets.
 - Shenyang sleep-first plans: book Air China CA902 12 Nov on Ctrip (¥1,291; Trip.com $203 fallback) and the twin rooms now (free cancellation); trains G153 29 Oct 10:00,
   K28 or K1568 1 Nov 09:30, 4652 2 Nov 14:00; UBTZ 275 is on sale already. Confirm the Shenyang registration day before relying on a 20:30
   arrival on 12 Nov (it is two days early, so only a schedule change would matter).
