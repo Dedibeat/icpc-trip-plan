@@ -527,6 +527,29 @@ USD → CNY at the workbook rates (3,598 / 536 = 6.713). Prices are full-stay to
   a file – parse them with a small Python script. `hotel_details` has no room-level data; SlickTrip `hotel_details` gives room names.
   Booking.com MCP does not list these chain branches (`hotel_names_not_resolved`); Expedia `search_hotels` returned "Unknown error" twice.
 
+## 3 beds ≤ 2.5 km from NEU for ≤ ₮400k, 12–16 Nov (28 Oct 2026; not yet in the workbook)
+
+User rule (28 Oct): stay **12–16 Nov (4 nights)**, 3 people, **each person has their own bed**, ≤ 2.5 km from NEU, total
+≤ **₮400k** (= $111 at 3,598 or ¥746 at 536, i.e. ~¥187 per night for all three). The user asked for sources other than Trip.com.
+
+| Option (12–16 Nov, whole stay) | Distance | Total | ₮ | Fits? |
+|---|---|---|---|---|
+| **7 Days Inn Sanhao St Liaozhan** (文萃路 6甲6), 1 room for 3 adults, Booking.com via SlickTrip, non-refundable | 1.3 km | **$110** ($28/night) | **₮396k** | Only match. Bed layout not shown; check it is a 3-bed family/triple room, not a double + sofa |
+| Same hotel, 2 adults (1 room) | 1.3 km | $64 | – | 2 rooms = $128 = ₮461k, over budget |
+| Home Inn Sanhao St / Shengjing Hospital (Bluepillow, free cancellation), 2 adults | 1.1 km | $74 | – | 7 Days + Home Inn = $138 = ₮497k, over |
+| Ji Hotel Sanhao St (Bluepillow), 2 adults | 0.95 km | $137 | ₮493k | over |
+| Sunlight Apartment TV Tower (Booking.com 9.3), 2 rooms / 4 adults, 13–15 Nov | 2.6 km | ¥761 / 2 nights | – | too far, over |
+| LazyBee International Youth Hostel (CtripTA via Tripadvisor), 13–15 Nov 2 adults $38.54 | 2.8 km | – | – | too far |
+| Booking.com 3 adults / 1 room inside 2.5 km | – | cheapest Atour Youth Ave Square ¥1,894 | ₮1.0M | over |
+
+- Tripadvisor (2 adults, 13–15 Nov): 7 Days Inn Sanhao St (0.7 km) via Agoda **$24.58 for 2 nights** – cheapest near NEU, but no 3-guest
+  quote (Tripadvisor timed out on every 3-guest and 12–16 Nov search, 28 Oct).
+- Sources tried: Booking.com MCP (coordinates, 2.5 km radius; misses the 7 Days / Home Inn branches), SlickTrip (Google Hotels data; gives the
+  3-adult 7 Days Inn rate and sellers), Tripadvisor (Agoda / Booking / Vio / CtripTA, timed out often), Expedia ("Unknown error"),
+  Agoda through Bright Data (only a "Just a moment" loader), Google Hotels through Bright Data ("endpoint not supported"), Booking.com
+  search page through Bright Data (lost the dates, 0 results). SlickTrip `hotel_details` showed no room list for the 7 Days Inn.
+- NEU International Academic Exchange Centre (东北大学国际学术交流中心, on campus) is listed on SlickTrip but had no price.
+
 ## No-sleep-loss way out, 10–13 Nov (27 Oct 2026)
 
 Request: cheap UB → Shenyang with no sleep loss, leaving 10–13 Nov, flights only if possible, travel cost only. "No sleep loss"
