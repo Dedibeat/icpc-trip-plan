@@ -596,6 +596,17 @@ Method notes (27 Oct):
 - Ctrip fare products (bag included or not): `document.querySelector('button.btn-book').click()`, then click the "展开查看所有产品" element.
 - ChinaTicketOnline's API still works as in the section above (`getTrainListAjax`, run from a chinaticketonline.com page).
 
+## Re-check of Hohhot + Spring for Thu 12 Nov (28 Oct 2026, cloud session)
+
+- **Ctrip could not be read from the cloud:** Bright Data `scrape_as_markdown` and `scraping_browser_navigate` both refuse
+  flights.ctrip.com and m.ctrip.com (robots.txt, needs KYC), and headless Chromium in the container was denied by the session's
+  permission check. Ctrip needs the Windows built-in browser (method in "No-sleep-loss way out").
+- SlickTrip cross-check, 12 Nov, 1 adult: **CA758** UB 13:00 → HET 14:40 (Comac C909) **$268** via MIAT (partner, bag included),
+  Gotogate $291, Air China direct unpriced – same as on 22 Oct, so it gives no sign that Ctrip's ¥1,011 has moved. **9C6782** HET 19:05 →
+  SHE 21:15 **$54** on Spring's site, cabin bag only (was $65 on 22 Oct) ≈ ¥362, the same as Ctrip's ¥220 + ¥140 taxes of 27 Oct.
+  Other HET → SHE flights that day have a stop: Shandong via TAO 11:10 $356, via TNA 13:50 $362, China Southern via CGO 18:25 $465.
+- Workbook unchanged (still CA758 ¥1,011 + 9C6782 ¥360 + bag ¥120).
+
 ## Open items / next optimization ideas
 
 - **Book soon (10 Oct):** Spring UB ⇄ PVG fares and MIAT UB–HKG are far below their usual levels (SlickTrip "low"); Air China UB → PEK 17 Dec $157.
