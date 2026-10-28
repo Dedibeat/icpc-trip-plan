@@ -550,6 +550,19 @@ User rule (28 Oct): stay **12–16 Nov (4 nights)**, 3 people, **each person has
   search page through Bright Data (lost the dates, 0 results). SlickTrip `hotel_details` showed no room list for the 7 Days Inn.
 - NEU International Academic Exchange Centre (东北大学国际学术交流中心, on campus) is listed on SlickTrip but had no price.
 
+## Contest-morning commute to NEU, Sun 15 Nov (28 Oct 2026)
+
+Asked for travel time to NEU Nanhu on 15 Nov (contest 09:00) from **Jiapeng Express Inn (Shenyang Municipal Government Square)**
+(Trip.com screenshot: 9.5 with 1 review, ₮147,507 for 1 room × 4 nights, photo shows one large bed, so the 3-bed rule is not confirmed;
+exact address not found online, assumed near Line 2 **Shifu Guangchang 市府广场**, ~5–6 km north of NEU).
+- 15 Nov 2026 is a **Sunday**: no weekday rush hour; Shenyang traffic before 08:00 on Sunday is light.
+- **Metro Line 3 east (Nanliguan–Fangjialan) opened 30 Jun 2026** and has **Sanhaojie 三好街** and Gongyezhanlanguan 工业展览馆 (Line 2 / 3 interchange).
+  Route: Line 2 Shifu Guangchang → Qingnian Dajie → Qingnian Gongyuan → Gongyezhanlanguan (3 stops, ~7 min), change to Line 3 one stop to
+  Sanhaojie, walk ~1 km to the campus; or walk ~1.5 km from Gongyezhanlanguan. Door to door **~35–45 min**, ¥3–4 pp. First trains ~05:30–06:00.
+- **DiDi/taxi** (5–6 km, Qingnian Dajie south): **~15–20 min, ~¥15–20 per car**; add 10–15 min if it snows (first snow is common mid-Nov).
+- Plan: be at the venue gate by ~08:15–08:30 (ID/badge check, warm-up seating). Leave hotel **07:30 by metro or 07:45 by DiDi**; wake ~06:45.
+  Station and walking distances are estimates; check exact walking route in Amap/Baidu once the hotel address is known.
+
 ## No-sleep-loss way out, 10–13 Nov (27 Oct 2026)
 
 Request: cheap UB → Shenyang with no sleep loss, leaving 10–13 Nov, flights only if possible, travel cost only. "No sleep loss"
