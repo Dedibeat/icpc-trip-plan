@@ -596,9 +596,38 @@ Method notes (27 Oct):
 - Ctrip fare products (bag included or not): `document.querySelector('button.btn-book').click()`, then click the "展开查看所有产品" element.
 - ChinaTicketOnline's API still works as in the section above (`getTrainListAjax`, run from a chinaticketonline.com page).
 
+## Hohhot + Spring price check (29 Oct 2026)
+
+The user saw the Hohhot + Spring one ticket go from ~₮760k (28 Oct) to ~₮860k (29 Oct) and asked whether to wait. Checked on Ctrip (built-in
+browser), Trip.com (MNT) and SlickTrip, per person, 1 adult, before the ¥30 Taoxian taxi, CNY at the workbook ₮536.
+
+| Option | 10 Nov (Tue) | 12 Nov (Thu) | 27 Oct for comparison |
+|---|---|---|---|
+| CA758 UB 13:00 → HET 14:40 (Ctrip, incl. tax, bag incl.) | ¥1,011 | ¥1,011 | ¥1,011 (unchanged since 22 Oct) |
+| 9C6782 HET 19:05 → SHE 21:15 (Ctrip, before ¥140 tax) | ¥290 / ¥350 / **¥410 with 20 kg** / ¥450 | ¥280 / ¥340 / **¥400 with 20 kg** / ¥440 | 12 Nov ¥220 / ¥280 / ¥340 / ¥380; 10 Nov ¥220 |
+| **2 separate Ctrip tickets, Spring cabin bag only** | ¥1,441 = ₮772k | **¥1,431 = ₮767k** | ¥1,371 = ₮735k |
+| **2 separate Ctrip tickets, Spring 20 kg fare** | ¥1,561 = ₮837k | **¥1,551 = ₮831k** | ¥1,491 = ₮799k |
+| Trip.com one ticket (20 kg checked, 5 kg cabin, non-refundable) | **₮856,600** | ₮851,200 | ₮770,100 / ~₮824k |
+| Ctrip one ticket | ¥1,601 = ₮858k | ¥1,591 = ₮853k | ¥1,451 / ¥1,531 |
+
+- The whole rise is the Spring leg: its cheapest bucket moved up one step (+¥60–70) on 10, 12 and 13 Nov, and Spring's PVG → SHE
+  9C6759 on 13 Nov moved the same way (¥290 → ¥350, 20 kg fare ¥410 → ¥470). Trip.com's package also lost its discount (10 Nov was ~¥60
+  below separate tickets with a 20 kg bag on 27 Oct; now ~¥27 above them, at Trip.com's ₮539.3 per CNY). 9C6782's ¥280 is 2.1折 (full fare ≈ ¥1,330), so many steps remain.
+- SlickTrip `price_check` for 9C6782 12 Nov ($64): **"low"**, usual $65–356 over the 27 days around it. Trip.com's price-alert box suggests
+  ₮824,812 (12 Nov) / ₮830,045 (10 Nov) "high chances of success" – separate Ctrip tickets with a 20 kg bag already cost ₮831k.
+- Spring's cheapest fares show 退改¥84起 (refund / change from ¥84) on 12 Nov, ¥116 on 10 Nov. CA758 fare rules not read.
+- Spring via Shanghai, Fri 13 Nov (Ctrip): 9C6520 ¥808 (unchanged) + 9C6759 ¥350 + ¥140 = **¥1,298 = ₮696k** cabin only; with 20 kg bags
+  ¥858 + ¥470 + ¥140 = ¥1,468 = ₮787k. Still ₮44–71k pp below Hohhot + Spring, with the tight 2 h 05 min transfer and no spare day.
+- Advice given: book now as two separate Ctrip tickets on Thu 12 Nov, all travellers in one order; Spring rises as the date nears, the
+  upside of waiting is about one step (~₮32k pp), and the downside is open-ended.
+- **Workbook is now ¥60 pp low** on both Spring sheets: `Shenyang – Hohhot + Spring` Spring row ¥360 → ¥420 (bag +¥120 unchanged);
+  `Shenyang – Spring via Shanghai` 9C6759 ¥430 → ¥490 (bag fares +¥170 unchanged). Not applied yet.
+
 ## Open items / next optimization ideas
 
 - **Book soon (10 Oct):** Spring UB ⇄ PVG fares and MIAT UB–HKG are far below their usual levels (SlickTrip "low"); Air China UB → PEK 17 Dec $157.
+- **29 Oct:** Spring fares rose one step (+¥60–70 pp) on 10–13 Nov; book Hohhot + Spring (12 Nov) or Spring via Shanghai (13 Nov) now as
+  separate Ctrip tickets. Both Spring workbook sheets are ¥60 pp low (see "Hohhot + Spring price check").
 - **27 Oct:** CA902 12 Nov is now ¥1,541 on Ctrip (10 Nov ¥2,311), so `Sleep first` / `Sleep value` (still ¥1,291) are ~₮134k pp
   low. Cheapest no-sleep-loss way out: Spring via Shanghai on Fri 13 Nov (9C6520 + 9C6759, ₮680k pp, tight 2 h 05 min transfer), or
   Hohhot + Spring on 10 / 12 Nov (₮751k pp, 4 h 25 min transfer, spare day). Both are workbook sheets.
