@@ -86,6 +86,7 @@ Chinese city names) lists every train with fares for any date, even before sales
 built-in browser's page text; Bright Data/Trip.com route pages only give "from $X".
 
 - **Overnight sleepers replace a G-train + Beijing hotel night** for Shenyang: K53 Beijing 22:35 → Shenyang North 07:00 (13 Nov) and K54 Shenyang North 22:00 → Beijing 06:58 (15 Nov), hard sleeper ¥171 / soft ¥263. Reach Beijing station from PEK by Airport Express + metro line 2 (~1 h). Used in all Shenyang plans.
+- **T297 Beijing 12:24 → Shenyang North 20:46** (Beijing–Mudanjiang through train, 8 h 22 min; Trip.com 12 Nov: hard seat / standing MNT 52,830, hard sleeper MNT 98,113, soft sleeper MNT 148,248 sold out, waitlist only). It leaves from **Beijing Railway Station (北京站, code BJP)** in Dongcheng, which is not Beijing South, West or Chaoyang. Metro: Line 2 "Beijing Railway Station" stop. From PEK T3: Airport Express to Dongzhimen, then Line 2 southbound, about 1 h. Pairs with CA956 UB 16:10 → PEK 18:15 on 11 Nov (Trip.com MNT 547,200 incl. 23 kg) plus one Beijing night. Hotel search keywords: "Beijing Railway Station" / 北京站, and Chongwenmen (崇文门), Jianguomen (建国门), Dongdan (东单), Wangfujing as fallbacks. Pick the landmark entry, not the free text, and sort by distance.
 - Beijing → Nanjing sleepers (D5 21:21, D11 21:22, ¥377–401) leave too soon after MIAT lands at 19:30, so the 6 Nov Beijing night stays.
 - Shenyang → Beijing G-train fares vary ¥268–383 by train; the plans keep ¥339 where used.
 
