@@ -660,6 +660,8 @@ Totals incl. tax, CNY, Ctrip calendar 29 Oct:
 ## Open items / next optimization ideas
 
 - **Book soon (10 Oct):** Spring UB ⇄ PVG fares and MIAT UB–HKG are far below their usual levels (SlickTrip "low"); Air China UB → PEK 17 Dec $157.
+- **29 Oct, decided (user): the team flies Thu 12 Nov, Hohhot + Spring.** Advised to book both legs on 29 Oct (12:10, still CA758 ¥1,011
+  + 9C6782 ¥280 + ¥140): waiting a day has no expected gain (CA758 has never been below ¥1,011; Spring moves ±¥60 at random).
 - **29 Oct:** Spring fares rose one step (+¥60–70 pp) on 10–13 Nov. The calendar data says the leg that will rise is **Air China
   CA758 (book by ~31 Oct)**; Spring's HET → SHE fare stays ~¥430 incl. tax to the last days. Both Spring workbook sheets are ¥60 pp low
   (see "Hohhot + Spring price check"). Run `scripts/ctrip_calendar.py` daily until booked.
