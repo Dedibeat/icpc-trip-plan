@@ -1,0 +1,35 @@
+checked,source,item,depart,price,currency,taxes,note
+2026-10-22,Ctrip,CA758 ULN-HET 13:00,2026-11-12,1011,CNY,incl,
+2026-10-22,Ctrip,9C6782 HET-SHE 19:05,2026-11-10,240,CNY,excl,
+2026-10-22,Ctrip,9C6782 HET-SHE 19:05,2026-11-12,290,CNY,excl,
+2026-10-22,SlickTrip,9C6782 HET-SHE 19:05,2026-11-12,65,USD,incl,
+2026-10-22,Ctrip,one ticket ULN-SHE via HET (CA758+9C6782),2026-11-12,1561,CNY,incl,
+2026-10-22,Kiwi,CA758+9C6782 self-transfer,2026-11-12,237,USD,incl,no checked bag
+2026-10-22,Kiwi,CA758+9C6782 self-transfer,2026-11-13,215,USD,incl,no checked bag
+2026-10-27,Ctrip,CA758 ULN-HET 13:00,2026-11-10,1011,CNY,incl,same 10-13 Nov
+2026-10-27,Ctrip,CA758 ULN-HET 13:00,2026-11-12,1011,CNY,incl,
+2026-10-27,Trip.com,CA758 ULN-HET 13:00,2026-11-12,1009,CNY,incl,
+2026-10-27,Ctrip,9C6782 HET-SHE 19:05,2026-11-10,220,CNY,excl,
+2026-10-27,Ctrip,9C6782 HET-SHE 19:05,2026-11-12,220,CNY,excl,products 220 / 280 / 340 (20 kg) / 380
+2026-10-27,Trip.com,one ticket ULN-SHE via HET (CA758+9C6782),2026-11-10,770100,MNT,incl,= CNY 1428
+2026-10-27,Trip.com,one ticket ULN-SHE via HET (CA758+9C6782),2026-11-12,1528,CNY,incl,
+2026-10-27,Ctrip,one ticket ULN-SHE via HET (CA758+9C6782),2026-11-10,1451,CNY,incl,
+2026-10-27,Ctrip,one ticket ULN-SHE via HET (CA758+9C6782),2026-11-12,1531,CNY,incl,
+2026-10-27,Ctrip,9C6520 ULN-PVG 13:00,2026-11-13,808,CNY,incl,10 / 12 Nov 1108
+2026-10-27,Ctrip,9C6759 PVG-SHE 18:50,2026-11-13,290,CNY,excl,products 290 / 350 / 410 (20 kg) / 450
+2026-10-27,Trip.com,Spring package ULN-PVG-SHE,2026-11-13,751400,MNT,incl,7 kg cabin; 780300 with 20 kg both legs
+2026-10-28,Trip.com (user),one ticket ULN-SHE via HET (CA758+9C6782),,760000,MNT,incl,seen by the user; date not recorded
+2026-10-29,Ctrip,CA758 ULN-HET 13:00,2026-11-10,1011,CNY,incl,
+2026-10-29,Ctrip,CA758 ULN-HET 13:00,2026-11-12,1011,CNY,incl,
+2026-10-29,Ctrip,9C6782 HET-SHE 19:05,2026-11-10,290,CNY,excl,products 290 / 350 / 410 (20 kg) / 450
+2026-10-29,Ctrip,9C6782 HET-SHE 19:05,2026-11-12,280,CNY,excl,products 280 / 340 / 400 (20 kg) / 440
+2026-10-29,Ctrip,9C6782 HET-SHE 19:05,2026-11-14,240,CNY,excl,
+2026-10-29,SlickTrip,9C6782 HET-SHE 19:05,2026-11-10,65,USD,incl,
+2026-10-29,SlickTrip,9C6782 HET-SHE 19:05,2026-11-12,64,USD,incl,price_check low (usual 65-356)
+2026-10-29,Trip.com,one ticket ULN-SHE via HET (CA758+9C6782),2026-11-10,856600,MNT,incl,20 kg checked + 5 kg cabin
+2026-10-29,Trip.com,one ticket ULN-SHE via HET (CA758+9C6782),2026-11-12,851200,MNT,incl,
+2026-10-29,Ctrip,one ticket ULN-SHE via HET (CA758+9C6782),2026-11-10,1601,CNY,incl,
+2026-10-29,Ctrip,one ticket ULN-SHE via HET (CA758+9C6782),2026-11-12,1591,CNY,incl,
+2026-10-29,Ctrip,9C6520 ULN-PVG 13:00,2026-11-13,808,CNY,incl,12 Nov 1007
+2026-10-29,Ctrip,9C6759 PVG-SHE 18:50,2026-11-13,350,CNY,excl,products 350 / 410 / 470 (20 kg) / 510
+2026-10-29,Google Flights,9C6782 HET-SHE 19:05,2026-11-12,64,USD,incl,"Prices are currently typical"; no history graph

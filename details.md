@@ -19,6 +19,9 @@ In `ICPC_Single_Contest_Plans.xlsx` every "3 ppl" column / H column = the UNFUND
 | `ICPC_flight_fares_30Sep2026.xlsx` | Trip.com fares found via the Bright Data scraper, compared against the fares the plans used before. Rows 11–22 checked 30 Sep, rows 38–63 checked 1 Oct 2026, rows 65–73 Hohhot gateway + other flight sources. Sheets: "Connector notes", "Trains & hotels" (Ctrip trains and Trip.com hotels checked 1 Oct), "12306 & ChinaTicketOnline" (official fares, sale times and reseller mark-ups, checked 3 Oct), "10 Oct – Dec & Jan checks" (Trip.com / SlickTrip / 12306 / CTO figures behind the Shanghai, Nanchang, Shenyang G-train and Hong Kong sheets). |
 | `scripts/recalc_check.py` | Recalculates every workbook in Python, with no Excel or LibreOffice needed. Prints the key totals and exits 1 on any formula error. |
 | `scripts/q12306.py` | Lists every 12306 train on a route/date with official fares, over plain HTTP (no browser, no login). Works from the cloud container. On Windows set `Q12306_INSECURE=1` (12306's CA is not in the Windows store); it is slow (~1 s per train), so the built-in browser snippet below is faster. |
+| `scripts/ctrip_calendar.py` | Snapshots Ctrip's low-price calendar (cheapest fare of any airline per departure date, ~1 year ahead) for ULN-HET, HET-SHE, ULN-SHA, SHA-SHE, ULN-SHE over plain HTTP (no browser, no cookies) and appends it to `data/ctrip_calendar.csv`. Run once a day to build a price history; it prints each snapshot for 10–14 Nov. |
+| `data/ctrip_calendar.csv` | Calendar snapshots: snapshot, route, depart, price (before tax), total (incl. tax), CNY. 0 = no fare listed. First snapshot 29 Oct 2026. |
+| `data/fare_observations.csv` | Hand-recorded fares for the Shenyang way-out flights from 22, 27 and 29 Oct (Ctrip, Trip.com, SlickTrip, Kiwi, Google): the only time series before the calendar log started. |
 | `requirements.txt` | Python deps: `openpyxl` (edit workbooks), `formulas` (recalculate). |
 
 ## Setup
@@ -620,14 +623,46 @@ browser), Trip.com (MNT) and SlickTrip, per person, 1 adult, before the ¥30 Tao
   ¥858 + ¥470 + ¥140 = ¥1,468 = ₮787k. Still ₮44–71k pp below Hohhot + Spring, with the tight 2 h 05 min transfer and no spare day.
 - Advice given: book now as two separate Ctrip tickets on Thu 12 Nov, all travellers in one order; Spring rises as the date nears, the
   upside of waiting is about one step (~₮32k pp), and the downside is open-ended.
+- **Correction after the calendar analysis below:** the Spring leg's risk is small; the leg that rises is Air China CA758.
+
+### Price data analysis (29 Oct 2026)
+
+Sources of price data, and what each gives:
+- **Ctrip low-price calendar** (best): POST `https://m.ctrip.com/restapi/soa2/15380/bjjson/FlightIntlAndInlandLowestPriceSearch` with
+  `{"departNewCityCode":"HET","arriveNewCityCode":"SHE","startDate":"YYYY-MM-DD","grade":3,"flag":0,"channelName":"FlightIntlOnline","searchType":1,"passengerList":[{"passengercount":1,"passengertype":"Adult"}],"calendarSelections":[{"selectionType":8,"selectionContent":["3"]}]}`.
+  Works from curl / Python with no cookies, domestic and international. Returns `priceList` (`departDate` `/Date(ms+0800)/`, `price`
+  before tax, `totalPrice` incl. tax) for ~1 year. The cheapest of any airline that day, no flight number. The old
+  `flights.ctrip.com/itinerary/api/12808/lowestPrice` returns 403 even inside the browser. Logged by `scripts/ctrip_calendar.py`.
+- SlickTrip: `price_calendar` (one-way, `max_stops=0`) and `search_flights` `price_check` (verdict + usual range); no stored history
+  unless a watch exists (`list_tracked_flights` was empty on 29 Oct). `watch_details` keeps every price move once a watch is set.
+- Google Flights: only "Prices are currently typical" for HET → SHE 12 Nov; no price-history graph on this route.
+- Our own observations: `data/fare_observations.csv`.
+
+One snapshot shows how fares change with **days before departure** (each later date stands in for "12 Nov, N days out").
+Totals incl. tax, CNY, Ctrip calendar 29 Oct:
+
+| Route (flight days) | ≤5 days out | 6–8 days | 9–11 days | 12–23 days | Read |
+|---|---|---|---|---|---|
+| HET → SHE (9C6782, Tue / Thu / Sat) | 430 (2 d), 500 (5 d) | 430 (7 d) | – (7 Nov: no fare listed) | 380–430 (12 Nov 420) | **Flat**: Spring holds ~¥430 to the last days |
+| ULN → HET (CA758, Mon / Tue / Thu days) | 2,031–2,081 (4–5 d) | 1,311 (7 d) | 1,153 (11 d) | 1,011–1,031 | **Rises from ~11 days out**: +¥140, +¥300 at 7 d, +¥1,000 at 4–5 d |
+| ULN → SHA (9C6520, Fridays) | 4,102 (1 d) | 1,006 (8 d) | – | 808 (15 and 22 d) | Rises ~¥200 inside ~10 days |
+| SHA → SHE (busy route) | 555–737 | 430–620 | 430–490 | 380–490 | Mild rise inside ~5 days |
+
+- Time series for 9C6782 (Ctrip, before tax): 12 Nov ¥290 (22 Oct) → ¥220 (27 Oct) → ¥280 (29 Oct); 10 Nov ¥240 → ¥220 → ¥290. It moves
+  both ways in a ¥220–290 band, so the ¥220 on 27 Oct was a dip, not the floor. CA758 stayed ¥1,011 on all three dates.
+- Conclusion: **book CA758 by ~31 Oct** (12 Nov is 11 days out on 1 Nov). The Spring leg can wait for a dip (¥220–240 seen) at small
+  risk (+¥80 at worst in the data, plus selling out for 3–4 seats), or be booked now. Spring via Shanghai: 9C6520 ¥808 likely rises
+  ~¥200 within a week. Caveat: a cross-section is not a time series; weekday mix and other airlines on the same day blur it. Keep running
+  `scripts/ctrip_calendar.py` daily to see the real curve.
 - **Workbook is now ¥60 pp low** on both Spring sheets: `Shenyang – Hohhot + Spring` Spring row ¥360 → ¥420 (bag +¥120 unchanged);
   `Shenyang – Spring via Shanghai` 9C6759 ¥430 → ¥490 (bag fares +¥170 unchanged). Not applied yet.
 
 ## Open items / next optimization ideas
 
 - **Book soon (10 Oct):** Spring UB ⇄ PVG fares and MIAT UB–HKG are far below their usual levels (SlickTrip "low"); Air China UB → PEK 17 Dec $157.
-- **29 Oct:** Spring fares rose one step (+¥60–70 pp) on 10–13 Nov; book Hohhot + Spring (12 Nov) or Spring via Shanghai (13 Nov) now as
-  separate Ctrip tickets. Both Spring workbook sheets are ¥60 pp low (see "Hohhot + Spring price check").
+- **29 Oct:** Spring fares rose one step (+¥60–70 pp) on 10–13 Nov. The calendar data says the leg that will rise is **Air China
+  CA758 (book by ~31 Oct)**; Spring's HET → SHE fare stays ~¥430 incl. tax to the last days. Both Spring workbook sheets are ¥60 pp low
+  (see "Hohhot + Spring price check"). Run `scripts/ctrip_calendar.py` daily until booked.
 - **27 Oct:** CA902 12 Nov is now ¥1,541 on Ctrip (10 Nov ¥2,311), so `Sleep first` / `Sleep value` (still ¥1,291) are ~₮134k pp
   low. Cheapest no-sleep-loss way out: Spring via Shanghai on Fri 13 Nov (9C6520 + 9C6759, ₮680k pp, tight 2 h 05 min transfer), or
   Hohhot + Spring on 10 / 12 Nov (₮751k pp, 4 h 25 min transfer, spare day). Both are workbook sheets.
