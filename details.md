@@ -521,6 +521,7 @@ USD → CNY at the workbook rates (3,598 / 536 = 6.713). Prices are full-stay to
 | Ji Hotel Sanhao St (current plan hotel, double) | 0.95 km | $96.93 ≈ ¥651 | ¥1,301 | Ctrip (plan budgets 2 twins at ¥1,371) |
 | Sunlight Apartment TV Tower (Booking.com 9.3, 19 reviews) | 2.6 km | ¥633 | ¥1,267 | Booking.com |
 
+- **2. Qianyuan Boutique Apartment, Jiuzhaoye Square Store (钱苑精品公寓(佳兆业广场店))**, Trip.com id 112973233 (checked 30 Oct). Address: Tower C, Kaisa Plaza, Wencui Rd, Shenhe. It's 640 m from Shitushuguan station on metro Line 2, which runs direct from Shenyang North, and 6.5 km from Shenyang North. It's a 15-room homestay (民宿) in an office tower, rated 9.9 with 72 reviews. Phone +86-13840058757. Check-in is self check-in, and you must phone 1 day ahead. Trip.com says "Guests from all countries/regions are welcome", but every review is from a Chinese guest, and small 民宿 self check-in often uses Chinese ID face verification. So foreign-passport registration is unproven. Get written confirmation in the Trip.com chat before booking, and book free-cancellation. Rooms: Captivating Sweetheart Twin 55 m² (2 beds), Projection Suite 88 m² (3 beds). Smoking is permitted, so ask for a non-smoking room.
 - Swapping the Ji Hotel twins (¥1,371) for 2 double rooms at a 7 Days / Home Inn on Sanhao Street saves **¥670–880 ≈ ₮0.36–0.47M**
   per trip. Not applied to the workbook.
 - Check before booking: (1) the cheapest 7 Days / Home Inn room is often **windowless (无窗)**. Pick a room with a window (有窗) for the
