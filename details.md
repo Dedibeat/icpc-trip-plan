@@ -722,6 +722,31 @@ Booking.com near Luohu border is ¥2,586–4,064 for the same stay (more than Ts
 on East Rail and a border queue every morning. Only worth it with Trip.com chain hotels (~¥150–250 / room, not checked) and a
 venue at CityU / Kowloon Tong.
 
+### All Hong Kong plans costed (21 Nov, 4 people)
+
+Whole trip = 4 × travel + HK hotel (Premium Lounge HK$2,088 or Good Fortune Inn HK$2,889, 3 nights, 2 rooms) + extra HK nights
+at HK$696 + meals ₮50k pp/day away + HK transport ₮0.37M + fee HK$1,800 + UB taxi / insurance / eSIM ₮0.46M. Assumed (not
+checked): Hohhot / Beijing / Shanghai room share ¥75 pp, Spring 20 kg bag ¥170, HK → Guangzhou ¥200, jeep ¥100, domestic
+calendar fares + ¥140 tax. Costing script: scratchpad `plans.py` (not committed).
+
+| Plan | Out | Back | Travel pp | Days | 4 ppl (PL / GFI) | Sleep |
+|---|---|---|---|---|---|---|
+| P0 MIAT nonstop (user ₮2.3M; Ctrip ¥5,151 = ₮2.76M) | OM297 8 Jan | OM2972 11 Jan | ₮2.30M (2.76M) | 4 | ₮12.62M / 12.99M (14.47M) | BEST |
+| P1 Hailar + fly via Guangzhou / Hohhot | MR851 + HX462 8 Jan | CZ2131 + Hohhot night + CA757 | ₮2.05M | 5 | ₮11.82M / 12.19M | WATCH |
+| **P2 Hailar + Hohhot overland** | same | CZ2131 + V3888 + jeep + UBTZ 275 | ₮1.63M | 6 | **₮10.35M / 10.72M** | WATCH |
+| P3 / P4 Hailar + all train (berths / seats) | same | Z182 + V3888 + jeep + UBTZ 275 | ₮1.33M / 1.14M | 7 | ₮9.33M / 8.58M (PL) | WATCH |
+| P5 Hailar + Macau → CAN → HET + overland | same | CZ5014 + CZ3197 (airport night) + overland | ₮1.49M | 7 | ₮10.00M / 10.36M | WATCH |
+| P6 Hailar + HKG → HET via PEK + CA757 | same | CA112 + CA1111 + Hohhot night + CA757 | ₮2.09M | 5 | ₮11.98M / 12.35M | WATCH |
+| P7 Hailar + Spring via Shanghai | same | SZX → SHA + PVG → UB 12 Jan 08:00 | ₮2.16M | 5 | ₮12.26M / 12.63M | WATCH |
+| P8 Hailar + MIAT one-way back | same | OM2972 ¥3,603 | ₮2.77M | 4 | ₮14.49M | WATCH |
+| P9 Hailar Mon 4 Jan + overland | MR851 + HX462 4 Jan | as P2 | ₮1.63M | 10 | ₮12.43M (+4 nights) | BEST |
+| P10 / P11 Overland out + overland / train-seat home | UBTZ 276 Mon 4 Jan + jeep + Erenhot → Hohhot + HET → SZX 6 Jan | as P2 / P4 | ₮1.40M / 0.91M | 10 / 11 | ₮10.88M / 9.11M (PL) | OK |
+| P12 Hohhot red-eye out + overland | OM257 Thu 7 Jan 22:25 + HET → HKG 8 Jan | as P2 | ₮1.99M | 7 | ₮11.97M | WATCH |
+| P13 Spring both ways via Shanghai | 9C6520 Thu 7 Jan + SHA → HKG | as P7 | ₮2.48M | 6 | ₮14.07M | OK |
+| P14 Beijing out + overland | CA956 Wed 6 Jan + BJS → ZUH + bridge bus | as P2 | ₮2.35M | 8 | ₮13.95M | OK |
+| P15 Erenhot (Hunnu) out + overland | ULN → ERL + ERL → SZX 5 Jan | as P2 | ₮1.91M | 9 | ₮12.72M | OK |
+| Seoul transfers (Jeju / Eastar / HK Express) | ¥1,926–1,999 | Jeju $350 | – | – | not costed: Korean visa | – |
+
 ## Open items / next optimization ideas
 
 - **Hong Kong (21 Nov):** book the Hailar combo (MR851 + HX462, Fri 8 Jan, ¥1,528 on Ctrip) and CZ2131 (11 Jan) once the HK
