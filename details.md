@@ -661,7 +661,71 @@ Totals incl. tax, CNY, Ctrip calendar 29 Oct:
 - **Workbook is now ¥60 pp low** on both Spring sheets: `Shenyang – Hohhot + Spring` Spring row ¥360 → ¥420 (bag +¥120 unchanged);
   `Shenyang – Spring via Shanghai` 9C6759 ¥430 → ¥490 (bag fares +¥170 unchanged). Not applied yet.
 
+## Hong Kong cheap routes via the mainland (21 Nov 2026)
+
+Request: Hong Kong regional, **4 people, ₮12M budget**, beat the MIAT nonstop (~₮2.3M pp return, user figure), mainland / Macau
+stops and mainland hotel nights allowed, "every crazy idea". Contest still assumed **Sat 9 – Sun 10 Jan 2027** (a Codeforces
+post says HK Regional 9–10 Jan after an OCPC camp at CityU 2–8 Jan; codeforces.com returns 403 to WebFetch). Host / venue
+still unconfirmed; an Asia EC Feb 2026 minute proposed making HK / Macau an open site (not confirmed).
+
+Sources: Ctrip low-price calendar API (`scratchpad cal.py`, same POST as `scripts/ctrip_calendar.py`; city codes HLD Hailar,
+MFM Macau, ZUH Zhuhai, SZX, CAN, ERL Erenhot, NZH Manzhouli; `BJS`/`PEK` return nothing for ULN), Ctrip list pages in the
+built-in browser (`flights.ctrip.com/online/list/oneway-xxx-yyy?depdate=…`, read the text between 低价提醒 and 在线客服 after
+a small screenshot), SlickTrip, ChinaTicketOnline API, Booking.com. CNY ₮536, HKD ₮461 (workbook rates).
+
+Baseline check: MIAT OM297 UB 07:15 → HKG 11:50 / OM2972 HKG 20:30 → UB 01:10. Round trip 8 → 11 Jan: Ctrip **¥5,151**
+(₮2.76M), SlickTrip $710 (₮2.55M, "about usual", usual $575–900). **MIAT one-ways are dear:** UB → HKG ¥2,069 (8 Jan),
+HKG → UB ¥3,603 (11 Jan). So a mainland route must beat it on both legs separately.
+
+**Out – the Hailar trick (found 21 Nov):** Hunnu Air **MR851 UB 13:10 → Hailar HLD 15:00** (¥657, Mon / Fri) + Hong Kong
+Airlines **HX462 HLD 18:20 → HKG 23:30** (¥852, Mon / Fri) = **¥1,528 on one Ctrip listing** (separate ¥1,509), Fri 8 Jan.
+3 h 20 min self-transfer, bags not through (行李非直达): enter and leave the mainland at Hailar. ₮0.82M pp vs MIAT one-way ₮1.11M.
+Same fares on Mon 4 Jan (arrive early). Fallback if MR851 is late: HLD 18:10 → PEK → HKG 06:05 (HK Express, ¥1,582) – arrives
+on day 1. Sleep: hotel ~01:00 on the night before day 1 (registration day), contest eve untouched → WATCH.
+
+Other outbound ideas checked and dropped (per person, 5–8 Jan):
+- Hohhot: MIAT OM257 22:25 → 00:15 ¥967 (red-eye; CA758 13:00 now **¥1,851**) + HET → HKG ¥824–838 (Air China via PEK etc.) ≈ ¥1,800 + hotel.
+- Shanghai: Spring 9C6520 Thu 7 Jan ¥1,399 + SHA → MFM ¥449 / SZX ¥460 / HKG ¥559 ≈ ¥1,850–1,960.
+- Beijing: MIAT $232 / Hunnu PKX $222 (SlickTrip) + BJS → ZUH ¥690 / SZX ¥860.
+- Erenhot (Hunnu ¥873) + ERL → SZX ¥1,170+; Manzhouli ¥800 + NZH → SZX ¥1,440+.
+- Via Seoul (Jeju / Eastar / HK Express ¥1,926–1,999, overnight, Ctrip flags 过境需签证 – Mongolians need a Korean visa).
+- UB → SZX / CAN / MFM / ZUH direct calendars: ¥1,756–2,605. Hailar wins.
+
+**Back – via Guangzhou and Hohhot (Mon 11 Jan):** HK → Guangzhou (HSR West Kowloon → Guangzhou South + metro to Baiyun, ~¥200
+estimate) + **China Southern CZ2131 CAN 16:15 → HET 19:20 ¥820 + ¥140 tax** (CZ3197 07:55 same fare). Then either
+- **B2 fly:** Hohhot night + **Air China CA757 Tue 12 Jan HET 10:10 → UB 12:00 ¥1,030** → ₮1.21M pp, or
+- **B3 overland:** **V3888 (was 4652) Hohhot 22:50 → Erenhot 06:50** (CTO: hard seat ¥69 / hard sleeper ¥130; on sale
+  **28 Dec 14:00**), jeep ~¥100 to Zamyn-Uud, **UBTZ 275 18:05 → UB 09:20** platskart ₮51,400 → home Wed 13 Jan, **₮0.80M pp**.
+- **B4 all ground:** Lo Wu → Shenzhen East, **Z182 Shenzhen East 09:46 → Hohhot East 18:09 +1** (hard seat ¥299.5, hard
+  sleeper ¥542.5, on sale 28 Dec 09:15) + V3888 + jeep + UBTZ 275 → home Thu 14 Jan, ₮0.30M (seats) / ₮0.49M (berths) pp.
+- Dropped: Hailar back (HX463 HKG 12:35 → HLD 17:20 misses Hunnu MR852 HLD 16:00 → UB 17:40; next Hunnu 4 days later);
+  HKG → HET Air China via PEK 14:35 → 22:15 ¥1,196 / Shandong via Qingdao overnight ¥1,009; Macau → CAN → HET CZ5014 18:40 +
+  CZ3197 next morning ¥842 (12 h airport night); SZX → HET 11 Jan ¥3,260 (10 Jan ¥890); Spring SZX → SHA ¥460 + PVG → UB
+  ¥1,716; Jeju HKG 00:35 via ICN $350 (Korean transit visa risk); MIAT one-way ¥3,603.
+
+| Plan (per person, travel only) | Out | Back | Total pp | ×4 |
+|---|---|---|---|---|
+| MIAT nonstop return (user figure / Ctrip) | – | – | ₮2.30M / ₮2.76M | ₮9.2M / ₮11.0M |
+| Hailar + fly home via Hohhot (B2) | ₮0.84M | ₮1.21M | ₮2.05M | ₮8.2M |
+| **Hailar + Hohhot overland (B3) – recommended** | ₮0.84M | ₮0.80M | **₮1.63M** | **₮6.5M** |
+| Hailar + all-train home (B4 berths / seats) | ₮0.84M | ₮0.49M / ₮0.30M | ₮1.33M / ₮1.14M | ₮5.3M / ₮4.6M |
+
+(Out includes ~HK$35 night bus from HKG; B2 includes ~¥75 pp Hohhot room share. Not in the workbook yet.)
+
+Whole trip for 4, rough (hotel 3 nights Good Fortune Inn HK$2,889 = ₮1.33M from Oct, meals ~₮50k pp/day, HK transport ₮0.37M,
+fee HK$1,800 ₮0.83M, UB taxi / insurance / eSIM ₮0.46M): MIAT ≈ ₮13.0M (over), B2 ≈ ₮12.2M, **B3 ≈ ₮10.7M**, B4 berths ≈ ₮9.7M.
+
+Hotels (Booking.com 21 Nov, 8–11 Jan, 4 adults / 2 rooms, 3 nights, ≥8.0): Premium Lounge (Chungking, 8.1, 1,382) **HK$2,088**,
+Traveller's Hostel 8.1 HK$2,408, David Lounge 8.0 HK$2,436, Tai San Harilela 8.0 HK$2,618, Sleep Inn 8.4 HK$2,733, Tai San
+Burlington 8.4 HK$2,821. Good Fortune Inn (4 twin beds) not re-checked. **Sleeping in Shenzhen and commuting does not pay:**
+Booking.com near Luohu border is ¥2,586–4,064 for the same stay (more than Tsim Sha Tsui), plus ~HK$40 each way per person
+on East Rail and a border queue every morning. Only worth it with Trip.com chain hotels (~¥150–250 / room, not checked) and a
+venue at CityU / Kowloon Tong.
+
 ## Open items / next optimization ideas
+
+- **Hong Kong (21 Nov):** book the Hailar combo (MR851 + HX462, Fri 8 Jan, ¥1,528 on Ctrip) and CZ2131 (11 Jan) once the HK
+  site / dates are confirmed; buy V3888 on 28 Dec 14:00 (12306) and UBTZ 275 on eticket.ubtz.mn. Re-check Good Fortune Inn.
 
 - **Book soon (10 Oct):** Spring UB ⇄ PVG fares and MIAT UB–HKG are far below their usual levels (SlickTrip "low"); Air China UB → PEK 17 Dec $157.
 - **29 Oct, decided (user): the team flies Thu 12 Nov, Hohhot + Spring.** Advised to book both legs on 29 Oct (12:10, still CA758 ¥1,011
