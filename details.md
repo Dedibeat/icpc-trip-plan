@@ -805,6 +805,27 @@ Back routes (Mon 11 Jan):
 - Ctrip asked for a login after many list searches and the built-in browser was later refused flights.ctrip.com; the calendar API
   still works without login.
 
+### Shanghai sightseeing stop (21 Nov)
+
+Request: go to Shanghai a few days early to see the city. Spring 9C6520 UB 13:00 → PVG 16:45 flies **Tue / Thu / Sat** (SlickTrip
+schedule); Ctrip calendar: Sat 2 Jan ¥1,649, Tue 5 Jan ¥1,599, Thu 7 Jan ¥1,399 (29 / 31 Dec ¥2,050–2,094). Shanghai → HK: Thu 7 Jan
+¥559, Fri 8 Jan ¥741. HK → Shanghai after the contest: Mon 11 Jan ¥670, Tue 12 / Thu 14 ¥579. Spring PVG → UB ¥1,716–1,720 daily-ish
+(9C6519 08:00 → 12:00). Train **Z82 (was Z268) Shanghai 14:49 → Hohhot 17:08 +1**, hard seat ¥254.5 / hard sleeper ¥464.5 (CTO, 14 Jan);
+Z282 Songjiang 19:17 → Hohhot 19:52 +1 ¥236 / ¥428. Hotel: **Dayin Serene Garden Hotel** (People's Square / Nanjing Road, 8.8, 384
+reviews) ¥1,193 for 2 rooms × 3 nights (Booking.com, 5–8 Jan); other central options ¥1,249–1,400.
+
+| Plan (4 ppl, same fixed costs as the matrix) | Travel pp | Shanghai nights | Days away | Total |
+|---|---|---|---|---|
+| P2 Hailar + overland, no Shanghai | ₮1.63M | 0 | 6 | ₮10.35M |
+| SA Spring Tue 5 Jan, 3 nights, Shanghai → HK Fri 8 Jan 09:15, overland home | ₮2.16M | 3 | 9 | ₮13.69M |
+| SA' Spring Tue 5 Jan, 2 nights, Shanghai → HK Thu 7 Jan evening (+1 HK night) | ₮2.06M | 2 | 9 | ₮13.41M |
+| SB Spring Sat 2 Jan, 6 nights, HK Fri 8 Jan | ₮2.18M | 6 | 12 | ₮15.04M |
+| SC Hailar out; HK → Shanghai Mon 11, 3 nights, Spring home Thu 14 | ₮2.22M | 3 | 7 | ₮13.56M |
+| **SD Hailar out; HK → Shanghai Mon 11, 3 nights, Z82 sleeper + V3888 + UBTZ 275 → UB Sun 17 Jan** | ₮1.63M | 3 | 10 | **₮11.80M** (₮11.35M with Z82 seats) |
+
+Shanghai **after** the contest is cheaper and keeps the pre-contest nights calm; it is the only Shanghai plan inside ₮12M.
+Assumptions: Spring 20 kg bag ¥170, airport transfers ~¥30, meals ₮50k pp/day; sightseeing tickets not included.
+
 ## Open items / next optimization ideas
 
 - **Hong Kong (21 Nov):** book the Hailar combo (MR851 + HX462, Fri 8 Jan, ¥1,528 on Ctrip) and CZ2131 (11 Jan) once the HK
