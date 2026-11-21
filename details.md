@@ -752,6 +752,21 @@ calendar fares + ¥140 tax. Costing script: scratchpad `plans.py` (not committed
 | P15 Erenhot (Hunnu) out + overland | ULN → ERL + ERL → SZX 5 Jan | as P2 | ₮1.91M | 9 | ₮12.72M | OK |
 | Seoul transfers (Jeju / Eastar / HK Express) | ¥1,926–1,999 | Jeju $350 | – | – | not costed: Korean visa | – |
 
+### Leg times for the Hong Kong plans (21 Nov; SlickTrip schedules, ChinaTicketOnline trains)
+
+- MIAT: OM297 Fri 8 Jan UB 07:15 → HKG 11:50; OM2972 Mon 11 Jan HKG 20:30 → UB 01:10 (+1).
+- Hailar: MR851 UB 13:10 → HLD 15:00; HX462 HLD 18:20 → HKG 23:30 (Mon / Fri).
+- Home via Guangzhou: G908 West Kowloon 11:14 → Guangzhou South 12:06 (CTO ¥215; trains every ~15 min); CZ2131 CAN 16:15 → HET 19:20;
+  CA757 HET 10:10 → UB 12:00; V3888 Hohhot 22:50 → Erenhot 06:50; UBTZ 275 Zamyn-Uud 18:05 → UB 09:20.
+- Z182 Shenzhen East 09:46 → Hohhot East 18:09 (+1). Erenhot → Hohhot: V3890 12:45 → 20:00, V3926 18:00 → 22:44 (CTO, 5 Jan).
+- Macau: CZ5014 MFM 18:40 → CAN, CZ3197 CAN 07:55 → HET 11:10 (+1). Via Beijing: CA112 HKG 14:35 → PEK, CA1111 → HET 22:15.
+- Hohhot → HKG 8 Jan: CA1112 08:30 + CA109 → 16:45. Hohhot → Shenzhen 6 Jan: ZH9130 15:30 → 18:55, CZ8284 07:55 → 11:25.
+- Shanghai: 9C6520 UB 13:00 → PVG 16:45; PVG → HKG 7 Jan evening CX381 19:05 → 22:05, 8 Jan Spring 9C8715 09:15 → 12:15;
+  SZX → SHA 11 Jan Spring 9C8882 14:40 → 17:00; Spring PVG → UB Tue 12 Jan 08:00 → 12:00.
+- Beijing: CA956 UB 16:10 → PEK 18:15; CA1905 PEK 7 Jan 09:30 → ZUH 13:15.
+- **P15 (Erenhot) is void:** there is no Erenhot → Shenzhen flight; the calendar's ¥1,170 routes back through UB (MR862 + MR801 + ZH).
+- Ctrip list pages now ask for a login after ~15 searches in one session (21 Nov); the calendar API still works.
+
 ## Open items / next optimization ideas
 
 - **Hong Kong (21 Nov):** book the Hailar combo (MR851 + HX462, Fri 8 Jan, ¥1,528 on Ctrip) and CZ2131 (11 Jan) once the HK
