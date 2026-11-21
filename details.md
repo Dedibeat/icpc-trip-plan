@@ -788,6 +788,23 @@ Back routes (Mon 11 Jan):
 - **Spring via Shanghai**: SZX → SHA ¥460 (e.g. 9C8882 14:40 → 17:00); Spring 9C6519 Tue 12 Jan PVG 08:00 → UB 12:00 ¥1,716.
 - **MIAT one-way**: OM2972 HKG 20:30 → UB 01:10 ¥3,603.
 
+### Hailar re-check (21 Nov, ~20:50 UB time)
+
+- **MR851 is real and flying:** Trip.com status page (VariFlight data) shows Hunnu MR851 UB 13:10 → Hailar 15:00 operated every Mon / Fri
+  from 30 Oct to 20 Nov (E190, departures 13:06–14:19, 97% on time, 0 cancellations). **Only Ctrip sells it:** not on Trip.com,
+  SlickTrip, Google-style schedules, or hunnuair.com (its Amadeus booking engine has no Hailar). Ctrip calendar still **¥657** on
+  Mon / Fri (1, 4, 8, 11, 15 Jan).
+- **HX462 is real:** Ctrip calendar ¥852, Trip.com **¥880** (CNY 889 with options), SlickTrip $128. Jan timetable 18:20 → 23:30, but in
+  Nov it is timetabled 19:30 → 00:40 and left 18:28–20:43 (lands up to ~01:00). Flew Mon 26 Oct and Fridays; 0 cancellations.
+- **The ¥1,528 Ctrip combo row is no longer the day's cheapest** (Ctrip calendar ULN → HKG 8 Jan now ¥1,912; Trip.com's Hunnu
+  itinerary is ¥2,325). Budget **two separate tickets: ¥657 (Ctrip) + ¥852–880 = ¥1,509–1,537 ≈ ₮0.81–0.82M** – unchanged plan cost.
+  Risk with separate tickets: a missed connection loses the HX ticket (next HX462 is 3–4 days later); fallback HLD 22:40 Air China
+  via PEK → HKG 12:00 next day (¥2,360–2,460 Trip.com).
+- Hunnu also flies **MR867 UB 23:05 → Shenzhen 03:05**, but its first January date is Wed 13 Jan and there is no SZX → UB from 11 to
+  18 Jan, so it is no use for this trip.
+- Ctrip asked for a login after many list searches and the built-in browser was later refused flights.ctrip.com; the calendar API
+  still works without login.
+
 ## Open items / next optimization ideas
 
 - **Hong Kong (21 Nov):** book the Hailar combo (MR851 + HX462, Fri 8 Jan, ¥1,528 on Ctrip) and CZ2131 (11 Jan) once the HK
