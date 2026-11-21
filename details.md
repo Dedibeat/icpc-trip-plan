@@ -773,7 +773,7 @@ Out routes:
 - **MIAT** OM297 Fri 8 Jan UB 07:15 → HKG 11:50 (return ticket ¥5,151 with OM2972 Mon 11 Jan HKG 20:30 → UB 01:10).
 - **Hailar** Fri 8 (or Mon 4) Jan: Hunnu MR851 UB 13:10 → HLD 15:00 ¥657 + Hong Kong Airlines HX462 HLD 18:20 → HKG 23:30 ¥852 (Ctrip combo ¥1,528).
 - **Hohhot red-eye**: MIAT OM257 Thu 7 Jan UB 22:25 → HET 00:15 ¥1,280; Air China CA1112 + CA109 Fri 8 Jan HET 08:30 → PEK → HKG 16:45 (day's cheapest ¥838, flight not confirmed).
-- **Shanghai**: Spring 9C6520 Thu 7 Jan UB 13:00 → PVG 16:45 ¥1,399; Spring 9C8715 Fri 8 Jan PVG 09:15 → HKG 12:15 (day's cheapest ¥559, flight not confirmed).
+- **Shanghai**: Spring 9C6520 Thu 7 Jan UB 13:00 → PVG 16:45 ¥1,399; Shanghai → HK **same evening, Thu 7 Jan** (day's cheapest ¥559, flight not confirmed; evening options CX381 PVG 19:05 → 22:05, MU725 21:15 → 00:15, CX327 SHA 22:30 → 01:10). Fri 8 Jan costs ¥741 (e.g. Spring 9C8715 09:15 → 12:15). Corrected 21 Nov: the ¥559 is the 7 Jan fare, not 8 Jan.
 - **Beijing**: Air China CA956 Wed 6 Jan UB 16:10 → PEK 18:15 $298; CA1905 Thu 7 Jan PEK 09:30 → ZUH 13:15 ¥770; HZMB bus ~40 min HK$65.
 - **Overland**: UBTZ 276 Mon 4 Jan UB 16:40 → Zamyn-Uud 07:20 ₮51,400; jeep ~¥100; V3890 Erenhot 12:45 → Hohhot 20:00 seat ¥69; Shenzhen Air ZH9130 Wed 6 Jan HET 15:30 → SZX 18:55 ~¥750 (calendar ¥610 + tax); Shenzhen → HK by metro / border.
 - **Erenhot by air: dropped** – SlickTrip shows no Erenhot → Shenzhen flight; the ¥1,170 calendar fare flies back via UB and Beijing (24 h+).
