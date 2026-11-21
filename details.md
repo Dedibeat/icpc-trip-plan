@@ -664,7 +664,9 @@ Totals incl. tax, CNY, Ctrip calendar 29 Oct:
 ## Hong Kong cheap routes via the mainland (21 Nov 2026)
 
 Request: Hong Kong regional, **4 people, ₮12M budget**, beat the MIAT nonstop (~₮2.3M pp return, user figure), mainland / Macau
-stops and mainland hotel nights allowed, "every crazy idea". Contest still assumed **Sat 9 – Sun 10 Jan 2027** (a Codeforces
+stops and mainland hotel nights allowed, "every crazy idea". **Confirmed 21 Nov by the team's invitation letter (user screenshot): the 51st ICPC Asia Hong Kong Regional, 9–10 Jan 2027,
+hosted by the University of Hong Kong (School of Computing and Data Science, Pokfulam; icpc@cs.hku.hk); the team is invited.**
+Earlier note: contest assumed **Sat 9 – Sun 10 Jan 2027** (a Codeforces
 post says HK Regional 9–10 Jan after an OCPC camp at CityU 2–8 Jan; codeforces.com returns 403 to WebFetch). Host / venue
 still unconfirmed; an Asia EC Feb 2026 minute proposed making HK / Macau an open site (not confirmed).
 
@@ -718,7 +720,10 @@ fee HK$1,800 ₮0.83M, UB taxi / insurance / eSIM ₮0.46M): MIAT ≈ ₮13.0M (
 Hotels (Booking.com 21 Nov, 8–11 Jan, 4 adults / 2 rooms, 3 nights, ≥8.0): Premium Lounge (Chungking, 8.1, 1,382) **HK$2,088**,
 Traveller's Hostel 8.1 HK$2,408, David Lounge 8.0 HK$2,436, Tai San Harilela 8.0 HK$2,618, Sleep Inn 8.4 HK$2,733, Tai San
 Burlington 8.4 HK$2,821. Good Fortune Inn (4 twin beds) not re-checked. **Sleeping in Shenzhen and commuting does not pay:**
-Booking.com near Luohu border is ¥2,586–4,064 for the same stay (more than Tsim Sha Tsui), plus ~HK$40 each way per person
+**Near HKU (Booking.com 21 Nov, 3 km, 2 rooms, 3 nights):** YHA Mt Davis 8.1 HK$3,899 (hilltop, shuttle), Bishop Lei 8.2
+HK$5,267, BW Plus Sai Ying Pun 7.4 HK$6,190 (was HK$3,640 on 10 Oct), Courtyard HK$7,740 – near-venue costs ₮0.8–2.4M more than
+Tsim Sha Tsui, so keep a TST guesthouse (TST → Admiralty → HKU on MTR, ~30–35 min, ~HK$15). With HKU as the venue the Shenzhen
+idea is dead (Lo Wu → HKU ~1 h 20 min). Booking.com near Luohu border is ¥2,586–4,064 for the same stay (more than Tsim Sha Tsui), plus ~HK$40 each way per person
 on East Rail and a border queue every morning. Only worth it with Trip.com chain hotels (~¥150–250 / room, not checked) and a
 venue at CityU / Kowloon Tong.
 
