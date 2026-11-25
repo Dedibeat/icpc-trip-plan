@@ -846,6 +846,10 @@ Booking.com Premium Lounge 7 → 12 Jan (5 nights, 2 rooms) **HK$3,395** (HK$679
 | A MIAT return 7 → 12 ($623) | Thu 11:50 | ₮2.26M | 6 | ₮13.46M |
 | F Hailar Mon 4 + overland home | Mon 23:30 | ₮1.62M | 11 | ₮12.84M |
 
+**User rule (26 Nov): count only travel + hotel in plan totals** (no meals, fee, HK transport, UB costs). On that basis, 4 ppl:
+D ₮7.72M, F ₮8.98M, G ₮9.29M, C ₮9.70M (₮9.57M with seats), E ₮9.78M, B ₮10.13M, A ₮10.61M – all inside ₮12M. Hotel
+part: 4 nights ₮1.25M, 5 nights ₮1.57M (Premium Lounge, 2 rooms).
+
 Nothing beats Hailar on cost. With the contest on Sun 10, the Hailar late arrival hits the night of Fri 8 only, not the
 contest eve. Best sleep: MIAT Thu 7 (A / C), ~₮2.2–2.7M over D.
 
