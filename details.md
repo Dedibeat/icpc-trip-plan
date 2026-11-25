@@ -854,6 +854,12 @@ part: 4 nights ₮1.25M, 5 nights ₮1.57M (Premium Lounge, 2 rooms).
 than 7 → 12 ($623) with one HK night fewer. Travel + hotel for 4 (4 nights, Premium Lounge rate assumed): **₮12.08M** vs A ₮10.61M.
 MIAT out Thu 7 + overland home from Mon 11 (UB Wed 13 09:20): ₮9.38M.
 
+**User (26 Nov): drop overland plans; flights only.** HKG → UB Mon 11 (Trip.com): MIAT one-way ¥3,575 (dear); **Air China
+one ticket ¥2,175: HKG 14:35 → PEK → Hohhot (night) → UB Tue 12 12:00** (also China Eastern via Shanghai + Hohhot ¥2,180).
+Flight-only shortlist, travel + hotel for 4: J Hailar + Air China back Mon 11 ₮9.10M; E Hailar + MIAT back Tue 12 ₮9.78M;
+B MIAT 8 → 12 ₮10.13M; A MIAT 7 → 12 ₮10.61M; L MIAT one-way Fri 8 + Air China back ₮10.67M; K same from Thu 7 ₮11.08M;
+H MIAT 7 → 11 ₮12.08M.
+
 Nothing beats Hailar on cost. With the contest on Sun 10, the Hailar late arrival hits the night of Fri 8 only, not the
 contest eve. Best sleep: MIAT Thu 7 (A / C), ~₮2.2–2.7M over D.
 
