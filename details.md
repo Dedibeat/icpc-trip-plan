@@ -826,6 +826,29 @@ reviews) ¥1,193 for 2 rooms × 3 nights (Booking.com, 5–8 Jan); other central
 Shanghai **after** the contest is cheaper and keeps the pre-contest nights calm; it is the only Shanghai plan inside ₮12M.
 Assumptions: Spring 20 kg bag ¥170, airport transfers ~¥30, meals ₮50k pp/day; sightseeing tickets not included.
 
+### Return moved to Tue 12 Jan (26 Nov 2026)
+
+User: return date is now **Tue 12 Jan**; main goal is sleep and performance on **contest day Sun 10 Jan**. User found on
+Trip.com MIAT round trip **8 → 12 Jan $612** (OM297 07:15 → 11:50; return HKG **13:00 → UB 17:40**, the Tuesday timing).
+Checked 26 Nov: Trip.com MIAT round trip **Thu 7 → 12 Jan $623** (SlickTrip $728 for both); MIAT one-ways: UB → HKG Thu 7 ¥2,298,
+Fri 8 ¥2,253; HKG → UB Tue 12 ¥2,419 (13:00 → 17:40). Ctrip calendar Tue 12 Jan: CAN → HET ¥780 (+¥140), HKG → HET ¥1,009,
+MFM → HET ¥842, SZX → SHA ¥690; HET → UB Wed 13 ¥1,448 (12 / 14 Jan ¥1,030). Hailar legs still ¥657 + ¥849 on Fri 8.
+Booking.com Premium Lounge 7 → 12 Jan (5 nights, 2 rooms) **HK$3,395** (HK$679 / night). Overland home from Tue 12 reaches UB
+**Thu 14 Jan 09:20** (V3888 Tue 22:50, UBTZ 275 Wed 18:05). Script: scratchpad `j12.py`.
+
+| Plan (4 ppl, same fixed costs as the matrix) | Arrive HK | Travel pp | Days | Total |
+|---|---|---|---|---|
+| D Hailar Fri 8 + overland home | Fri 23:30 | ₮1.62M | 7 | **₮10.78M** |
+| G MIAT one-way Fri 8 + overland home | Fri 11:50 | ₮2.01M | 7 | ₮12.35M |
+| E Hailar Fri 8 + MIAT one-way back Tue 12 | Fri 23:30 | ₮2.13M | 5 | ₮12.44M |
+| B MIAT return 8 → 12 ($612) | Fri 11:50 | ₮2.22M | 5 | ₮12.79M |
+| C MIAT one-way Thu 7 + overland home | Thu 11:50 | ₮2.03M | 8 | ₮12.96M |
+| A MIAT return 7 → 12 ($623) | Thu 11:50 | ₮2.26M | 6 | ₮13.46M |
+| F Hailar Mon 4 + overland home | Mon 23:30 | ₮1.62M | 11 | ₮12.84M |
+
+Nothing beats Hailar on cost. With the contest on Sun 10, the Hailar late arrival hits the night of Fri 8 only, not the
+contest eve. Best sleep: MIAT Thu 7 (A / C), ~₮2.2–2.7M over D.
+
 ## Open items / next optimization ideas
 
 - **Hong Kong (21 Nov):** book the Hailar combo (MR851 + HX462, Fri 8 Jan, ¥1,528 on Ctrip) and CZ2131 (11 Jan) once the HK
