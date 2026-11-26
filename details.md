@@ -860,6 +860,17 @@ Flight-only shortlist, travel + hotel for 4: J Hailar + Air China back Mon 11 �
 B MIAT 8 → 12 ₮10.13M; A MIAT 7 → 12 ₮10.61M; L MIAT one-way Fri 8 + Air China back ₮10.67M; K same from Thu 7 ₮11.08M;
 H MIAT 7 → 11 ₮12.08M.
 
+**Hidden-route sweep (26 Nov, Ctrip calendar ULN → 39 cities 4–9 Jan + SlickTrip schedules):** only four real nonstops leave
+UB for China cheap: Hailar (Hunnu MR851 Mon / Fri ¥657), **Manzhouli Hunnu MR881 13:20 → 15:00 ¥795 (Wed 6 / Sat 9)**,
+**Erenhot Hunnu MR861 08:45 → 10:00 ¥873 (daily)**, Hohhot (MIAT OM257 red-eye ¥966 calendar / SlickTrip $202–262; Air China
+CA758 13:00 → 14:40 $274). All other "cheap" ULN fares (Tianjin, Qingdao, Jeju ¥1,475, Shanghai ¥1,399 Sat 9) are via Beijing /
+Seoul / HK or Spring. Onward: Erenhot → Hohhot China Express G54460 14:05 → 15:00 / Tianjiao 9D5664 19:15 → 20:10 ¥380 (+¥140),
+then Hohhot → HKG ¥824–1,020 / SZX ¥750 / MFM ¥792 → Erenhot route ≈ ¥2,200 pp, no better than MIAT. Manzhouli has no onward
+south except via UB (NZH → HKG ¥1,620+). Hailar → CAN ¥1,060–1,150 / SZX ¥1,120–1,260 / MFM ¥1,256 – all dearer than HX462 ¥849.
+Return tricks: Hunnu MR862 **Erenhot 11:00 → UB 12:20 ¥941** (daily) but reaching Erenhot costs HET → ERL ¥500 + Hohhot night
+→ ≈ ¥2,500, worse than MIAT ¥2,419; Hailar → UB MR852 (Mon / Fri 16:00, ¥648) cannot be reached from HK the same day (HX463
+lands 17:20; all others via PEK land 21:45). **Conclusion: Hailar outbound is the only hidden gem.**
+
 Nothing beats Hailar on cost. With the contest on Sun 10, the Hailar late arrival hits the night of Fri 8 only, not the
 contest eve. Best sleep: MIAT Thu 7 (A / C), ~₮2.2–2.7M over D.
 
