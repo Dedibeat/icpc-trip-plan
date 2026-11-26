@@ -888,6 +888,12 @@ P4 MIAT Thu 7 + SZX Tue 12 ₮10.54M. Best sleep still MIAT return 7 → 12 ₮1
 for 4), "<9 left"** – ₮140k pp above ¥1,720 × 536 (Trip.com MNT rate ≈ ₮617 / ¥). Compare the CNY / USD price before paying.
 P1 at the MNT price: ₮1.97M pp, ₮7.87M travel for 4, **₮9.12M with the hotel**.
 
+**Hohhot hotel chosen (user, 26 Nov): Chiyang Hotel**, Cozy Standard (2 single beds), Trip.com MNT 68,595 / room (15% flyer
+discount), **MNT 145,401 for 2 rooms × 1 night (12 → 13 Jan)**, free cancellation until 12 Jan 18:00, pay by 10 Jan.
+**Word doc for the university (Mongolian): `ICPC_HongKong_2027_ayalal.docx`** – P1 itinerary, travel + hotel budget
+**₮9,131,585 for 4 (₮2,282,896 pp)**, sleep notes, visa / booking notes, MIAT alternatives. Built by scratchpad `hkdoc.js`
+(docx-js; `npm install docx` in the scratchpad, as the module is not global).
+
 **Booking P1 (26 Nov):** HX462 and the SZX → HET → UB through ticket are on Trip.com (English, foreign Visa / Mastercard).
 MR851 is only on Ctrip (Chinese): account by email or +976 number, passport as ID, pay by foreign card or Alipay with a linked
 foreign card (passport verification; ~3% fee over ¥200, per Trip.com guides; not tested). Fallback: Hunnu Air sales office /
