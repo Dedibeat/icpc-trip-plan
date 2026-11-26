@@ -895,6 +895,11 @@ discount), **MNT 145,401 for 2 rooms × 1 night (12 → 13 Jan)**, free cancella
 my check; MNT price ₮1,061,400 ≈ ¥1,980 at ₮536), sleep notes, visa / booking notes, MIAT alternatives. Built by scratchpad `hkdoc.js`
 (docx-js; `npm install docx` in the scratchpad, as the module is not global).
 
+**Fare move 26 Nov (afternoon calendar):** SZX → UB Tue 12 ¥1,720 → **¥1,960** (user sees ¥2,020) – the low bucket sold out
+within hours. **CAN → UB still ¥1,720 on 10 / 12 / 13 Jan** (same Hohhot + CA757 idea from Guangzhou; G-train West Kowloon →
+Guangzhou South ¥215). SZX → HET stays ¥780 (many flights); the scarce leg is CA757 HET → UB (one flight / day, ¥1,030 on 12,
+¥1,448 on 13). No new SZX / CAN → UB flights expected in Jan (winter schedule filed; Hunnu SZX–UB off 11–18 Jan).
+
 **Booking P1 (26 Nov):** HX462 and the SZX → HET → UB through ticket are on Trip.com (English, foreign Visa / Mastercard).
 MR851 is only on Ctrip (Chinese): account by email or +976 number, passport as ID, pay by foreign card or Alipay with a linked
 foreign card (passport verification; ~3% fee over ¥200, per Trip.com guides; not tested). Fallback: Hunnu Air sales office /
