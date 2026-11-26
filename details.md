@@ -884,6 +884,12 @@ Travel + hotel for 4 (HK ⇄ SZX airport ¥60, Hohhot room share ¥75 assumed): 
 **P2 Hailar + SZX Mon 11 ₮8.88M** (UB Tue 12 noon, beats J ₮9.10M), P3 OM257 Wed 6 + SZX Mon 11 ₮10.17M (red-eye night),
 P4 MIAT Thu 7 + SZX Tue 12 ₮10.54M. Best sleep still MIAT return 7 → 12 ₮10.61M.
 
+**Booking P1 (26 Nov):** HX462 and the SZX → HET → UB through ticket are on Trip.com (English, foreign Visa / Mastercard).
+MR851 is only on Ctrip (Chinese): account by email or +976 number, passport as ID, pay by foreign card or Alipay with a linked
+foreign card (passport verification; ~3% fee over ¥200, per Trip.com guides; not tested). Fallback: Hunnu Air sales office /
+call centre or a UB travel agent. P1 enters the mainland twice (Hailar, Shenzhen) → team needs a **double-entry China visa**
+(HK visa-free for Mongolians); MR851 + HX462 are separate tickets (3 h 20 min, no protection).
+
 Nothing beats Hailar on cost. With the contest on Sun 10, the Hailar late arrival hits the night of Fri 8 only, not the
 contest eve. Best sleep: MIAT Thu 7 (A / C), ~₮2.2–2.7M over D.
 
