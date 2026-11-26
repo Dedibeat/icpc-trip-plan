@@ -900,6 +900,12 @@ within hours. **CAN → UB still ¥1,720 on 10 / 12 / 13 Jan** (same Hohhot + CA
 Guangzhou South ¥215). SZX → HET stays ¥780 (many flights); the scarce leg is CA757 HET → UB (one flight / day, ¥1,030 on 12,
 ¥1,448 on 13). No new SZX / CAN → UB flights expected in Jan (winter schedule filed; Hunnu SZX–UB off 11–18 Jan).
 
+**Guangzhou check (26 Nov, Trip.com CNY):** CAN → UB Tue 12 **¥1,720 = Air China CA1381 CAN 08:30 → HET 11:40 + CA757 Wed 13
+10:10 → UB 12:00** (one ticket, 22 h 30 min in Hohhot). Mon 11: CA1381 09:05 + CA757 Tue 12, ¥1,930–2,020; Spring via Shanghai
+¥2,248. 08:30 from Baiyun cannot be reached from HK the same morning → go to Guangzhou Mon 11 evening (G-train ¥215) and sleep
+near Baiyun (2 rooms ~¥300, not checked) instead of the 4th HK night (saves HK$679). Net ≈ ¥200 pp cheaper than the SZX ¥2,020
+ticket (~₮0.43M for 4), at the cost of an evening move and an early start.
+
 **Booking P1 (26 Nov):** HX462 and the SZX → HET → UB through ticket are on Trip.com (English, foreign Visa / Mastercard).
 MR851 is only on Ctrip (Chinese): account by email or +976 number, passport as ID, pay by foreign card or Alipay with a linked
 foreign card (passport verification; ~3% fee over ¥200, per Trip.com guides; not tested). Fallback: Hunnu Air sales office /
