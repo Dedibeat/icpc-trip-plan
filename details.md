@@ -884,6 +884,10 @@ Travel + hotel for 4 (HK ⇄ SZX airport ¥60, Hohhot room share ¥75 assumed): 
 **P2 Hailar + SZX Mon 11 ₮8.88M** (UB Tue 12 noon, beats J ₮9.10M), P3 OM257 Wed 6 + SZX Mon 11 ₮10.17M (red-eye night),
 P4 MIAT Thu 7 + SZX Tue 12 ₮10.54M. Best sleep still MIAT return 7 → 12 ₮10.61M.
 
+**User screenshot 26 Nov:** Trip.com shows the SZX 10:55 → HET → UB 12:00 (+1) ticket at **MNT 1,061,400 pp (MNT 4,245,600
+for 4), "<9 left"** – ₮140k pp above ¥1,720 × 536 (Trip.com MNT rate ≈ ₮617 / ¥). Compare the CNY / USD price before paying.
+P1 at the MNT price: ₮1.97M pp, ₮7.87M travel for 4, **₮9.12M with the hotel**.
+
 **Booking P1 (26 Nov):** HX462 and the SZX → HET → UB through ticket are on Trip.com (English, foreign Visa / Mastercard).
 MR851 is only on Ctrip (Chinese): account by email or +976 number, passport as ID, pay by foreign card or Alipay with a linked
 foreign card (passport verification; ~3% fee over ¥200, per Trip.com guides; not tested). Fallback: Hunnu Air sales office /
