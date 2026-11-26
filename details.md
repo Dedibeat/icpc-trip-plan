@@ -871,6 +871,19 @@ Return tricks: Hunnu MR862 **Erenhot 11:00 → UB 12:20 ¥941** (daily) but reac
 → ≈ ¥2,500, worse than MIAT ¥2,419; Hailar → UB MR852 (Mon / Fri 16:00, ¥648) cannot be reached from HK the same day (HX463
 lands 17:20; all others via PEK land 21:45). **Conclusion: Hailar outbound is the only hidden gem.**
 
+**Second sweep (26 Nov, "never give up"):** Sanya / Haikou / Vietnam / SE Asia / Japan / Korea gateways all ¥1,660+ (nothing
+cheap). Aero Mongolia (M0) flies **M0802 Hohhot 09:30 → UB 11:00** (Mon 11 listed on SlickTrip; fare not found online).
+Trip.com via Erenhot (Hunnu MR861 + GS 9D5664) UB 08:45 → Hohhot 20:10 ¥1,327 one ticket. **New gems – Shenzhen ⇄ Hohhot ⇄ UB
+through tickets (Trip.com, taxes in):**
+- **Back: Shenzhen Airlines ZH9129 SZX 10:55 → HET 14:20, night in Hohhot, Air China CA757 10:10 → UB 12:00: ¥1,720 on Tue 12**
+  (home Wed 13). Mon 11: **China Southern CZ8283 SZX 20:10 → HET 23:30 + CA757 Tue 12 → UB 12:00, ¥2,010** (ZH9129 version ¥2,070;
+  Spring via Shanghai ¥2,259). Guangzhou → UB ¥1,720 on 10 / 12 / 13 Jan, ¥1,930 on 11 (calendar).
+- **Out: MIAT OM257 Wed 6 (or Fri 8) 22:25 → HET 00:15 + China Southern CZ8284 07:55 → SZX 11:25: ¥1,880**; Suparna version
+  (HET 19:xx → SZX 23:00) ¥1,760. Hunnu **MR867 UB 23:05 → SZX 03:05 runs Wed 6 Jan, ¥2,317**.
+Travel + hotel for 4 (HK ⇄ SZX airport ¥60, Hohhot room share ¥75 assumed): **P1 Hailar + SZX Tue 12 ₮8.57M** (UB Wed 13 noon),
+**P2 Hailar + SZX Mon 11 ₮8.88M** (UB Tue 12 noon, beats J ₮9.10M), P3 OM257 Wed 6 + SZX Mon 11 ₮10.17M (red-eye night),
+P4 MIAT Thu 7 + SZX Tue 12 ₮10.54M. Best sleep still MIAT return 7 → 12 ₮10.61M.
+
 Nothing beats Hailar on cost. With the contest on Sun 10, the Hailar late arrival hits the night of Fri 8 only, not the
 contest eve. Best sleep: MIAT Thu 7 (A / C), ~₮2.2–2.7M over D.
 
