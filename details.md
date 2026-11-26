@@ -906,6 +906,11 @@ Guangzhou South ¥215). SZX → HET stays ¥780 (many flights); the scarce leg i
 near Baiyun (2 rooms ~¥300, not checked) instead of the 4th HK night (saves HK$679). Net ≈ ¥200 pp cheaper than the SZX ¥2,020
 ticket (~₮0.43M for 4), at the cost of an evening move and an early start.
 
+**Hold / pay later (26 Nov):** no confirmed free flight hold on Trip.com or Ctrip (pay-later pages cover hotels; an unpaid
+flight order expires after a short deadline shown on the payment page). Ways to hold: a UB travel agent or the airline office
+can make a reservation with a ticketing time limit (fare not guaranteed until ticketed); or pay now on a changeable /
+refundable fare. Hotels already pay-later: Chiyang (pay by 10 Jan, free cancel to 12 Jan 18:00).
+
 **Booking P1 (26 Nov):** HX462 and the SZX → HET → UB through ticket are on Trip.com (English, foreign Visa / Mastercard).
 MR851 is only on Ctrip (Chinese): account by email or +976 number, passport as ID, pay by foreign card or Alipay with a linked
 foreign card (passport verification; ~3% fee over ¥200, per Trip.com guides; not tested). Fallback: Hunnu Air sales office /
