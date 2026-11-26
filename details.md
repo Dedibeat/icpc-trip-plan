@@ -891,7 +891,8 @@ P1 at the MNT price: ₮1.97M pp, ₮7.87M travel for 4, **₮9.12M with the hot
 **Hohhot hotel chosen (user, 26 Nov): Chiyang Hotel**, Cozy Standard (2 single beds), Trip.com MNT 68,595 / room (15% flyer
 discount), **MNT 145,401 for 2 rooms × 1 night (12 → 13 Jan)**, free cancellation until 12 Jan 18:00, pay by 10 Jan.
 **Word doc for the university (Mongolian): `ICPC_HongKong_2027_ayalal.docx`** – P1 itinerary, travel + hotel budget
-**₮9,131,585 for 4 (₮2,282,896 pp)**, sleep notes, visa / booking notes, MIAT alternatives. Built by scratchpad `hkdoc.js`
+**₮9,216,865 for 4 (₮2,304,216 pp)** – updated 26 Nov: user says the SZX → HET → UB ticket is **¥2,020** in CNY (was ¥1,720 on
+my check; MNT price ₮1,061,400 ≈ ¥1,980 at ₮536), sleep notes, visa / booking notes, MIAT alternatives. Built by scratchpad `hkdoc.js`
 (docx-js; `npm install docx` in the scratchpad, as the module is not global).
 
 **Booking P1 (26 Nov):** HX462 and the SZX → HET → UB through ticket are on Trip.com (English, foreign Visa / Mastercard).
